@@ -18,7 +18,7 @@ class GoogleRSSCollector:
     def __init__(self):
         pass
 
-    def search(self, keyword: str, days: int = 2) -> list:
+    def search(self, keyword: str, days: int = 3) -> list:
         """
         구글 뉴스 RSS 검색
         - keyword: 검색어
@@ -45,7 +45,7 @@ class GoogleRSSCollector:
     def _parse_rss(self, xml_text: str, keyword: str) -> list:
         """RSS XML 파싱"""
         articles = []
-        cutoff = datetime.now() - timedelta(days=2)
+        cutoff = datetime.now() - timedelta(days=3)
 
         try:
             root = ET.fromstring(xml_text)
