@@ -11,7 +11,7 @@ import time
 
 class AISummarizer:
     # Gemini 1.5 Flash (무료 티어)
-    API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+    API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 
     def __init__(self, api_key: str):
         self.api_key = api_key
