@@ -27,7 +27,7 @@ KEYWORDS = [
 # 아래 중 하나라도 제목에 있어야 전송
 TITLE_MUST_INCLUDE = [
     "외국인 근로자", "외국인 선원", "외국인 계절", "외국인 어선",
-    "외국인력", "계절근로", "어선원", "불법체류",
+    "외국인 어선원", "외국인력", "계절근로", "불법체류",
     "비자", "E-8", "E-9", "E-10", "출입국 정책",
     "수산 인력", "어업 인력", "이민 정책",
 ]
@@ -86,8 +86,29 @@ def jaccard_sim(w1: set, w2: set) -> float:
     return len(w1 & w2) / len(w1 | w2)
 
 
+# 지역명 목록 (중복 판단용)
+REGION_WORDS = [
+    '영동군', '전남', '전라남', '인천', '경북', '경상북', '해남', '강화군',
+    '정읍', '고흥', '울산', '목포', '포천', '부산', '제주', '여수',
+    '광주', '대전', '세종', '충남', '충청남', '충북', '강원', '경남', '경기',
+]
+
+# 사건종류 키워드 (중복 판단용)
+EVENT_WORDS = [
+    '계절근로', '구급약품', '흉기', '주치의', '원격진료',
+    '인력난', '브로커', '법제화', '전담', '사고', '입국',
+]
+
+
+def get_event_key(title: str) -> str:
+    """지역명+사건종류 조합 키 생성"""
+    region = next((r for r in REGION_WORDS if r in title), "")
+    event = next((e for e in EVENT_WORDS if e in title), "")
+    return f"{region}_{event}" if region and event else ""
+
+
 def dedup(articles: list) -> list:
-    """URL 중복 + 제목 유사도(50% 이상) 기준 중복 제거"""
+    """URL 중복 + 제목 유사도 + 지역/사건 조합 기준 중복 제거"""
     # 1차: URL 중복 제거
     seen_links = set()
     url_deduped = []
@@ -97,15 +118,28 @@ def dedup(articles: list) -> list:
             seen_links.add(link)
             url_deduped.append(art)
 
-    # 2차: 제목 유사도 중복 제거
+    # 2차: 유사도 + 지역/사건 조합 중복 제거
     kept = []
     kept_words = []
+    seen_event_keys = set()
+
     for art in url_deduped:
-        words = get_title_words(art.get("title", ""))
-        is_dup = any(jaccard_sim(words, kw) >= 0.35 for kw in kept_words)
-        if not is_dup:
-            kept.append(art)
-            kept_words.append(words)
+        title = art.get("title", "")
+        words = get_title_words(title)
+        event_key = get_event_key(title)
+
+        # 지역+사건 조합이 이미 있으면 중복
+        if event_key and event_key in seen_event_keys:
+            continue
+
+        # 유사도 중복
+        if any(jaccard_sim(words, kw) >= 0.35 for kw in kept_words):
+            continue
+
+        kept.append(art)
+        kept_words.append(words)
+        if event_key:
+            seen_event_keys.add(event_key)
 
     return kept
 
