@@ -14,7 +14,7 @@ from response_formatter import ResponseFormatter
 
 # ── 관심 키워드 ──────────────────────────────────────────────────
 KEYWORDS = [
-    "계절근로자",
+    "계절근로",
     "외국인 선원",
     "어선 외국인",
     "양식장 외국인",
