@@ -1,58 +1,74 @@
 """
-Gemini API를 활용한 뉴스 요약 및 언론대응 필요성 판단 모듈
-+ 유사도 검사 기능 추가 (비슷한 기사 자동 제거)
+Gemini API를 활용한 뉴스 분석 모듈
+- 역할 1: 유사도 검사 (비슷한 기사 묶기)
+- 역할 2: 관련성 필터링 (무관 기사 제거)
+- 역할 3: 한줄 요약
+- 중요도 점수 없음
 """
 
 import json
 import urllib.request
-import urllib.error
 import time
 
 
 class AISummarizer:
-    # Gemini 1.5 Flash (무료 티어)
     API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 
     def __init__(self, api_key: str):
         self.api_key = api_key
 
-    def remove_duplicates(self, articles: list) -> list:
+    def analyze_articles(self, articles: list) -> list:
         """
-        유사도 검사 - 비슷한 기사 제거
-        Gemini가 기사 목록을 읽고 유사한 것끼리 묶어서 대표 1개만 남김
+        1단계: 유사도 검사 (중복 제거)
+        2단계: 관련성 필터링 + 한줄 요약
         """
+        if not articles:
+            return []
+
+        # 1단계: 유사도 검사
+        articles = self._remove_similar(articles)
+
+        # 2단계: 관련성 필터링 + 요약
+        results = []
+        for article in articles:
+            time.sleep(3)  # API 한도 초과 방지
+            try:
+                result = self._filter_and_summarize(article)
+                if result:  # None이면 무관 기사로 제거
+                    results.append(result)
+            except Exception as e:
+                print(f"  [AI오류] {article.get('title','')[:30]}: {e}")
+                # AI 실패 시 일단 포함 (요약은 description으로 대체)
+                article["summary"] = article.get("description", "")[:150]
+                results.append(article)
+
+        return results
+
+    def _remove_similar(self, articles: list) -> list:
+        """유사도 검사 - 비슷한 기사 제거"""
         if len(articles) <= 1:
             return articles
 
         print(f"  유사도 검사 시작: {len(articles)}건")
 
-        # Gemini에게 넘길 기사 목록 만들기
         article_list = ""
         for i, a in enumerate(articles):
-            article_list += f"[{i}] 제목: {a.get('title','')}\n"
-            article_list += f"    내용: {a.get('description','')[:100]}\n"
-            article_list += f"    언론사: {a.get('source','')}\n\n"
+            article_list += f"[{i}] {a.get('title','')[:50]} ({a.get('source','')})\n"
 
-        prompt = f"""아래 뉴스 기사 목록에서 내용이 70% 이상 비슷한 기사들을 찾아주세요.
-비슷한 기사끼리 묶고, 각 묶음에서 언론사 영향력이 가장 큰 기사 1개만 남겨주세요.
+        prompt = f"""아래 뉴스 기사 목록에서 내용이 70% 이상 비슷한 기사끼리 묶고,
+각 묶음에서 언론사 영향력이 가장 큰 기사 1개만 남겨주세요.
 
-언론사 영향력 순서 (높은 순):
-연합뉴스 > KBS > MBC > SBS > JTBC > YTN > 조선일보 > 중앙일보 > 동아일보 > 한겨레 > 경향신문 > 그 외
+언론사 영향력 순서: 연합뉴스 > KBS > MBC > SBS > JTBC > YTN > 조선 > 중앙 > 동아 > 한겨레 > 그 외
 
 [기사 목록]
 {article_list}
 
-응답은 JSON만, 다른 설명 없이:
-{{
-  "keep": [남길 기사 번호 목록, 예: 0, 2, 4],
-  "reason": "간단한 이유"
-}}"""
+JSON만 응답:
+{{"keep": [남길 번호들], "reason": "이유"}}"""
 
         try:
-            time.sleep(4)
+            time.sleep(3)
             response = self._call_gemini(prompt)
-
-            # JSON 파싱
             clean = response.strip()
             if "```json" in clean:
                 clean = clean.split("```json")[1].split("```")[0]
@@ -60,142 +76,63 @@ class AISummarizer:
                 clean = clean.split("```")[1].split("```")[0]
 
             parsed = json.loads(clean.strip())
-            keep_indices = parsed.get("keep", list(range(len(articles))))
-            reason = parsed.get("reason", "")
-
-            # 유효한 인덱스만 필터
-            keep_indices = [i for i in keep_indices if 0 <= i < len(articles)]
-
+            keep_indices = [i for i in parsed.get("keep", []) if 0 <= i < len(articles)]
             result = [articles[i] for i in keep_indices]
             removed = len(articles) - len(result)
-
-            print(f"  유사도 검사 완료: {removed}건 제거 ({reason})")
+            print(f"  유사도 검사 완료: {removed}건 제거")
             return result
 
         except Exception as e:
-            print(f"  [유사도 검사 오류] {e} → 원본 그대로 사용")
+            print(f"  [유사도 오류] {e} → 원본 유지")
             return articles
 
-    def analyze_articles(self, articles: list) -> list:
+    def _filter_and_summarize(self, article: dict) -> dict:
         """
-        1단계: 유사도 검사로 중복 제거
-        2단계: 기사별 AI 분석 (요약, 중요도, 사실관계 등)
+        관련성 판단 + 한줄 요약
+        무관 기사면 None 반환
         """
-        # 1단계: 유사도 검사
-        articles = self.remove_duplicates(articles)
-
-        # 2단계: 개별 분석
-        results = []
-        for article in articles:
-            try:
-                time.sleep(4)
-                analyzed = self._analyze_single(article)
-                results.append(analyzed)
-            except Exception as e:
-                print(f"  [AI오류] {article.get('title','')[:30]}: {e}")
-                article["importance"] = 2
-                article["summary"] = article.get("description", "")[:200]
-                article["fact_check"] = "확인 필요"
-                article["fact_details"] = []
-                article["response_type"] = "검토 필요"
-                article["future_plan"] = "관계부처 협의 후 입장 결정 예정"
-                results.append(article)
-
-        return results
-
-    def _analyze_single(self, article: dict) -> dict:
-        """단일 기사 분석"""
-        prompt = self._build_prompt(article)
-        response_text = self._call_gemini(prompt)
-
-        try:
-            clean = response_text.strip()
-            if "```json" in clean:
-                clean = clean.split("```json")[1].split("```")[0]
-            elif "```" in clean:
-                clean = clean.split("```")[1].split("```")[0]
-
-            parsed = json.loads(clean.strip())
-
-            article.update({
-                "importance": int(parsed.get("importance", 2)),
-                "summary": parsed.get("summary", ""),
-                "media_tone": parsed.get("media_tone", "중립"),
-                "fact_check": parsed.get("fact_check", "확인 필요"),
-                "fact_details": parsed.get("fact_details", []),
-                "response_type": parsed.get("response_type", ""),
-                "future_plan": parsed.get("future_plan", ""),
-            })
-
-        except (json.JSONDecodeError, IndexError):
-            article["importance"] = 3
-            article["summary"] = response_text[:300]
-            article["fact_check"] = "AI 분석 중 오류"
-            article["fact_details"] = []
-            article["response_type"] = "검토 필요"
-            article["future_plan"] = "관계부처 협의 후 입장 결정 예정"
-
-        return article
-
-    def _build_prompt(self, article: dict) -> str:
         title = article.get("title", "")
         description = article.get("description", "")
-        source = article.get("source", "")
-        keyword = article.get("keyword", "")
 
-        return f"""당신은 대한민국 법무부 출입국·외국인정책본부의 언론대응 전문 분석관입니다.
-아래 뉴스 기사를 분석하여 JSON 형식으로만 응답하세요.
+        prompt = f"""아래 뉴스가 외국인 근로자/계절근로자/어선원/수산업 인력/출입국 정책과
+직접 관련이 있으면 YES, 없으면 NO로 판단하고 요약해주세요.
 
-[기사 정보]
-- 언론사: {source}
-- 검색키워드: {keyword}
-- 제목: {title}
-- 내용 요약: {description}
+제목: {title}
+내용: {description[:200]}
 
-[분석 기준]
-- 담당 업무: E-8/E-9 계절근로자 비자, 수산업 외국인력, 어업경영체, 양식업 자동화, 해수부·법무부 정책
-- 관련 기관: 법무부, 해양수산부, 고용노동부, 수협
+관련 없는 예시: 지방선거, 노약자 복지, 물류단지, 맛집, 단순 봉사활동
 
-[응답 형식 - JSON only]
-{{
-  "importance": 1~5 (5=매우 중요 대응필수 / 3=보통 / 1=무관),
-  "summary": "기사 내용 2~3문장 요약 (육하원칙 기반)",
-  "media_tone": "비판적" 또는 "우호적" 또는 "중립",
-  "fact_check": "사실" 또는 "일부사실" 또는 "사실무근" 또는 "확인필요",
-  "fact_details": [
-    "ㅇ 사실관계 항목1 - 상세내용",
-    " - 세부내용",
-    "ㅇ 사실관계 항목2 - 상세내용",
-    " - 세부내용",
-    "ㅇ 사실관계 항목3 - 상세내용"
-  ],
-  "response_type": "적극해명" 또는 "참고자료 배포" 또는 "모니터링" 또는 "대응불필요",
-  "future_plan": "향후 계획 1~2문장 (공무원 문체)"
-}}
+JSON만 응답:
+{{"relevant": "YES" 또는 "NO", "summary": "관련있으면 한줄요약(50자 이내), 없으면 빈문자열"}}"""
 
-중요: JSON만 출력하고 다른 설명은 하지 마세요."""
+        response = self._call_gemini(prompt)
+        clean = response.strip()
+        if "```json" in clean:
+            clean = clean.split("```json")[1].split("```")[0]
+        elif "```" in clean:
+            clean = clean.split("```")[1].split("```")[0]
+
+        parsed = json.loads(clean.strip())
+
+        if parsed.get("relevant", "NO") == "NO":
+            return None  # 무관 기사 제거
+
+        article["summary"] = parsed.get("summary", "") or description[:150]
+        article["importance"] = 3  # 기본값 (전송 조건용)
+        return article
 
     def _call_gemini(self, prompt: str) -> str:
-        """Gemini API 호출"""
         url = f"{self.API_URL}?key={self.api_key}"
-
         payload = {
             "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {
-                "temperature": 0.3,
-                "maxOutputTokens": 1024,
-            }
+            "generationConfig": {"temperature": 0.2, "maxOutputTokens": 512}
         }
-
         data = json.dumps(payload).encode("utf-8")
         req = urllib.request.Request(
-            url,
-            data=data,
+            url, data=data,
             headers={"Content-Type": "application/json"},
             method="POST"
         )
-
         with urllib.request.urlopen(req, timeout=30) as resp:
             result = json.loads(resp.read().decode("utf-8"))
-
         return result["candidates"][0]["content"]["parts"][0]["text"]
