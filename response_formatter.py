@@ -1,6 +1,7 @@
 """
 법무부 출입국·외국인정책본부 언론대응 포맷 생성 모듈
-공문서 스타일: ㅇ / - 계층 구조
+- plain text 기반 (특수문자 최소화)
+- 공문서 스타일: ㅇ / - 계층 구조
 """
 
 from datetime import datetime
@@ -23,9 +24,8 @@ class ResponseFormatter:
     }
 
     def format_response(self, article: dict, index: int = 1) -> str:
-        """
-        언론대응 텔레그램 메시지 포맷 생성
-        """
+        """언론대응 텔레그램 메시지 포맷 생성"""
+
         title = article.get("title", "")
         source = article.get("source", "알 수 없음")
         pub_date = article.get("pubDate", "")
@@ -40,54 +40,59 @@ class ResponseFormatter:
 
         tone_emoji = self.TONE_EMOJI.get(media_tone, "🟡")
         importance_label = self.IMPORTANCE_LABEL.get(importance, "📋 참고자료")
-
-        # 날짜 포맷
         date_str = self._format_date(pub_date)
 
-        # 사실관계 항목 포맷 (없으면 기본값)
+        # summary에서 JSON 찌꺼기 제거
+        summary = self._clean_summary(summary)
+
+        # 사실관계 항목 포맷
         if not fact_details:
             fact_details = [
                 f"ㅇ {fact_check} - 세부 사실관계 확인 필요",
-                "- 관련 법령 및 정책 검토 중",
+                "  - 관련 법령 및 정책 검토 중",
             ]
-
         fact_block = "\n".join(fact_details)
 
-        # 이스케이프 처리 (텔레그램 MarkdownV2 특수문자)
-        # 일반 Markdown 사용
-        msg = f"""{'━'*35}
+        msg = f"""{'━'*30}
 {importance_label} | {tone_emoji} {media_tone} | {index}번 기사
 
-📌 *제목*: {title}
-🗞 *언론사*: {source} | {date_str}
-🔗 {link}
+제목: {title}
+언론사: {source} | {date_str}
+링크: {link}
 
-━━━ 배경 ━━━━━━━━━━━━━━━━━━━
+【 배경 】
 {summary}
 
-━━━ 사실관계 [{fact_check}] ━━━━━━━
+【 사실관계 [{fact_check}] 】
 {fact_block}
 
-━━━ 향후 계획 ━━━━━━━━━━━━━━
+【 향후 계획 】
 ㅇ {future_plan}
 
-💬 *대응 방향*: {response_type}
-{'━'*35}"""
+대응방향: {response_type}
+{'━'*30}"""
 
         return msg
 
-    def format_daily_summary(self, articles: list) -> str:
-        """하루 전체 브리핑 요약"""
-        total = len(articles)
-        urgent = sum(1 for a in articles if a.get("importance", 0) >= 4)
-        critical = sum(1 for a in articles if a.get("media_tone") == "비판적")
+    def _clean_summary(self, text: str) -> str:
+        """summary에 JSON이 섞여있으면 제거"""
+        import re
+        import json as jsonlib
 
-        return f"""
-📊 *오늘의 동향 요약*
-- 대응 필요 기사: 총 {total}건
-- 긴급/적극해명: {urgent}건
-- 비판적 보도: {critical}건
-"""
+        # JSON 블록 제거
+        text = re.sub(r'```json.*?```', '', text, flags=re.DOTALL)
+        text = re.sub(r'```.*?```', '', text, flags=re.DOTALL)
+
+        # { 로 시작하는 JSON 덩어리 제거
+        text = re.sub(r'\{.*?\}', '', text, flags=re.DOTALL)
+
+        # 백틱, 따옴표 정리
+        text = text.replace('`', '').replace('"importance"', '').replace('"summary"', '')
+
+        # 연속 빈줄 정리
+        text = re.sub(r'\n{3,}', '\n', text)
+
+        return text.strip() or "내용 확인 필요"
 
     def _format_date(self, pub_date_str: str) -> str:
         """날짜 포맷 정리"""
