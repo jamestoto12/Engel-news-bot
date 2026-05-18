@@ -11,6 +11,7 @@ from news_collector import NewsCollector
 from ai_summarizer import AISummarizer
 from telegram_sender import TelegramSender
 from response_formatter import ResponseFormatter
+from google_rss_collector import GoogleRSSCollector
 
 # ── 관심 키워드 ──────────────────────────────────────────────────
 KEYWORDS = [
@@ -88,10 +89,19 @@ def main():
 
     # 뉴스 수집
     all_articles = []
+    rss_collector = GoogleRSSCollector()
+
     for keyword in KEYWORDS:
-        articles = collector.search(keyword, display=10)
-        all_articles.extend(articles)
-        print(f"  [{keyword}] {len(articles)}건 수집")
+        # 네이버 뉴스 API
+        naver_articles = collector.search(keyword, display=10)
+        all_articles.extend(naver_articles)
+
+        # 구글 뉴스 RSS (지역지·전문지 커버)
+        google_articles = rss_collector.search(keyword, days=2)
+        all_articles.extend(google_articles)
+
+        total = len(naver_articles) + len(google_articles)
+        print(f"  [{keyword}] 네이버:{len(naver_articles)}건 + 구글:{len(google_articles)}건 = {total}건")
 
     print(f"\n총 수집: {len(all_articles)}건")
 
