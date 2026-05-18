@@ -1,0 +1,8 @@
+# 뉴스봇 의존성 패키지
+# 표준 라이브러리만 사용하므로 추가 패키지 없음
+# (urllib, json, hashlib, datetime 모두 Python 내장)
+
+# 향후 확장 시 필요할 수 있는 패키지 (현재 미사용):
+# requests==2.31.0
+# python-telegram-bot==21.0
+# google-generativeai==0.5.0
