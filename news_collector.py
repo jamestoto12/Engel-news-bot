@@ -36,7 +36,7 @@ class NewsCollector:
                 data = json.loads(raw)
 
             articles = []
-            cutoff = datetime.now() - timedelta(hours=24)  # 최근 24시간
+            cutoff = datetime.now() - timedelta(days=3)  # 최근 3일 (주말 대비)
 
             for item in data.get("items", []):
                 # 날짜 파싱
