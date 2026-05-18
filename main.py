@@ -15,6 +15,7 @@ from google_rss_collector import GoogleRSSCollector
 # ── 관심 키워드 ──────────────────────────────────────────────────
 KEYWORDS = [
     "계절근로자",
+    "계절근로",
     "외국인 선원",
     "어선 외국인",
     "수산 외국인",
