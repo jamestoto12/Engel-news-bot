@@ -58,19 +58,48 @@ def title_filter(title: str) -> bool:
     return any(kw in title for kw in TITLE_MUST_INCLUDE)
 
 
+def get_title_words(title: str) -> set:
+    """제목에서 핵심 단어 추출 (불용어 제거)"""
+    import re
+    title = re.sub(r'[^\w\s]', ' ', title)
+    stopwords = {
+        '외국인', '계절근로자', '계절근로', '총력', '본격', '운영', '지원',
+        '사업', '무료', '제공', '포함', '해소', '투입', '농번기', '공공형',
+        '입국', '선정', '연속', '농사', '일손', '이미', '맞춤형'
+    }
+    words = set(w for w in title.split() if len(w) >= 2)
+    return words - stopwords
+
+
+def jaccard_sim(w1: set, w2: set) -> float:
+    """두 단어 집합 유사도"""
+    if not w1 or not w2:
+        return 0.0
+    return len(w1 & w2) / len(w1 | w2)
+
+
 def dedup(articles: list) -> list:
-    """URL + 제목 앞 10자 기준 중복 제거"""
+    """URL 중복 + 제목 유사도(50% 이상) 기준 중복 제거"""
+    # 1차: URL 중복 제거
     seen_links = set()
-    seen_titles = set()
-    result = []
+    url_deduped = []
     for art in articles:
         link = art.get("link", "")
-        title_key = art.get("title", "").strip()[:10]
-        if link not in seen_links and title_key not in seen_titles:
+        if link not in seen_links:
             seen_links.add(link)
-            seen_titles.add(title_key)
-            result.append(art)
-    return result
+            url_deduped.append(art)
+
+    # 2차: 제목 유사도 중복 제거
+    kept = []
+    kept_words = []
+    for art in url_deduped:
+        words = get_title_words(art.get("title", ""))
+        is_dup = any(jaccard_sim(words, kw) >= 0.5 for kw in kept_words)
+        if not is_dup:
+            kept.append(art)
+            kept_words.append(words)
+
+    return kept
 
 
 def main():
