@@ -26,9 +26,10 @@ KEYWORDS = [
 # ── 제목에 반드시 포함돼야 할 키워드 (제목 필터) ─────────────────
 # 아래 중 하나라도 제목에 있어야 전송
 TITLE_MUST_INCLUDE = [
-    "외국인", "계절근로", "어선원", "선원", "이민", "출입국",
-    "비자", "E-8", "E-9", "E-10", "불법체류", "외국인력",
-    "수산 인력", "어업 인력",
+    "외국인 근로자", "외국인 선원", "외국인 계절", "외국인 어선",
+    "외국인력", "계절근로", "어선원", "불법체류",
+    "비자", "E-8", "E-9", "E-10", "출입국 정책",
+    "수산 인력", "어업 인력", "이민 정책",
 ]
 
 HISTORY_FILE = "sent_history.json"
@@ -65,15 +66,16 @@ def title_filter(title: str) -> bool:
 
 
 def get_title_words(title: str) -> set:
-    """제목에서 핵심 단어 추출 (불용어 제거)"""
+    """제목에서 핵심 단어 추출 (불용어 제거, 조사 정규화)"""
     import re
     title = re.sub(r'[^\w\s]', ' ', title)
     stopwords = {
-        '외국인', '계절근로자', '계절근로', '총력', '본격', '운영', '지원',
-        '사업', '무료', '제공', '포함', '해소', '투입', '농번기', '공공형',
-        '입국', '선정', '연속', '농사', '일손', '이미', '맞춤형'
+        '외국인', '계절근로자', '계절근로', '총력', '본격', '운영',
+        '무료', '포함', '해소', '투입', '농번기', '공공형',
+        '연속', '농사', '일손', '이미', '맞춤형'
     }
-    words = set(w for w in title.split() if len(w) >= 2)
+    # 단어 앞 4글자로 정규화 (조사 차이 흡수: 흉기 vs 흉기로)
+    words = set(w[:4] for w in title.split() if len(w) >= 2)
     return words - stopwords
 
 
@@ -100,7 +102,7 @@ def dedup(articles: list) -> list:
     kept_words = []
     for art in url_deduped:
         words = get_title_words(art.get("title", ""))
-        is_dup = any(jaccard_sim(words, kw) >= 0.5 for kw in kept_words)
+        is_dup = any(jaccard_sim(words, kw) >= 0.35 for kw in kept_words)
         if not is_dup:
             kept.append(art)
             kept_words.append(words)
