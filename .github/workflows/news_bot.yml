@@ -2,8 +2,12 @@ name: 법무부 출입국 언론대응 뉴스봇
 
 on:
   schedule:
+    # KST 06:00 = UTC 21:00 (전날)
     - cron: '0 21 * * *'
-    - cron: '0 22 * * *'
+    # KST 18:00 = UTC 09:00
+    - cron: '0 9 * * *'
+  
+  # 수동 실행 (테스트용)
   workflow_dispatch:
 
 jobs:
@@ -11,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: write
+      contents: write  # sent_history.json 커밋을 위해 필요
 
     steps:
       - name: 레포지토리 체크아웃
@@ -36,7 +40,7 @@ jobs:
         run: |
           python main.py
 
-      - name: 전송 기록 저장
+      - name: 전송 기록 저장 (자동 커밋)
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
