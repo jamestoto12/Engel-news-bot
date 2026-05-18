@@ -1,6 +1,5 @@
 """
 법무부 출입국·외국인정책본부 언론대응 뉴스봇
-매일 아침 실행 → 뉴스 수집 → AI 필터링/요약 → 텔레그램 전송
 """
 
 import os
@@ -15,7 +14,7 @@ from google_rss_collector import GoogleRSSCollector
 
 # ── 관심 키워드 ──────────────────────────────────────────────────
 KEYWORDS = [
-    "계절근로자",
+    "계절근로",
     "외국인 선원",
     "어선 외국인",
     "양식장 외국인",
@@ -29,17 +28,29 @@ KEYWORDS = [
     "농어촌 일손",
 ]
 
-# ── 제외 키워드 ───────────────────────────────────────────────────
+# ── 제외 키워드 (AI 없이 바로 제거) ──────────────────────────────
 EXCLUDE_KEYWORDS = [
-    "맛집", "요리", "레시피", "할인", "이벤트", "봉사활동",
-    "음식점", "셰프", "식당", "축제", "행사 참여", "무료나눔"
+    # 완전 무관
+    "맛집", "요리", "레시피", "할인", "이벤트",
+    "음식점", "셰프", "식당", "축제",
+    # 선거/정치
+    "선거", "3파전", "후보", "공천", "출마",
+    # 재난/날씨 (외국인 무관)
+    "이상고온", "태풍", "지진", "산불",
+    # 복지/의료 (출입국 무관)
+    "노약자", "복지관", "경로당", "요양",
+    # 물류/건설
+    "물류단지", "물류센터", "건설공사",
+    # 소방/안전교육 단독
+    "소방안전교육", "소방훈련",
+    # 봉사
+    "봉사활동", "자원봉사",
 ]
 
 HISTORY_FILE = "sent_history.json"
 
 
 def load_history() -> set:
-    """이미 전송한 기사 해시 목록 로드"""
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -48,22 +59,34 @@ def load_history() -> set:
 
 
 def save_history(hashes: set):
-    """전송한 기사 해시 목록 저장 (최근 500개만 유지)"""
     hash_list = list(hashes)[-500:]
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
         json.dump({"hashes": hash_list, "updated": str(date.today())}, f, ensure_ascii=False, indent=2)
 
 
 def make_hash(article: dict) -> str:
-    """기사 고유 해시 생성 (중복 체크용)"""
     key = article.get("title", "") + article.get("link", "")
     return hashlib.md5(key.encode()).hexdigest()
 
 
 def is_excluded(title: str, description: str) -> bool:
-    """제외 키워드 포함 여부 확인"""
-    text = (title + description).lower()
+    text = title + description
     return any(kw in text for kw in EXCLUDE_KEYWORDS)
+
+
+def dedup_by_title(articles: list) -> list:
+    """제목 앞 15자 기준 중복 제거"""
+    seen_titles = set()
+    seen_links = set()
+    result = []
+    for art in articles:
+        link = art.get("link", "")
+        title_key = art.get("title", "").strip()[:15]
+        if link not in seen_links and title_key not in seen_titles:
+            seen_links.add(link)
+            seen_titles.add(title_key)
+            result.append(art)
+    return result
 
 
 def main():
@@ -71,102 +94,74 @@ def main():
     print(f"뉴스봇 실행: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"{'='*60}\n")
 
-    # API 키 환경변수에서 로드
     naver_client_id = os.environ.get("NAVER_CLIENT_ID")
     naver_client_secret = os.environ.get("NAVER_CLIENT_SECRET")
     gemini_api_key = os.environ.get("GEMINI_API_KEY")
     telegram_token = os.environ.get("TELEGRAM_BOT_TOKEN")
     telegram_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
 
-    # 초기화
     collector = NewsCollector(naver_client_id, naver_client_secret)
+    rss_collector = GoogleRSSCollector()
     summarizer = AISummarizer(gemini_api_key)
     sender = TelegramSender(telegram_token, telegram_chat_id)
     formatter = ResponseFormatter()
 
-    # 이전 전송 기록 로드
     sent_hashes = load_history()
 
-    # 뉴스 수집
+    # ── 1단계: 수집 ──────────────────────────────────────────────
     all_articles = []
-    rss_collector = GoogleRSSCollector()
-
     for keyword in KEYWORDS:
-        # 네이버 뉴스 API
-        naver_articles = collector.search(keyword, display=10)
-        all_articles.extend(naver_articles)
-
-        # 구글 뉴스 RSS (지역지·전문지 커버)
-        google_articles = rss_collector.search(keyword, days=2)
-        all_articles.extend(google_articles)
-
-        total = len(naver_articles) + len(google_articles)
-        print(f"  [{keyword}] 네이버:{len(naver_articles)}건 + 구글:{len(google_articles)}건 = {total}건")
+        naver = collector.search(keyword, display=10)
+        google = rss_collector.search(keyword, days=3)
+        all_articles.extend(naver)
+        all_articles.extend(google)
+        print(f"  [{keyword}] 네이버:{len(naver)} + 구글:{len(google)}")
 
     print(f"\n총 수집: {len(all_articles)}건")
 
-    # 중복 제거 (URL + 제목 기반)
-    seen_links = set()
-    seen_titles = set()
-    unique_articles = []
-    for art in all_articles:
-        link = art.get("link", "")
-        title = art.get("title", "").strip()
-        # 제목 앞 20자로 유사 제목 체크
-        title_key = title[:20]
-        if link not in seen_links and title_key not in seen_titles:
-            seen_links.add(link)
-            seen_titles.add(title_key)
-            unique_articles.append(art)
+    # ── 2단계: 제목+URL 중복 제거 ────────────────────────────────
+    unique = dedup_by_title(all_articles)
+    print(f"중복 제거 후: {len(unique)}건")
 
-    print(f"중복 제거 후: {len(unique_articles)}건")
-
-    # 제외 키워드 필터링
-    filtered = [a for a in unique_articles if not is_excluded(a.get("title",""), a.get("description",""))]
+    # ── 3단계: 제외 키워드 필터링 (AI 없이) ─────────────────────
+    filtered = [a for a in unique if not is_excluded(a.get("title",""), a.get("description",""))]
     print(f"제외 필터 후: {len(filtered)}건")
 
-    # 이미 전송한 기사 제외
+    # ── 4단계: 이미 전송한 기사 제외 ────────────────────────────
     new_articles = [a for a in filtered if make_hash(a) not in sent_hashes]
     print(f"신규 기사: {len(new_articles)}건\n")
 
     if not new_articles:
-        print("전송할 신규 기사 없음.")
-        sender.send_message("📭 [뉴스봇] 오늘 신규 관련 기사가 없습니다.")
+        sender.send_message("📭 [뉴스봇] 신규 관련 기사가 없습니다.")
         return
 
-    # AI 요약 및 중요도 판단
-    print("AI 요약·필터링 시작...")
+    # ── 5단계: AI 요약 (남은 기사만, 한줄 요약) ─────────────────
+    print("AI 요약 시작...")
     analyzed = summarizer.analyze_articles(new_articles)
+    print(f"최종 전송 대상: {len(analyzed)}건\n")
 
-    # 전체 전송 (AI 필터링에서 무관 기사는 이미 제거됨)
-    important = analyzed
-    print(f"전송 대상 기사: {len(important)}건")
-
-    if not important:
-        print("관련 기사 없음.")
-        sender.send_message("📋 [뉴스봇] 오늘 관련 기사가 없습니다.")
+    if not analyzed:
+        sender.send_message("📭 [뉴스봇] 관련 기사가 없습니다.")
         return
 
-    # 텔레그램 전송
+    # ── 6단계: 텔레그램 전송 ─────────────────────────────────────
     today_str = date.today().strftime("%Y년 %m월 %d일")
-    header = f"📰 *{today_str} 언론동향 브리핑*\n법무부 출입국·외국인정책본부\n{'─'*30}"
+    header = f"📰 {today_str} 언론동향 브리핑\n법무부 출입국·외국인정책본부\n{'━'*30}"
     sender.send_message(header)
 
     new_hashes = set()
-    for i, article in enumerate(important, 1):
-        # 언론대응 포맷 생성
-        response_text = formatter.format_response(article, index=i)
-        sender.send_message(response_text)
+    for i, article in enumerate(analyzed, 1):
+        msg = formatter.format_response(article, index=i)
+        sender.send_message(msg)
         new_hashes.add(make_hash(article))
-        print(f"  전송 완료: {article.get('title', '')[:40]}...")
+        print(f"  전송: {article.get('title','')[:40]}...")
 
-    # 전송 기록 저장
     sent_hashes.update(new_hashes)
     save_history(sent_hashes)
 
-    footer = f"\n✅ 총 {len(important)}건 전송 완료 | {datetime.now().strftime('%H:%M')}"
+    footer = f"✅ 총 {len(analyzed)}건 전송 완료 | {datetime.now().strftime('%H:%M')}"
     sender.send_message(footer)
-    print(f"\n전송 완료: {len(important)}건")
+    print(f"\n완료: {len(analyzed)}건")
 
 
 if __name__ == "__main__":
