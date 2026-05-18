@@ -105,13 +105,18 @@ def main():
 
     print(f"\n총 수집: {len(all_articles)}건")
 
-    # 중복 제거 (URL 기반)
+    # 중복 제거 (URL + 제목 기반)
     seen_links = set()
+    seen_titles = set()
     unique_articles = []
     for art in all_articles:
         link = art.get("link", "")
-        if link not in seen_links:
+        title = art.get("title", "").strip()
+        # 제목 앞 20자로 유사 제목 체크
+        title_key = title[:20]
+        if link not in seen_links and title_key not in seen_titles:
             seen_links.add(link)
+            seen_titles.add(title_key)
             unique_articles.append(art)
 
     print(f"중복 제거 후: {len(unique_articles)}건")
