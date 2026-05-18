@@ -2,10 +2,12 @@
 구글 뉴스 RSS를 통한 뉴스 수집 모듈
 - 네이버 API에서 못 잡는 지역지·전문지 커버
 - 추가 API 키 불필요 (무료)
+- 구글 RSS 암호화 링크 → 실제 기사 URL 변환 처리
 """
 
 import urllib.request
 import urllib.parse
+import urllib.error
 import xml.etree.ElementTree as ET
 import re
 from datetime import datetime, timedelta
@@ -19,11 +21,6 @@ class GoogleRSSCollector:
         pass
 
     def search(self, keyword: str, days: int = 3) -> list:
-        """
-        구글 뉴스 RSS 검색
-        - keyword: 검색어
-        - days: 최근 며칠 기사까지 수집할지
-        """
         try:
             query = urllib.parse.quote(f"{keyword} when:{days}d")
             url = f"{self.BASE_URL}?q={query}&hl=ko&gl=KR&ceid=KR:ko"
@@ -43,7 +40,6 @@ class GoogleRSSCollector:
             return []
 
     def _parse_rss(self, xml_text: str, keyword: str) -> list:
-        """RSS XML 파싱"""
         articles = []
         cutoff = datetime.now() - timedelta(days=3)
 
@@ -64,20 +60,20 @@ class GoogleRSSCollector:
                 if pub_datetime and pub_datetime < cutoff:
                     continue
 
-                # 구글 뉴스 링크에서 실제 URL 추출
-                real_link = self._extract_real_link(link, description)
+                # 실제 기사 URL 추출 (구글 암호화 링크 → 실제 URL)
+                real_link = self._resolve_real_link(link, description)
 
                 # 언론사 추출
-                source = self._extract_source(title, description)
+                source = self._extract_source(title)
 
-                # 제목에서 언론사 제거 (구글RSS는 제목에 언론사가 붙음)
+                # 제목 정리
                 clean_title = self._clean_title(title)
 
                 articles.append({
                     "title": clean_title,
                     "description": self._clean_html(description),
-                    "link": real_link or link,
-                    "originallink": real_link or link,
+                    "link": real_link,
+                    "originallink": real_link,
                     "pubDate": pub_date_str,
                     "pub_datetime": pub_datetime,
                     "keyword": keyword,
@@ -90,27 +86,43 @@ class GoogleRSSCollector:
 
         return articles
 
+    def _resolve_real_link(self, google_link: str, description: str) -> str:
+        """
+        구글 RSS 암호화 링크 → 실제 기사 URL 변환
+        방법1: description HTML에서 href 추출
+        방법2: 구글 링크 리다이렉트 따라가기
+        """
+        # 방법1: description에서 실제 URL 추출
+        match = re.search(r'href="(https?://(?!news\.google\.com)[^"]+)"', description)
+        if match:
+            return match.group(1)
+
+        # 방법2: 구글 링크 리다이렉트 따라가기
+        if "news.google.com" in google_link:
+            try:
+                req = urllib.request.Request(
+                    google_link,
+                    headers={"User-Agent": "Mozilla/5.0"},
+                )
+                # 리다이렉트 따라가기
+                with urllib.request.urlopen(req, timeout=5) as resp:
+                    final_url = resp.geturl()
+                    if "news.google.com" not in final_url:
+                        return final_url
+            except Exception:
+                pass
+
+        return google_link
+
     def _parse_date(self, date_str: str):
-        """날짜 파싱"""
         try:
             from email.utils import parsedate_to_datetime
             return parsedate_to_datetime(date_str).replace(tzinfo=None)
         except Exception:
             return None
 
-    def _extract_real_link(self, link: str, description: str) -> str:
-        """구글 RSS 링크에서 실제 기사 URL 추출"""
-        # description에서 href 추출 시도
-        match = re.search(r'href="([^"]+)"', description)
-        if match:
-            url = match.group(1)
-            if url.startswith("http") and "google.com" not in url:
-                return url
-        return link
-
-    def _extract_source(self, title: str, description: str) -> str:
-        """구글 뉴스 RSS에서 언론사명 추출 (제목 끝에 붙어있음)"""
-        # 형식: "기사 제목 - 언론사명"
+    def _extract_source(self, title: str) -> str:
+        """구글 뉴스 RSS 제목 끝 언론사명 추출 (형식: 기사제목 - 언론사)"""
         if " - " in title:
             return title.split(" - ")[-1].strip()
         return "알 수 없음"
@@ -122,7 +134,6 @@ class GoogleRSSCollector:
         return title.strip()
 
     def _clean_html(self, text: str) -> str:
-        """HTML 태그 제거"""
         text = re.sub(r"<[^>]+>", "", text)
         text = text.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&").replace("&quot;", '"').replace("&#39;", "'")
         return text.strip()
