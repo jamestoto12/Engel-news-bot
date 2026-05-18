@@ -117,23 +117,31 @@ def main():
         sender.send_message("📭 [뉴스봇] 신규 관련 기사가 없습니다.")
         return
 
-    # ── 5단계: 전송 ──────────────────────────────────────────────
+    # ── 5단계: 전송 (하나의 메시지로 합쳐서) ────────────────────
     today_str = date.today().strftime("%Y년 %m월 %d일")
-    header = f"📰 {today_str} 언론동향 브리핑\n법무부 출입국·외국인정책본부\n{'━'*30}"
-    sender.send_message(header)
+    
+    # 헤더 + 모든 기사 합치기
+    parts = [f"📰 {today_str} 언론동향 브리핑"]
+    parts.append(f"법무부 출입국·외국인정책본부")
+    parts.append(f"총 {len(new_articles)}건 | {datetime.now().strftime('%H:%M')}")
+    parts.append("━" * 30)
+    parts.append("")
 
     new_hashes = set()
     for i, article in enumerate(new_articles, 1):
         msg = formatter.format_response(article, index=i)
-        sender.send_message(msg)
+        parts.append(msg)
+        parts.append("")  # 기사 사이 빈줄
         new_hashes.add(make_hash(article))
-        print(f"  전송: {article.get('title','')[:40]}...")
+        print(f"  포함: {article.get('title','')[:40]}...")
+
+    # 하나의 메시지로 전송 (텔레그램이 길면 자동 분할)
+    full_message = "\n".join(parts)
+    sender.send_message(full_message)
 
     sent_hashes.update(new_hashes)
     save_history(sent_hashes)
 
-    footer = f"✅ 총 {len(new_articles)}건 | {datetime.now().strftime('%H:%M')}"
-    sender.send_message(footer)
     print(f"\n완료: {len(new_articles)}건")
 
 
