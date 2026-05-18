@@ -6,6 +6,7 @@ Gemini API를 활용한 뉴스 요약 및 언론대응 필요성 판단 모듈
 import json
 import urllib.request
 import urllib.error
+import time
 
 
 class AISummarizer:
@@ -48,6 +49,7 @@ class AISummarizer:
 }}"""
 
         try:
+            time.sleep(4)
             response = self._call_gemini(prompt)
 
             # JSON 파싱
@@ -86,6 +88,7 @@ class AISummarizer:
         results = []
         for article in articles:
             try:
+                time.sleep(4)
                 analyzed = self._analyze_single(article)
                 results.append(analyzed)
             except Exception as e:
