@@ -37,9 +37,15 @@ HISTORY_FILE = "sent_history.json"
 
 def load_history() -> set:
     if os.path.exists(HISTORY_FILE):
-        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return set(data.get("hashes", []))
+        try:
+            with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+                content = f.read().strip()
+                if not content:
+                    return set()
+                data = json.loads(content)
+                return set(data.get("hashes", []))
+        except (json.JSONDecodeError, Exception):
+            return set()
     return set()
 
 
