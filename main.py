@@ -15,7 +15,7 @@ from google_rss_collector import GoogleRSSCollector
 
 # ── 관심 키워드 ──────────────────────────────────────────────────
 KEYWORDS = [
-    "계절근로",
+    "계절근로자",
     "외국인 선원",
     "어선 외국인",
     "양식장 외국인",
@@ -138,13 +138,13 @@ def main():
     print("AI 요약·필터링 시작...")
     analyzed = summarizer.analyze_articles(new_articles)
 
-    # 대응 필요성 높은 기사만 선별 (AI 판단)
-    important = [a for a in analyzed if a.get("importance", 0) >= 3]
-    print(f"대응 필요 기사: {len(important)}건")
+    # 전체 전송 (AI 필터링에서 무관 기사는 이미 제거됨)
+    important = analyzed
+    print(f"전송 대상 기사: {len(important)}건")
 
     if not important:
-        print("대응 필요성 높은 기사 없음.")
-        sender.send_message("📋 [뉴스봇] 오늘 언론대응이 필요한 기사가 없습니다.")
+        print("관련 기사 없음.")
+        sender.send_message("📋 [뉴스봇] 오늘 관련 기사가 없습니다.")
         return
 
     # 텔레그램 전송
