@@ -6,7 +6,7 @@
 import os
 import json
 import hashlib
-from datetime import datetime, date
+from datetime import datetime, timedelta, timezone
 from news_collector import NewsCollector
 from telegram_sender import TelegramSender
 from response_formatter import ResponseFormatter
@@ -34,25 +34,45 @@ TITLE_MUST_INCLUDE = [
 
 HISTORY_FILE = "sent_history.json"
 
+# GitHub Actions 러너는 UTC 기준이므로 날짜·시각은 모두 KST로 계산
+KST = timezone(timedelta(hours=9))
 
-def load_history() -> set:
+# 하루 1번, 자기 전(KST 21시 이후)에 전송
+# 예약을 저녁에 여러 번 걸어 두고, 21시 이후 처음 실행된 것만 전송
+SEND_FROM_HOUR = 21
+# 예약 지연으로 자정을 넘기면(00~06시) 전날 저녁분으로 보고 알림음 없이 전송
+NIGHT_UNTIL_HOUR = 6
+
+
+def now_kst() -> datetime:
+    return datetime.now(KST)
+
+
+def briefing_day(now: datetime) -> str:
+    """이번 실행이 속한 '저녁 브리핑' 날짜 (자정~06시 실행은 전날로 계산)"""
+    return str((now - timedelta(hours=NIGHT_UNTIL_HOUR)).date())
+
+
+def load_history() -> tuple:
+    """(전송한 기사 해시 집합, 마지막 실행일 KST 문자열) 반환"""
     if os.path.exists(HISTORY_FILE):
         try:
             with open(HISTORY_FILE, "r", encoding="utf-8") as f:
                 content = f.read().strip()
                 if not content:
-                    return set()
+                    return set(), ""
                 data = json.loads(content)
-                return set(data.get("hashes", []))
+                return set(data.get("hashes", [])), data.get("last_run_kst", "")
         except (json.JSONDecodeError, Exception):
-            return set()
-    return set()
+            return set(), ""
+    return set(), ""
 
 
-def save_history(hashes: set):
+def save_history(hashes: set, run_day: str):
     hash_list = list(hashes)[-500:]
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump({"hashes": hash_list, "updated": str(date.today())}, f, ensure_ascii=False, indent=2)
+        json.dump({"hashes": hash_list, "updated": str(now_kst().date()), "last_run_kst": run_day},
+                  f, ensure_ascii=False, indent=2)
 
 
 def make_hash(article: dict) -> str:
@@ -146,8 +166,23 @@ def dedup(articles: list) -> list:
 
 def main():
     print(f"\n{'='*60}")
-    print(f"뉴스봇 실행: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    now = now_kst()
+    print(f"뉴스봇 실행: {now.strftime('%Y-%m-%d %H:%M:%S')} KST")
     print(f"{'='*60}\n")
+
+    sent_hashes, last_run = load_history()
+
+    forced = os.environ.get("FORCE_RUN") == "1"  # 수동 실행은 시간·횟수 제한 없음
+    # 수동 실행은 저녁 브리핑 기록을 바꾸지 않음 (그날 저녁 브리핑이 막히지 않도록)
+    run_day = last_run if forced else briefing_day(now)
+
+    if not forced:
+        if NIGHT_UNTIL_HOUR <= now.hour < SEND_FROM_HOUR:
+            print(f"전송 시간대(KST {SEND_FROM_HOUR}시 이후) 전 → 건너뜀")
+            return
+        if last_run == run_day:
+            print(f"{run_day} 저녁 브리핑 이미 전송됨 → 건너뜀")
+            return
 
     naver_client_id = os.environ.get("NAVER_CLIENT_ID")
     naver_client_secret = os.environ.get("NAVER_CLIENT_SECRET")
@@ -159,7 +194,7 @@ def main():
     sender = TelegramSender(telegram_token, telegram_chat_id)
     formatter = ResponseFormatter()
 
-    sent_hashes = load_history()
+    silent = now.hour < NIGHT_UNTIL_HOUR
 
     # ── 1단계: 수집 ──────────────────────────────────────────────
     all_articles = []
@@ -185,16 +220,18 @@ def main():
     print(f"신규 기사: {len(new_articles)}건\n")
 
     if not new_articles:
-        sender.send_message("📭 [뉴스봇] 신규 관련 기사가 없습니다.")
+        # 신규 기사가 없으면 알림을 보내지 않고 실행 기록만 남김
+        print("신규 기사 없음 → 전송 생략")
+        save_history(sent_hashes, run_day)
         return
 
     # ── 5단계: 전송 (하나의 메시지로 합쳐서) ────────────────────
-    today_str = date.today().strftime("%Y년 %m월 %d일")
+    today_str = now.strftime("%Y년 %m월 %d일")
     
     # 헤더 + 모든 기사 합치기
     parts = [f"📰 {today_str} 언론동향 브리핑"]
     parts.append(f"법무부 출입국·외국인정책본부")
-    parts.append(f"총 {len(new_articles)}건 | {datetime.now().strftime('%H:%M')}")
+    parts.append(f"총 {len(new_articles)}건 | {now.strftime('%H:%M')}")
     parts.append("━" * 30)
     parts.append("")
 
@@ -208,10 +245,10 @@ def main():
 
     # 하나의 메시지로 전송 (텔레그램이 길면 자동 분할)
     full_message = "\n".join(parts)
-    sender.send_message(full_message)
+    sender.send_message(full_message, silent=silent)
 
     sent_hashes.update(new_hashes)
-    save_history(sent_hashes)
+    save_history(sent_hashes, run_day)
 
     print(f"\n완료: {len(new_articles)}건")
 
