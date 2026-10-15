@@ -16,9 +16,10 @@ class TelegramSender:
         self.token = token
         self.chat_id = chat_id
 
-    def send_message(self, text: str) -> bool:
+    def send_message(self, text: str, silent: bool = False) -> bool:
         """
         텔레그램 메시지 전송 (plain text, 4096자 초과 시 자동 분할)
+        silent=True면 알림음 없이 전송
         """
         # 특수문자 정리
         text = self._clean_text(text)
@@ -26,12 +27,12 @@ class TelegramSender:
         chunks = self._split_message(text, max_length=4000)
 
         for chunk in chunks:
-            self._send_chunk(chunk)
+            self._send_chunk(chunk, silent)
             time.sleep(0.5)
 
         return True
 
-    def _send_chunk(self, text: str) -> bool:
+    def _send_chunk(self, text: str, silent: bool = False) -> bool:
         """단일 메시지 청크 전송 (plain text)"""
         try:
             url = self.BASE_URL.format(token=self.token, method="sendMessage")
@@ -40,6 +41,7 @@ class TelegramSender:
                 "chat_id": self.chat_id,
                 "text": text,
                 "disable_web_page_preview": False,
+                "disable_notification": silent,
             }
 
             data = json.dumps(payload).encode("utf-8")
