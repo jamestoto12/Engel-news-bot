@@ -256,7 +256,10 @@ def main():
 
     # 하나의 메시지로 전송 (텔레그램이 길면 자동 분할)
     full_message = "\n".join(parts)
-    sender.send_message(full_message, silent=silent)
+    if not sender.send_message(full_message, silent=silent):
+        # 전송 실패 시 기록하지 않음 → 다음 실행에서 같은 기사를 다시 보냄
+        print("\n텔레그램 전송 실패 → 전송 기록을 남기지 않음")
+        raise SystemExit(1)
 
     save_history(sent_list + new_hashes, run_day)
 
