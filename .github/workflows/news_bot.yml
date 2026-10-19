@@ -1,22 +1,24 @@
 name: 법무부 출입국 언론대응 뉴스봇
 
 on:
-  # 정시 실행: 외부 예약 서비스(cron-job.org)가 매일 KST 22:00에 GitHub API로
+  # 정시 실행: 외부 예약 서비스(cron-job.org)가 매일 KST 07:00·11:30·18:00에 GitHub API로
   # workflow_dispatch 실행 명령을 보냄. 직접 명령은 예약 대기열을 거치지 않아 보통 1분 안에 시작됨.
   workflow_dispatch:
     inputs:
       force:
-        description: '강제 실행 (시간·하루 1회 제한 무시, 테스트용)'
+        description: '강제 실행 (이미 보낸 회차여도 실행, 테스트용)'
         type: boolean
         default: false
 
   # 예비 예약: cron-job.org 실행이 빠진 날을 대비. GitHub 예약은 늦게 시작되는 경우가 많아
-  # 정시 시각(22:00) 뒤로만 걸어 둠. 그날 이미 보냈으면 main.py가 건너뜀.
+  # 각 정시 시각 뒤로만 걸어 둠. 그 회차를 이미 보냈으면 main.py가 건너뜀.
   schedule:
-    # KST 22:37 = UTC 13:37
-    - cron: '37 13 * * *'
-    # KST 23:37 = UTC 14:37
-    - cron: '37 14 * * *'
+    # KST 07:37 = UTC 22:37 (전날)
+    - cron: '37 22 * * *'
+    # KST 12:07 = UTC 03:07
+    - cron: '7 3 * * *'
+    # KST 18:37 = UTC 09:37
+    - cron: '37 9 * * *'
 
 # 예약 실행이 겹쳐 중복 전송되지 않도록 순차 실행
 concurrency:
