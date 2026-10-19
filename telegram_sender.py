@@ -13,8 +13,9 @@ class TelegramSender:
     BASE_URL = "https://api.telegram.org/bot{token}/{method}"
 
     def __init__(self, token: str, chat_id: str):
-        self.token = token
-        self.chat_id = chat_id
+        # Secrets에 붙여 넣을 때 섞여 들어간 줄바꿈·공백 제거
+        self.token = (token or "").strip()
+        self.chat_id = (chat_id or "").strip()
 
     def send_message(self, text: str, silent: bool = False) -> bool:
         """
@@ -26,11 +27,12 @@ class TelegramSender:
 
         chunks = self._split_message(text, max_length=4000)
 
+        ok = True
         for chunk in chunks:
-            self._send_chunk(chunk, silent)
+            ok = self._send_chunk(chunk, silent) and ok
             time.sleep(0.5)
 
-        return True
+        return ok
 
     def _send_chunk(self, text: str, silent: bool = False) -> bool:
         """단일 메시지 청크 전송 (plain text)"""
