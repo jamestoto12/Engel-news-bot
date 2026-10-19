@@ -44,12 +44,13 @@ HISTORY_FILE = "sent_history.json"
 # GitHub Actions 러너는 UTC 기준이므로 날짜·시각은 모두 KST로 계산
 KST = timezone(timedelta(hours=9))
 
-# 하루 1번, 매일 SEND_FROM_HOUR(KST) 정각에 전송
+# 하루 3번 정해진 시각(KST)에 전송
 # 정시 실행은 외부 예약 서비스(cron-job.org)가 GitHub에 실행 명령(workflow_dispatch)을 보내서 함.
-# 이 시각 전에 실행되면 건너뛰고, 같은 날 이미 보냈으면 건너뜀 (GitHub 예비 예약과 중복 방지)
-# 전송 시각을 바꾸려면 이 값과 cron-job.org 예약 시각을 함께 바꿀 것
-SEND_FROM_HOUR = 22
-# 예약 지연으로 자정을 넘기면(00~06시) 전날 저녁분으로 보고 알림음 없이 전송
+# 실행되면 '가장 최근에 지난 전송 시각'을 찾아, 그 회차를 아직 안 보냈을 때만 전송
+# (GitHub 예비 예약이나 cron-job.org 재시도와 중복 방지)
+# 전송 시각을 바꾸려면 이 목록과 cron-job.org 예약 시각을 함께 바꿀 것
+SEND_SLOTS = ["07:00", "11:30", "18:00"]
+# 예약 지연으로 자정~06시에 실행되면 알림음 없이 전송
 NIGHT_UNTIL_HOUR = 6
 
 
@@ -57,9 +58,13 @@ def now_kst() -> datetime:
     return datetime.now(KST)
 
 
-def briefing_day(now: datetime) -> str:
-    """이번 실행이 속한 '저녁 브리핑' 날짜 (자정~06시 실행은 전날로 계산)"""
-    return str((now - timedelta(hours=NIGHT_UNTIL_HOUR)).date())
+def current_slot(now: datetime) -> str:
+    """가장 최근에 지난 전송 회차 (예: '2026-10-19 11:30'). 첫 시각 이전이면 전날 마지막 회차"""
+    slots = sorted(SEND_SLOTS)
+    passed = [s for s in slots if now.strftime("%H:%M") >= s]
+    if passed:
+        return f"{now.date()} {passed[-1]}"
+    return f"{(now - timedelta(days=1)).date()} {slots[-1]}"
 
 
 def load_history() -> tuple:
@@ -183,17 +188,13 @@ def main():
     sent_list, last_run = load_history()
     sent_hashes = set(sent_list)
 
-    forced = os.environ.get("FORCE_RUN") == "1"  # '강제 실행'을 체크한 수동 실행은 시간·횟수 제한 없음
-    # 수동 실행은 저녁 브리핑 기록을 바꾸지 않음 (그날 저녁 브리핑이 막히지 않도록)
-    run_day = last_run if forced else briefing_day(now)
+    forced = os.environ.get("FORCE_RUN") == "1"  # '강제 실행'을 체크한 수동 실행은 회차 제한 없음
+    # 수동 실행은 회차 기록을 바꾸지 않음 (다음 정시 브리핑이 막히지 않도록)
+    run_day = last_run if forced else current_slot(now)
 
-    if not forced:
-        if NIGHT_UNTIL_HOUR <= now.hour < SEND_FROM_HOUR:
-            print(f"전송 시간대(KST {SEND_FROM_HOUR}시 이후) 전 → 건너뜀")
-            return
-        if last_run == run_day:
-            print(f"{run_day} 브리핑 이미 전송됨 → 건너뜀")
-            return
+    if not forced and last_run == run_day:
+        print(f"{run_day} 회차 이미 전송됨 → 건너뜀")
+        return
 
     naver_client_id = os.environ.get("NAVER_CLIENT_ID")
     naver_client_secret = os.environ.get("NAVER_CLIENT_SECRET")
