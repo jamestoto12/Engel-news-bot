@@ -1,12 +1,5 @@
 {
   "hashes": [
-    "f489df1c0ff78af1b5ee4d5ce44dfb4e",
-    "9996bb9a8452d0a2ae7e65be5e957745",
-    "cbe9007a5da20f9f0fb5802aa6369e25",
-    "2b9cb8961b22b6aa65189e6ef9000371",
-    "ea1886f1163cf60f0e4d0e59e765cbf2",
-    "1bc9b3c1848d3b5801576d01dcaab9d6",
-    "3dae89c189fea0cbb346bb4a3c4049cf",
     "31030c2194be2a96ab648e158fde995c",
     "ef99d4692b489735763eb05c650dd371",
     "cdb9c8a29973c13836d641ea99db96c7",
@@ -499,8 +492,15 @@
     "50d852a1d65688cce4ea74e18b9acdde",
     "fce25dff5752ffe3c88a3e561fcddf6c",
     "b21310234550679009c2cc4887874719",
-    "ef06e8c9a39ad87ccc1926d56f10f62a"
+    "ef06e8c9a39ad87ccc1926d56f10f62a",
+    "98e7d6d45d23c2a4e6ba18a9246a8756",
+    "98c33ffa1fa89e169576b7bbc4d4900b",
+    "6ae1583b7e269ec52996975df5a9a2ce",
+    "1cdddce4e555a0830eea529afe92c8d4",
+    "7a983f7a74dce460bbf19358ad26c32b",
+    "2e408e05bf062c76ee4777396adb817d",
+    "03f6078baa37e1cb0795b213ffa43b20"
   ],
   "updated": "2026-11-06",
-  "last_run_kst": "2026-11-06 07:00"
+  "last_run_kst": "2026-11-06 11:30"
 }
