@@ -1,14 +1,5 @@
 {
   "hashes": [
-    "127cf81d0a1b56fd3a3dc12dec3a35e8",
-    "02e2f5051c26844aebc22177d97585db",
-    "6654202edb03f9caa814af706be2f1a5",
-    "860c156d5d0ed43b1162c7727a974c5d",
-    "348f828752041aff989c7f37a5e73b16",
-    "5995a60c47c0232293e5407d0d5ff9a4",
-    "6f757bbf6d29a6fe4eeb9f427713da86",
-    "a6f316b618e8a922c789f9eba009a90f",
-    "76b7d35df3e077234bceca5a21c8289e",
     "f245497463560ac7cd0fe4fe4d3f1c5c",
     "22c48167b1bf87419178a9030850793b",
     "07286e33dfbcae84ca8c97557afc0882",
@@ -499,8 +490,17 @@
     "768b90cd45b718ae53bda11f48d2935a",
     "4a96f1b6e1ccd4272070f5665cefa472",
     "b82ae6cebbc85470a8488301438db0aa",
-    "fd7298bd74bbfe0f95443cd03730a6a6"
+    "fd7298bd74bbfe0f95443cd03730a6a6",
+    "1d5dddfa241e31c5699c5911eb45f84e",
+    "ee4d2ed5d6a4fa8865cdbacbf98dddec",
+    "12f4bbb9c2a2f447273287f72888325c",
+    "c62262bc114df2f71b1d383de46fc3ce",
+    "0bd17af0b823594ae2e9d4341e9d56d3",
+    "0c7bdf5e150efebca611df192e24ff71",
+    "475f532a862bac0b277aacffd2e207d9",
+    "5dbe94ce6d582dc99c71d2baa939a068",
+    "3b792a053a4d3d7a86a24a92995847dc"
   ],
-  "updated": "2026-11-06",
-  "last_run_kst": "2026-11-06 18:00"
+  "updated": "2026-11-07",
+  "last_run_kst": "2026-11-07 07:00"
 }
