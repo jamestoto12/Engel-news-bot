@@ -1,9 +1,5 @@
 {
   "hashes": [
-    "69fb3468e4f0f1b5089c42726f3de96c",
-    "54bb50c4673c62f73898110d64551db4",
-    "bc68582f1d5d1880993b59693f247e79",
-    "60769d666d0987a9a9012fdb9cdeed81",
     "3a92b32970183e04652d95568c2da659",
     "a17c533f754c84ac922a78261d87930a",
     "018877a8e9ae94a403cb4351da2bb710",
@@ -499,8 +495,12 @@
     "f0fb535f282fddb5c69c6089c1cbf965",
     "586abd1c2354448588d6cc576b75ee10",
     "2b85757cc2f71be16e0440f9377131dd",
-    "d31cd0e97abd333c2bcb7af8cff16992"
+    "d31cd0e97abd333c2bcb7af8cff16992",
+    "a721256c96f817742fd912d1a6afc997",
+    "769e171bbdb4f5e349b3601ac9f159bc",
+    "0983580802c75fdeafbaa9f6fa2afdfd",
+    "d3462c1d45da4422608ee6cee939f3fa"
   ],
-  "updated": "2026-11-07",
-  "last_run_kst": "2026-11-07 18:00"
+  "updated": "2026-11-08",
+  "last_run_kst": "2026-11-08 07:00"
 }
