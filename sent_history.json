@@ -1,6 +1,5 @@
 {
   "hashes": [
-    "60e7ce67a82f6dd798b69eb45ea9fbd5",
     "71d660365ed2090a1059a99bd7ce3e58",
     "f13657f385edee2c271e9ed508fa0dae",
     "44b50a3128bbabeaa2b5ab873ba308d4",
@@ -499,8 +498,9 @@
     "3f55b2fc89492d8069df4446a75aa73b",
     "38892b4aa5cea6e6d3201f0ca686d458",
     "1e9decc99c6b11e4735057ea0920d06b",
-    "c1ea8370717a8597a15e79729c8593bf"
+    "c1ea8370717a8597a15e79729c8593bf",
+    "6595201bd45102bb8353217ab3f8fa7c"
   ],
-  "updated": "2026-11-09",
-  "last_run_kst": "2026-11-09 18:00"
+  "updated": "2026-11-10",
+  "last_run_kst": "2026-11-10 07:00"
 }
