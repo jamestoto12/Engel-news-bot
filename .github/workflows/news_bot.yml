@@ -3,8 +3,14 @@ name: 법무부 출입국 언론대응 뉴스봇
 on:
   # 정시 실행: 외부 예약 서비스(cron-job.org)가 매일 KST 07:00·11:30·18:00에 GitHub API로
   # workflow_dispatch 실행 명령을 보냄. 직접 명령은 예약 대기열을 거치지 않아 보통 1분 안에 시작됨.
+  # 긴급 알림: cron-job.org가 15분마다(매시 05·20·35·50분) inputs.mode=urgent로 실행 명령을 보냄.
   workflow_dispatch:
     inputs:
+      mode:
+        description: '실행 종류 (briefing=정시 브리핑, urgent=긴급 알림)'
+        type: choice
+        options: [briefing, urgent]
+        default: briefing
       force:
         description: '강제 실행 (이미 보낸 회차여도 실행, 테스트용)'
         type: boolean
@@ -53,6 +59,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FORCE_RUN: ${{ inputs.force && '1' || '0' }}
+          MODE: ${{ inputs.mode || 'briefing' }}
         run: |
           python main.py
 
@@ -61,5 +68,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add sent_history.json || true
-          git diff --staged --quiet || git commit -m "📰 뉴스봇 실행 기록 $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          git diff --staged --quiet || git commit -m "📰 뉴스봇 실행 기록(${{ inputs.mode || 'briefing' }}) $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
           git push || true
