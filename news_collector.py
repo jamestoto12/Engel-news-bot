@@ -66,7 +66,9 @@ class NewsCollector:
         try:
             # RFC 822 형식: "Mon, 21 Apr 2025 06:00:00 +0900"
             from email.utils import parsedate_to_datetime
-            return parsedate_to_datetime(date_str).replace(tzinfo=None)
+            # 한국 시각(tz 없는 값)으로 통일 — 구글 RSS는 GMT로 오므로 변환 필요
+            from datetime import timezone as _tz, timedelta as _td
+            return parsedate_to_datetime(date_str).astimezone(_tz(_td(hours=9))).replace(tzinfo=None)
         except Exception:
             return None
 
