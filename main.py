@@ -6,6 +6,8 @@
 import os
 import json
 import hashlib
+import re
+import html
 from datetime import datetime, timedelta, timezone
 from news_collector import NewsCollector
 from telegram_sender import TelegramSender
@@ -45,14 +47,23 @@ TITLE_MUST_INCLUDE = [
 # 15분마다 실행. 아래 '담당 분야' 단어와 '부정적 단어'가 제목에 함께 있는 최근 기사만 즉시 전송
 URGENT_KEYWORDS = ["계절근로", "계절노동", "외국인 선원", "외국인 어선원"]
 URGENT_SCOPE = ["계절근로", "계절노동", "계절 근로", "계절 노동", "외국인 선원", "외국인 어선원"]
-URGENT_NEGATIVE = [
-    "사망", "숨져", "숨진", "숨지", "사고", "부상", "중상", "폭행", "성폭", "성추행", "성희롱",
-    "이탈", "도주", "잠적", "불법", "강제출국", "출국 조치", "추방", "인권", "착취", "브로커",
-    "체불", "갑질", "학대", "차별", "논란", "문제", "의혹", "비판", "지적", "부실", "허점",
-    "구멍", "사각지대", "유명무실", "국감", "국정감사", "국회", "행정사무감사", "단독",
-    "적발", "구속", "송치", "음주", "범죄", "마약", "화재", "비리", "피해", "위반", "고발",
-    "소송", "강제", "열악", "과잉", "적자", "반발", "규탄",
+# 이 단어가 있으면 무조건 부정적 기사
+URGENT_STRONG = [
+    "사망", "숨져", "숨진", "숨지", "중상", "폭행", "성폭", "성추행", "성희롱", "강제출국", "출국 조치",
+    "추방", "착취", "학대", "구속", "송치", "음주운전", "마약", "화재", "비리", "고발", "소송", "규탄",
+    "국감", "국정감사", "단독", "체불", "갑질", "브로커",
 ]
+# 이 단어는 부정적일 수도 있지만, 아래 '긍정 맥락' 단어와 함께 나오면 제외 (예: 안전사고 예방 교육, 이탈 줄어)
+URGENT_WEAK = [
+    "사고", "부상", "이탈", "도주", "잠적", "불법", "인권", "차별", "논란", "문제", "의혹", "비판",
+    "지적", "부실", "허점", "구멍", "사각지대", "유명무실", "국회", "행정사무감사", "적발", "범죄",
+    "피해", "위반", "강제", "열악", "과잉", "적자", "반발", "질타", "도마",
+]
+POSITIVE_CONTEXT = [
+    "예방", "방지", "지킨다", "지켜", "보호", "줄어", "감소", "해소", "개선", "강화", "교육", "지원",
+    "상생", "모범", "우수", "환영", "협약", "맞손", "캠페인", "안전", "제로",
+]
+URGENT_NEGATIVE = URGENT_STRONG + URGENT_WEAK  # (하위 호환용 이름)
 URGENT_WINDOW_HOURS = 3  # 최근 몇 시간 안에 나온 기사만 긴급 대상으로 봄
 
 HISTORY_FILE = "sent_history.json"
@@ -143,33 +154,88 @@ def jaccard_sim(w1: set, w2: set) -> float:
     return len(w1 & w2) / len(w1 | w2)
 
 
-SIMILAR_THRESHOLD = 0.35
+# ── 같은 사건 판단 ─────────────────────────────────────────────
+# 언론사마다 조사·표현을 바꿔 써서("닥락성, 사업 협약" / "닥락성과 MOU 체결") 단어 비교로는 못 잡음.
+# 그래서 ① 제목에 나온 지자체·기관명(○○시·군·구, ○○농협 등)과 ② 글자 2개 단위 겹침으로 판단.
+COMMON_WORDS = ["외국인", "계절근로자", "계절근로", "계절노동자", "계절노동", "근로자", "노동자",
+                "공공형", "농가형", "베트남", "필리핀", "라오스", "캄보디아", "몽골", "키르기스스탄",
+                "농촌", "농가", "인력난", "일손", "지원", "운영", "추진", "본격", "확대", "올해", "내년"]
+ENTITY_RE = re.compile(r"[가-힣]{1,8}(?:특례시|광역시|특별시|시|군|구|농협|수협|축협|의회|교육청)(?=[\s,·\-…'\"‘’“”(]|과|와|은|는|이|가|의|에|서|도|$)")
+ENTITY_EXCLUDE = {"도시", "임시", "당시", "동시", "수시", "즉시", "역시", "다시", "일시", "정시", "외국인근로자지원센터"}
+SAME_ENTITY_DICE = 0.18   # 같은 지자체·기관이 주어인 제목끼리는 이 정도만 겹쳐도 같은 사건
+DIFF_ENTITY_DICE = 0.45   # 지자체가 다르거나 없으면 훨씬 많이 겹쳐야 같은 사건
+
+
+def title_features(title: str) -> tuple:
+    t = re.sub(r"\[[^\]]*\]|\([^)]*\)|<[^>]*>", " ", title)  # [단독]·(종합) 같은 꼬리표 제거
+    entities = {e for e in ENTITY_RE.findall(t) if e not in ENTITY_EXCLUDE}
+    core = t
+    for w in sorted(COMMON_WORDS, key=len, reverse=True):
+        core = core.replace(w, " ")
+    for e in entities:
+        core = core.replace(e, " ")
+    core = re.sub(r"[^0-9A-Za-z가-힣]", "", core)
+    bigrams = {core[i:i + 2] for i in range(len(core) - 1)}
+    # '진안군'과 '진안 ~', '농협 진안군지부'가 같은 곳을 가리키도록 어간(진안)도 둠
+    stems = {re.sub(r"(특례시|광역시|특별시|시|군|구|농협|수협|축협|의회|교육청)$", "", e) for e in entities}
+    stems = {st for st in stems if len(st) >= 2}
+    return stems, bigrams, re.sub(r"\s", "", t)
+
+
+def dice(a: set, b: set) -> float:
+    if not a or not b:
+        return 0.0
+    return 2 * len(a & b) / (len(a) + len(b))
+
+
+def same_event(f1: tuple, f2: tuple) -> bool:
+    e1, b1, t1 = f1
+    e2, b2, t2 = f2
+    if any(st in t2 for st in e1) or any(st in t1 for st in e2):
+        return dice(b1, b2) >= SAME_ENTITY_DICE
+    return dice(b1, b2) >= DIFF_ENTITY_DICE
+
+
+def is_google(art: dict) -> bool:
+    return "news.google.com" in art.get("link", "")
 
 
 def group_similar(articles: list) -> list:
     """같은 사건을 다룬 기사를 하나로 묶음. 대표 기사에 'similar'(묶인 다른 기사 목록)를 붙여 반환"""
     seen_links = set()
-    groups = []  # (대표 기사, 대표 단어집합)
+    groups = []  # (대표 기사, 묶음 안 모든 기사의 특징 목록)
     for art in articles:
         link = art.get("link", "")
         if link in seen_links:
             continue
         seen_links.add(link)
-        words = get_title_words(art.get("title", ""))
-        for rep_art, rep_words in groups:
-            if jaccard_sim(words, rep_words) >= SIMILAR_THRESHOLD:
+        feat = title_features(art.get("title", ""))
+        for rep_art, feats in groups:
+            # 대표 기사뿐 아니라 이미 묶인 기사 중 하나와 같은 사건이어도 같은 묶음
+            if any(same_event(feat, f) for f in feats):
                 rep_art["similar"].append(art)
+                feats.append(feat)
                 break
         else:
             art["similar"] = []
-            groups.append((art, words))
-    return [g[0] for g in groups]
+            groups.append((art, [feat]))
+    reps = []
+    for rep, _ in groups:
+        # 대표 링크는 구글 암호화 링크보다 네이버·언론사 링크를 우선
+        if is_google(rep):
+            alt = next((o for o in rep["similar"] if not is_google(o)), None)
+            if alt:
+                others = [rep] + [o for o in rep["similar"] if o is not alt]
+                alt["similar"] = others
+                rep = alt
+        reps.append(rep)
+    return reps
 
 
-def is_similar_to_sent(title: str, sent_word_sets: list) -> bool:
+def is_similar_to_sent(title: str, sent_features: list) -> bool:
     """이미 보낸 기사와 같은 사건인지 (다른 언론사가 다른 제목으로 쓴 경우 포함)"""
-    words = get_title_words(title)
-    return any(jaccard_sim(words, w) >= SIMILAR_THRESHOLD for w in sent_word_sets)
+    f = title_features(title)
+    return any(same_event(f, sf) for sf in sent_features)
 
 
 def published_within(article: dict, hours: int, now: datetime) -> bool:
@@ -196,9 +262,9 @@ def pick_new(articles: list, title_ok, history: dict) -> list:
     filtered = [a for a in articles if title_ok(a.get("title", ""))]
     print(f"제목 필터 후: {len(filtered)}건")
     sent_hashes = set(history["hashes"])
-    sent_words = [get_title_words(t) for t in history["titles"]]
+    sent_features = [title_features(t) for t in history["titles"]]
     fresh = [a for a in filtered
-             if make_hash(a) not in sent_hashes and not is_similar_to_sent(a.get("title", ""), sent_words)]
+             if make_hash(a) not in sent_hashes and not is_similar_to_sent(a.get("title", ""), sent_features)]
     print(f"이미 보낸 기사·같은 사건 제외 후: {len(fresh)}건")
     fresh.sort(key=lambda a: a.get("pub_datetime") or datetime.min, reverse=True)
     grouped = group_similar(fresh)
@@ -213,17 +279,32 @@ def record_sent(history: dict, groups: list):
         history["titles"].append(art.get("title", ""))
 
 
-def format_group(formatter, art: dict, index: int) -> str:
-    msg = formatter.format_response(art, index=index)
+def esc(text: str) -> str:
+    return html.escape(text or "", quote=True)
+
+
+def format_group(art: dict, index: int) -> str:
+    """제목을 누르면 기사가 열리게(HTML 링크) 두 줄로 표시"""
+    title = esc(art.get("title", ""))
+    link = esc(art.get("link", ""))
+    dt = art.get("pub_datetime")
+    when = dt.strftime("%m/%d %H:%M") if dt else ""
+    line2 = f"   {esc(art.get('source', ''))} {when}"
     others = art.get("similar", [])
     if others:
         names = list(dict.fromkeys(o.get("source", "") for o in others if o.get("source")))
-        msg += f"\n   ➕ 같은 내용 {len(others)}건 더" + (f" ({', '.join(names[:3])}{' 등' if len(names) > 3 else ''})" if names else "")
-    return msg
+        line2 += f" · 같은 보도 {len(others)}건 더" + (f"({esc(', '.join(names[:2]))}{' 등' if len(names) > 2 else ''})" if names else "")
+    return f'{index}. <a href="{link}">{title}</a>\n{line2}'
+
+
+def is_negative(title: str) -> bool:
+    if any(k in title for k in URGENT_STRONG):
+        return True
+    return any(k in title for k in URGENT_WEAK) and not any(k in title for k in POSITIVE_CONTEXT)
 
 
 def is_urgent(title: str) -> bool:
-    return any(k in title for k in URGENT_SCOPE) and any(k in title for k in URGENT_NEGATIVE)
+    return any(k in title for k in URGENT_SCOPE) and is_negative(title)
 
 
 def run_urgent(now, history, collector, sender, formatter):
@@ -234,13 +315,13 @@ def run_urgent(now, history, collector, sender, formatter):
     if not groups:
         print("긴급 기사 없음 → 전송 생략")
         return
-    parts = [f"🚨 [긴급] 대응 검토 필요 기사 {len(groups)}건 | {now.strftime('%m/%d %H:%M')}", "━" * 20, ""]
+    parts = [f"🚨 <b>[긴급] 대응 검토 필요 {len(groups)}건</b> | {now.strftime('%m/%d %H:%M')}", ""]
     for i, art in enumerate(groups, 1):
-        parts.append(format_group(formatter, art, i))
-        parts.append("")
+        parts.append(format_group(art, i))
         print(f"  긴급: {art.get('title','')[:40]}...")
-    parts.append("※ 대응이 필요하면 링크를 Claude에 붙이고 '대응 필요'라고 하세요 (사전보고 초안 작성)")
-    if not sender.send_message("\n".join(parts), silent=now.hour < NIGHT_UNTIL_HOUR):
+    parts.append("")
+    parts.append("※ 대응 필요 시 링크를 Claude에 붙이고 '대응 필요'")
+    if not sender.send_message("\n".join(parts), silent=now.hour < NIGHT_UNTIL_HOUR, html=True):
         print("\n텔레그램 전송 실패 → 전송 기록을 남기지 않음")
         raise SystemExit(1)
     record_sent(history, groups)
@@ -285,17 +366,26 @@ def main():
         return
 
     # ── 3단계: 전송 (하나의 메시지로 합쳐서) ──
-    parts = [f"📰 {now.strftime('%Y년 %m월 %d일')} 언론동향 브리핑"]
-    parts.append("법무부 출입국·외국인정책본부")
-    parts.append(f"총 {len(groups)}건 | {now.strftime('%H:%M')}")
-    parts.append("━" * 30)
-    parts.append("")
-    for i, art in enumerate(groups, 1):
-        parts.append(format_group(formatter, art, i))
+    negative = [a for a in groups if is_negative(a.get("title", ""))]
+    normal = [a for a in groups if not is_negative(a.get("title", ""))]
+    total_raw = sum(1 + len(a.get("similar", [])) for a in groups)
+    parts = [f"📰 <b>{now.strftime('%m월 %d일 %H:%M')} 언론동향</b> | {len(groups)}건 (기사 {total_raw}건 묶음)", ""]
+    i = 0
+    if negative:
+        parts.append(f"⚠️ <b>주의 ({len(negative)})</b>")
+        for art in negative:
+            i += 1
+            parts.append(format_group(art, i))
         parts.append("")
+    if normal:
+        parts.append(f"📌 <b>일반 ({len(normal)})</b>")
+        for art in normal:
+            i += 1
+            parts.append(format_group(art, i))
+    for art in negative + normal:
         print(f"  포함: {art.get('title','')[:40]}...")
 
-    if not sender.send_message("\n".join(parts), silent=now.hour < NIGHT_UNTIL_HOUR):
+    if not sender.send_message("\n".join(parts), silent=now.hour < NIGHT_UNTIL_HOUR, html=True):
         # 전송 실패 시 기록하지 않음 → 다음 실행에서 같은 기사를 다시 보냄
         print("\n텔레그램 전송 실패 → 전송 기록을 남기지 않음")
         raise SystemExit(1)

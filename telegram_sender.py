@@ -17,7 +17,7 @@ class TelegramSender:
         self.token = (token or "").strip()
         self.chat_id = (chat_id or "").strip()
 
-    def send_message(self, text: str, silent: bool = False) -> bool:
+    def send_message(self, text: str, silent: bool = False, html: bool = False) -> bool:
         """
         텔레그램 메시지 전송 (plain text, 4096자 초과 시 자동 분할)
         silent=True면 알림음 없이 전송
@@ -29,22 +29,35 @@ class TelegramSender:
 
         ok = True
         for chunk in chunks:
-            ok = self._send_chunk(chunk, silent) and ok
+            ok = self._send_chunk(chunk, silent, html) and ok
             time.sleep(0.5)
 
         return ok
 
-    def _send_chunk(self, text: str, silent: bool = False) -> bool:
-        """단일 메시지 청크 전송 (plain text)"""
+    def _send_chunk(self, text: str, silent: bool = False, html: bool = False) -> bool:
+        """단일 메시지 청크 전송. html=True면 제목에 링크를 거는 HTML 모드, 실패하면 일반 글자로 다시 보냄"""
+        if html:
+            if self._post(text, silent, parse_mode="HTML", preview=False):
+                return True
+            import re, html as _h
+            plain = re.sub(r'<a href="([^"]*)">(.*?)</a>', lambda m: f"{m.group(2)}\n   {_h.unescape(m.group(1))}", text)
+            plain = _h.unescape(re.sub(r"<[^>]+>", "", plain))
+            print("  [텔레그램] HTML 전송 실패 → 일반 글자로 재전송")
+            return self._post(plain, silent)
+        return self._post(text, silent)
+
+    def _post(self, text: str, silent: bool, parse_mode: str = "", preview: bool = True) -> bool:
         try:
             url = self.BASE_URL.format(token=self.token, method="sendMessage")
 
             payload = {
                 "chat_id": self.chat_id,
                 "text": text,
-                "disable_web_page_preview": False,
+                "disable_web_page_preview": not preview,
                 "disable_notification": silent,
             }
+            if parse_mode:
+                payload["parse_mode"] = parse_mode
 
             data = json.dumps(payload).encode("utf-8")
             req = urllib.request.Request(
