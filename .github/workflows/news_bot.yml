@@ -25,6 +25,9 @@ on:
     - cron: '7 3 * * *'
     # KST 18:37 = UTC 09:37
     - cron: '37 9 * * *'
+    # 긴급 알림: 15분마다(매시 07·22·37·52분) — 아래 MODE에서 이 예약이면 urgent로 실행
+    # GitHub 예약은 몇 분~수십 분 밀릴 수 있음. 더 정확히 하려면 cron-job.org로 mode=urgent 호출 추가
+    - cron: '7,22,37,52 * * * *'
 
 # 예약 실행이 겹쳐 중복 전송되지 않도록 순차 실행
 concurrency:
@@ -59,7 +62,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FORCE_RUN: ${{ inputs.force && '1' || '0' }}
-          MODE: ${{ inputs.mode || 'briefing' }}
+          MODE: ${{ github.event.schedule == '7,22,37,52 * * * *' && 'urgent' || inputs.mode || 'briefing' }}
         run: |
           python main.py
 
@@ -68,5 +71,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add sent_history.json || true
-          git diff --staged --quiet || git commit -m "📰 뉴스봇 실행 기록(${{ inputs.mode || 'briefing' }}) $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          git diff --staged --quiet || git commit -m "📰 뉴스봇 실행 기록(${{ github.event.schedule == '7,22,37,52 * * * *' && 'urgent' || inputs.mode || 'briefing' }}) $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
           git push || true
