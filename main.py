@@ -341,7 +341,7 @@ def run_urgent(now, history, collector, sender, formatter):
         parts.append(format_group(art, i))
         print(f"  긴급: {art.get('title','')[:40]}...")
     parts.append("")
-    parts.append("※ 사전보고가 필요하면 이 메시지에 답장으로 '1 대응'처럼 보내세요")
+    parts.append("※ 사전보고: '1 대응'처럼 보내면 Claude에 붙여 넣을 문구를 드립니다")
     if not sender.send_message("\n".join(parts), silent=now.hour < NIGHT_UNTIL_HOUR, html=True):
         print("\n텔레그램 전송 실패 → 전송 기록을 남기지 않음")
         raise SystemExit(1)
@@ -405,7 +405,7 @@ def main():
             i += 1
             parts.append(format_group(art, i))
     parts.append("")
-    parts.append("※ 사전보고 초안: '1, 2 대응'처럼 보내세요")
+    parts.append("※ 사전보고: '1, 2 대응'처럼 보내면 Claude에 붙여 넣을 문구를 드립니다")
     for art in negative + normal:
         print(f"  포함: {art.get('title','')[:40]}...")
 
