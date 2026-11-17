@@ -20,7 +20,7 @@ HISTORY_FILE = "sent_history.json"
 LISTEN_SECONDS = int(os.environ.get("LISTEN_MINUTES", "13")) * 60
 MAX_AGE_SECONDS = 6 * 3600  # 리스너가 꺼져 있던 사이 온 명령은 6시간 안의 것만 처리
 
-HELP = ("사용법: 브리핑·긴급 알림의 기사 번호와 함께 '대응'이라고 보내세요.\n"
+HELP = ("사용법: 브리핑·긴급 알림의 기사 번호와 함께 '대응'이라고 보내세요. Claude에 붙여 넣을 문구를 보내 드립니다.\n"
         "예) 1, 2 대응  /  3번 대응\n"
         "알림 메시지에 답장으로 보내면 그 메시지의 번호로, 그냥 보내면 가장 최근 알림의 번호로 찾습니다.")
 
@@ -54,6 +54,17 @@ def parse_numbers(text: str) -> list:
     return list(dict.fromkeys(n for n in nums if 0 < n < 100))
 
 
+def claude_request(item: dict) -> str:
+    """Claude 대화창에 붙여 넣을 요청 문구. 같은 보도 링크는 본문 확인용으로 함께 줌 (구글 링크는 뒤로)"""
+    links = sorted(dict.fromkeys(item.get("links", [])), key=lambda u: "news.google.com" in u)
+    lines = ["대응 필요 — 언론 사전보고 초안 작성해줘",
+             f"기사: 「{item.get('title', '')}」({item.get('source', '')}, {item.get('date', '')}.)",
+             f"링크: {links[0] if links else ''}"]
+    if len(links) > 1:
+        lines.append("같은 보도: " + " ".join(links[1:3]))
+    return "\n".join(lines)
+
+
 def handle(sender: TelegramSender, gemini_key: str, msg: dict):
     text = (msg.get("text") or "").strip()
     sender.reply_to = msg.get("message_id")
@@ -73,17 +84,15 @@ def handle(sender: TelegramSender, gemini_key: str, msg: dict):
         sender.send_message(f"{entry['sent_at']} 알림에는 {len(items)}번까지만 있습니다. ({', '.join(map(str, bad))}번 제외)")
     if not nums:
         return
-    sender.send_message(f"{entry['sent_at']} 알림의 {', '.join(f'{n}번' for n in nums)} 사전보고 초안 작성 중입니다. (건당 1분 안팎)")
+    # 돈이 드는 자동 초안 대신, Claude에 그대로 붙여 넣을 문구를 메시지 하나씩으로 보냄 (길게 눌러 복사)
     for n in nums:
-        item = items[n - 1]
-        try:
-            draft = write_prereport(gemini_key, item)
-            sender.send_message(f"[{n}번 사전보고 초안]\n\n{draft}")
-        except Exception as e:
-            print(f"  [초안 실패] {n}번: {e}")
-            sender.send_message(
-                f"[{n}번] 초안 자동 작성에 실패했습니다. Claude에 아래 링크를 붙이고 '대응 필요'라고 해 주세요.\n"
-                f"{item.get('title', '')}\n{(item.get('links') or [''])[0]}")
+        sender.send_message(claude_request(items[n - 1]))
+    if os.environ.get("AUTO_DRAFT") == "1" and gemini_key:  # 필요할 때만 켜는 Gemini 자동 초안 (기본 꺼짐)
+        for n in nums:
+            try:
+                sender.send_message(f"[{n}번 사전보고 자동 초안]\n\n{write_prereport(gemini_key, items[n - 1])}")
+            except Exception as e:
+                print(f"  [초안 실패] {n}번: {e}")
 
 
 def main():
