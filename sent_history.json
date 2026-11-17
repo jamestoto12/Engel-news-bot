@@ -563,7 +563,21 @@
     "139b72e9fa0a2dc9ae25efda32893c77",
     "2d0397e90db084c6ad7ea1c3e35d5d3b",
     "3dde0916f3e701a9835ca2aa96ffb33c",
-    "4372cab1bec9e0fa7de2649c8377d2ec"
+    "4372cab1bec9e0fa7de2649c8377d2ec",
+    "4c0af471ecfe900374bc12b3a08cfb22",
+    "4df983671387248be2ae08bed37f5ff4",
+    "85d3e05a4fa462eca09d24c31cec4a91",
+    "98e335279a48b457d736e08c5347f0c2",
+    "6d5fa0392312496d0fe8e9284f03d613",
+    "6e58fadb65ee9441eda6bda9f1d1715a",
+    "180f680c88a6488266b35f2197a15cf5",
+    "4148cc4c66a809d5024c42dd2ef6120b",
+    "9eb585f840e7a8dacc93c808e4b2784f",
+    "67c8041aa65339cce5247d683062b779",
+    "6fab4197288f1866be395d72853074cc",
+    "91a48eb58d8d15d21b5014efcc02c276",
+    "a59c15b707f608731388ba1ae54b6b36",
+    "7bf4ba6c19f1ba5d3c4c114218fc4a35"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -597,10 +611,18 @@
     "4년 연속 우수지자체… 태백시 외국인 계절근로자 정책 전국 인정받았다",
     "양주시, 공공형 계절근로 2026년 사업 종료…138농가 지원",
     "제주 감귤 수확철 인력난 해소…베트남 계절근로자 39명 현장 투입",
-    "계절근로자 웃게 하니 ‘야반 도주’ 확 줄어"
+    "계절근로자 웃게 하니 ‘야반 도주’ 확 줄어",
+    "법무부 통제 대상화에 계절노동자 인권 사각지대 몰려…개별법으로 보...",
+    "외국인 근로자 정착 돕는 '조기적응 프로그램'",
+    "함양군, 베트남 현지에서 계절 근로자 직접 뽑는다",
+    "밭으로 달려간 정선군 공직자·외국인 근로자…농번기 일손 덜었다",
+    "[태백시] 외국인 계절근로자 운영 공모전 '전국 우수상' 쾌거",
+    "정선군, 농번기 일손 부족에 힘 보태…계절근로자·일손돕기 확대",
+    "군산시, 베트남 다낭서 계절근로자 60명 도입 추진",
+    "김해시, 외국인 계절근로자 인권·안전 실태 점검"
   ],
   "updated": "2026-11-17",
-  "last_run_kst": "2026-11-17 11:30",
+  "last_run_kst": "2026-11-17 18:00",
   "lists": [
     {
       "message_ids": [
@@ -712,6 +734,84 @@
           "date": "11.16",
           "links": [
             "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JUUFTQUk4WFFPRDdyeEhxazJuWHgtNDVDSzFXU09WazR0cjA0bTNyOFBfRURkVmlDR0s2QVNQOTg3cjdZcE9vQzBvbzJ5bWFTVHg2WmtJQ0E3TDZUcU8zbS0zNExZWExIUXJOUFoycVV6bFkwOUHSAWZBVV95cUxNb1FIMUhHRUFldjk0enV5c3M5VDg0QUs4UWJiRU9oNDBobk1kMHFPZEprOUtweEU3WG1DdEVFdXFhSWdKeHNnMUlGX3EzRkZSa1JmM21WYlBQWkpVZjJGeG4zYjZMQlE?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1618
+      ],
+      "sent_at": "2026-11-17 18:00",
+      "items": [
+        {
+          "title": "법무부 통제 대상화에 계절노동자 인권 사각지대 몰려…개별법으로 보...",
+          "source": "idomin.com",
+          "date": "11.17",
+          "links": [
+            "https://www.idomin.com/news/articleView.html?idxno=2019844",
+            "https://news.google.com/rss/articles/CBMiakFVX3lxTFBTTlNOV3JvS3FwYVA1dm5wemJrSnRtdFpvb1l4V19kbThYbWxJYkhKYmhTdUNaYWh0V2FNTG5NTmJWVEZVNTMzdDZYMHlpR1U1YkxsSmV3bUx2WmxDRGFRdWJVeHZSU3BVRWc?oc=5"
+          ]
+        },
+        {
+          "title": "외국인 근로자 정착 돕는 '조기적응 프로그램'",
+          "source": "jejumaeil.net",
+          "date": "11.17",
+          "links": [
+            "https://www.jejumaeil.net/news/articleView.html?idxno=406822"
+          ]
+        },
+        {
+          "title": "함양군, 베트남 현지에서 계절 근로자 직접 뽑는다",
+          "source": "news1.kr",
+          "date": "11.17",
+          "links": [
+            "https://n.news.naver.com/mnews/article/421/0009294330?sid=102",
+            "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBiQ3IzR1R6ZWdBOHFabVN0UUgxYnlEeEdvNmk0RWx5XzdXQUZKSFhpdFB6RXYwZ2hBc2c1dWttZkI0cDhyblFUdkVORFdLYTRWRmVvWm00c19CNDdLVzZJ?oc=5"
+          ]
+        },
+        {
+          "title": "밭으로 달려간 정선군 공직자·외국인 근로자…농번기 일손 덜었다",
+          "source": "pressian.com",
+          "date": "11.17",
+          "links": [
+            "https://n.news.naver.com/mnews/article/002/0002466243?sid=102",
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjcUdpMi1kTDRHdlRPaTd6R0tleHlJeEhkdGJ5MjlBcFJNOGliWnFtTmRjclV4a0Rlbmc5MjBzMHR4YnJGOTVLOW16Wk84d3ZuR2NtUjlwczFvUE4wT1M5ZmNfemZXYTc2VDJN?oc=5"
+          ]
+        },
+        {
+          "title": "[태백시] 외국인 계절근로자 운영 공모전 '전국 우수상' 쾌거",
+          "source": "연리지TV",
+          "date": "11.17",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiaEFVX3lxTE01M1NiLTZZUDVmRzl5TlZTWnloYVBXTGFSZmFLRkpDLV9xM241RHAzNjR2ZmFrQjVqMFVFdk5rZnZTcWhoYXgwTWotTjRIQ0xNd2lNeEZNcVAtSExmV2MyVjZSN1JmemZy?oc=5"
+          ]
+        },
+        {
+          "title": "정선군, 농번기 일손 부족에 힘 보태…계절근로자·일손돕기 확대",
+          "source": "enewstoday.co.kr",
+          "date": "11.17",
+          "links": [
+            "http://www.enewstoday.co.kr/news/articleView.html?idxno=2493547",
+            "https://news.google.com/rss/articles/CBMicEFVX3lxTE1tamNVZmlSNFE2dlRzVGZkblYwQzEtU3VtOVVDai1aZkVHc1ZSekFyN3RtOHYzRk5RZmpLaHkza2tiOHMwVWxxT3pLbVVfZnFoUWZDNWxIemNOczY0MEVUOVJqMVlodGRacDNVX0Q3YUnSAXRBVV95cUxPbDdIN1N0QTVGa2Rvckl1ZmNrdWd4Q2lPVVRiOC03ZnJWZXBjNjlIRi1EdmhGN3FTel91Q2JJYXA4QzlqZVBpUEtUVmM3aEhwaTNPd2M1ckd5aHBpRHNRWkFwWk9VOXpFcFU0V3Rja044YnhzaA?oc=5"
+          ]
+        },
+        {
+          "title": "군산시, 베트남 다낭서 계절근로자 60명 도입 추진",
+          "source": "jeollailbo.com",
+          "date": "11.17",
+          "links": [
+            "http://www.jeollailbo.com/news/articleView.html?idxno=816918",
+            "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PLTF2YmhheFFkTlRqQ0VTaThKdVoteEN6YzlaQk1WUWdPcjZBSDNBTHVRUWJubjBFWmtYWURBM2xYaTZxbFdGeXBEZlRnUXNtVk1nZmpiZWIxa3Zwa3ZGUkpCSmdaVlB2Y2xVM2tUZjLSAXBBVV95cUxOTy0xdmJoYXhRZE5UakNFU2k4SnVaLXhDemM5WkJNVlFnT3I2QUgzQUx1UVFibm4wRVprWFlEQTNsWGk2cWxXRnlwRGZUZ1FzbVZNZ2ZqYmViMWt2cGt2RlJKQkpnWlZQdmNsVTNrVGYy?oc=5",
+            "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9SYkwyV2NJRHM2M2YxNFcweFZFc1hqUzdCWkM0UmF1ZkRuV2dOUldCYnpUMEJQb2lMRV9nUm81OU92dVZIUVdlZXVITmVwQ29aSjNOeXh0Tkl1X0czcjkyQ0tiaw?oc=5"
+          ]
+        },
+        {
+          "title": "김해시, 외국인 계절근로자 인권·안전 실태 점검",
+          "source": "영남매일",
+          "date": "11.17",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmZHdzNUMyVUI3NVJOenZ3ZENvT3dGbFN3ZlJHcE9ZWWJnRmRiZURpOGFtd2FLT3NydmE0NDFENUR4eVplYlUwemxhUDFzZEhyaWVNYzBqbS1sOGd4TTdNdW1kX1ZqTGs?oc=5"
           ]
         }
       ]
