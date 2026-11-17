@@ -109,6 +109,7 @@ def load_history() -> dict:
         "hashes": list(data.get("hashes", [])),
         "titles": list(data.get("titles", [])),
         "last_run_kst": data.get("last_run_kst", ""),
+        "lists": list(data.get("lists", [])),
     }
 
 
@@ -120,6 +121,8 @@ def save_history(history: dict):
             "titles": list(dict.fromkeys(history["titles"]))[-400:],
             "updated": str(now_kst().date()),
             "last_run_kst": history["last_run_kst"],
+            # 텔레그램에서 "1, 2 대응"이라고 하면 번호로 기사를 찾기 위한 최근 목록 (최근 30개 메시지)
+            "lists": history.get("lists", [])[-30:],
         }, f, ensure_ascii=False, indent=2)
 
 
@@ -272,6 +275,24 @@ def pick_new(articles: list, title_ok, history: dict) -> list:
     return grouped
 
 
+def record_list(history: dict, message_ids: list, ordered: list, now):
+    """보낸 메시지의 번호별 기사 목록을 저장 (리스너가 '1, 2 대응'을 처리할 때 씀)"""
+    items = []
+    for art in ordered:
+        dt = art.get("pub_datetime")
+        items.append({
+            "title": art.get("title", ""),
+            "source": art.get("source", ""),
+            "date": dt.strftime("%m.%d") if dt else "",
+            "links": [a.get("link", "") for a in [art] + art.get("similar", [])][:6],
+        })
+    history.setdefault("lists", []).append({
+        "message_ids": [m for m in message_ids if m],
+        "sent_at": now.strftime("%Y-%m-%d %H:%M"),
+        "items": items,
+    })
+
+
 def record_sent(history: dict, groups: list):
     for art in groups:
         for a in [art] + art.get("similar", []):
@@ -320,11 +341,12 @@ def run_urgent(now, history, collector, sender, formatter):
         parts.append(format_group(art, i))
         print(f"  긴급: {art.get('title','')[:40]}...")
     parts.append("")
-    parts.append("※ 대응 필요 시 링크를 Claude에 붙이고 '대응 필요'")
+    parts.append("※ 사전보고가 필요하면 이 메시지에 답장으로 '1 대응'처럼 보내세요")
     if not sender.send_message("\n".join(parts), silent=now.hour < NIGHT_UNTIL_HOUR, html=True):
         print("\n텔레그램 전송 실패 → 전송 기록을 남기지 않음")
         raise SystemExit(1)
     record_sent(history, groups)
+    record_list(history, sender.sent_message_ids, groups, now)
     save_history(history)
     print(f"\n긴급 전송 완료: {len(groups)}건")
 
@@ -382,6 +404,8 @@ def main():
         for art in normal:
             i += 1
             parts.append(format_group(art, i))
+    parts.append("")
+    parts.append("※ 사전보고 초안: '1, 2 대응'처럼 보내세요")
     for art in negative + normal:
         print(f"  포함: {art.get('title','')[:40]}...")
 
@@ -391,6 +415,7 @@ def main():
         raise SystemExit(1)
 
     record_sent(history, groups)
+    record_list(history, sender.sent_message_ids, negative + normal, now)
     save_history(history)
     print(f"\n완료: {len(groups)}건")
 

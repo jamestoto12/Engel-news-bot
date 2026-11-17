@@ -16,12 +16,15 @@ class TelegramSender:
         # Secrets에 붙여 넣을 때 섞여 들어간 줄바꿈·공백 제거
         self.token = (token or "").strip()
         self.chat_id = (chat_id or "").strip()
+        self.sent_message_ids = []  # 마지막 send_message로 보낸 메시지 번호 (답장으로 기사 번호를 찾을 때 씀)
+        self.reply_to = None
 
     def send_message(self, text: str, silent: bool = False, html: bool = False) -> bool:
         """
         텔레그램 메시지 전송 (plain text, 4096자 초과 시 자동 분할)
         silent=True면 알림음 없이 전송
         """
+        self.sent_message_ids = []
         # 특수문자 정리
         text = self._clean_text(text)
 
@@ -58,6 +61,9 @@ class TelegramSender:
             }
             if parse_mode:
                 payload["parse_mode"] = parse_mode
+            if self.reply_to:
+                payload["reply_to_message_id"] = self.reply_to
+                payload["allow_sending_without_reply"] = True
 
             data = json.dumps(payload).encode("utf-8")
             req = urllib.request.Request(
@@ -69,6 +75,8 @@ class TelegramSender:
 
             with urllib.request.urlopen(req, timeout=15) as resp:
                 result = json.loads(resp.read().decode("utf-8"))
+                if result.get("ok"):
+                    self.sent_message_ids.append(result.get("result", {}).get("message_id"))
                 return result.get("ok", False)
 
         except Exception as e:
