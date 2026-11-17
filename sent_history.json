@@ -577,7 +577,17 @@
     "6fab4197288f1866be395d72853074cc",
     "91a48eb58d8d15d21b5014efcc02c276",
     "a59c15b707f608731388ba1ae54b6b36",
-    "7bf4ba6c19f1ba5d3c4c114218fc4a35"
+    "7bf4ba6c19f1ba5d3c4c114218fc4a35",
+    "bb28203231e674106b93d4b7025cbb5e",
+    "ccb72803469e9148058b5543692bcf15",
+    "e4f0cfa992bae3c7c17e9c1600991893",
+    "cf4af5b85709419a7d7b42e6ab9ffd11",
+    "8bc37a513d2671ba285f7d3dd5f9b90b",
+    "34d12adda86e68607a78aec32c7def6b",
+    "de1b877087a73db34671e54750142875",
+    "b60ac370c2e7946f8eeb4401f8d34120",
+    "0cb716635851e766db4670151553338d",
+    "bacbff7baa341da6c1506cc278ca4ea2"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -619,10 +629,18 @@
     "[태백시] 외국인 계절근로자 운영 공모전 '전국 우수상' 쾌거",
     "정선군, 농번기 일손 부족에 힘 보태…계절근로자·일손돕기 확대",
     "군산시, 베트남 다낭서 계절근로자 60명 도입 추진",
-    "김해시, 외국인 계절근로자 인권·안전 실태 점검"
+    "김해시, 외국인 계절근로자 인권·안전 실태 점검",
+    "[농업 혁신 현장] AI 번역 활용 계절노동자 교육…‘인력 부담’ 덜고 ‘...",
+    "정선군, 계절근로자·일손돕기 병행 농촌 인력난 대응",
+    "호주서 워홀 1년 더 하려면 농촌서 4개월 일해야…인력난에 비자 조건 ...",
+    "붕따우 앞바다에서 건강 문제를 겪은 외국인 선원들을 구하기 위한 구조 작업이 밤새도록 계속되었습니다.",
+    "애월농협, 공공형 계절근로자 대상 안전교육 및 문화체험 실시 ​",
+    "외국인 선원들은 응급 치료를 위해 즉시 육지로 이송되었습니다.",
+    "붕따우 해역에서 중병에 걸린 외국인 선원 구조 성공",
+    "올해 마지막 외국인력 고용허가 6,699명…23일부터 신청"
   ],
-  "updated": "2026-11-17",
-  "last_run_kst": "2026-11-17 18:00",
+  "updated": "2026-11-18",
+  "last_run_kst": "2026-11-18 07:00",
   "lists": [
     {
       "message_ids": [
@@ -812,6 +830,80 @@
           "date": "11.17",
           "links": [
             "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmZHdzNUMyVUI3NVJOenZ3ZENvT3dGbFN3ZlJHcE9ZWWJnRmRiZURpOGFtd2FLT3NydmE0NDFENUR4eVplYlUwemxhUDFzZEhyaWVNYzBqbS1sOGd4TTdNdW1kX1ZqTGs?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1627
+      ],
+      "sent_at": "2026-11-18 07:00",
+      "items": [
+        {
+          "title": "붕따우 앞바다에서 건강 문제를 겪은 외국인 선원들을 구하기 위한 구조 작업이 밤새도록 계속되었습니다.",
+          "source": "Vietnam.vn",
+          "date": "11.17",
+          "links": [
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ25sUmRfVzh2NE5zNW5TZWxHM201MDktc0VISWhZMXJ3dzJxMnplUk9QYV9PNUw5cHhQcDU4bGJMS1Y4eVNDREdJb3lqNi1QLXZiN3hPZ0FMWldUUGRzUy02cHhUZVA4WDNkZExyM0xRVUhYRUhkOFBGOVBqWkhHZl91M2pQTWNRVDVEcHBOV0M0OVNpOE84RXQtYUNHOGVWbVJrQTdpdw?oc=5"
+          ]
+        },
+        {
+          "title": "[농업 혁신 현장] AI 번역 활용 계절노동자 교육…‘인력 부담’ 덜고 ‘...",
+          "source": "nongmin.com",
+          "date": "11.18",
+          "links": [
+            "https://n.news.naver.com/mnews/article/662/0000108708?sid=102",
+            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xRmxHdmhoNUNzQ2FPUGpWOENCVUVCNWRwVGQtVHpCZ0R1bnNkdlNqOHoxNXdOTlIzSGFpMWVjcGxDNzg4V29ialBFdFhfTWhxWUJJOW5RS2ZjQQ?oc=5"
+          ]
+        },
+        {
+          "title": "정선군, 계절근로자·일손돕기 병행 농촌 인력난 대응",
+          "source": "kado.net",
+          "date": "11.18",
+          "links": [
+            "https://n.news.naver.com/mnews/article/654/0000211827?sid=102"
+          ]
+        },
+        {
+          "title": "호주서 워홀 1년 더 하려면 농촌서 4개월 일해야…인력난에 비자 조건 ...",
+          "source": "dailian.co.kr",
+          "date": "11.17",
+          "links": [
+            "https://n.news.naver.com/mnews/article/119/0003156366?sid=104",
+            "https://news.google.com/rss/articles/CBMiggJBVV95cUxQaGFQc3NLV2ZFQWszS2trVG5jb1lMUnJwOU02Qkhaa3R2YWhFOHVwWDFQUlFLRThCTVN4bXVzLV9Pc25EQUczc1RDX1pDblp6dUtOQkVQNVgyNlF2amVsVGtTTi1kWTdUalp6X1dVangwTURmb0RVaHR4b1lxOWpsNC11TVRjVW5ISzZGRi1RMTJ1UF9qSkt1ZjU0Q0VtTWtrWkpoVXRnbnUxcjZpUlE1d3JLc3Y3SjJwdk5JZEVGY1p0WEV2MjFxbzJpd0dkSy1RdUhMOUNXUTFjc0dHTEV4azZCWUdkdmp5Z0NRZnJsQ21hN0dqbVhpTTJWcnF1U1FUbUE?oc=5"
+          ]
+        },
+        {
+          "title": "애월농협, 공공형 계절근로자 대상 안전교육 및 문화체험 실시 ​",
+          "source": "지금제주",
+          "date": "11.17",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE9iZU5YbGVodEJzcG1nbWZQX2Z3NlV0YXJZU0ktSFBjN2poX1ZNbkV2WHdvM3hiZXVDbkN6NXpHVjI1Um9hRzR3aWtxTEdHY2lvZk5MTHhlY2FDQWlYUjlEUHhoN2wtZU52WXJrZGZR?oc=5"
+          ]
+        },
+        {
+          "title": "외국인 선원들은 응급 치료를 위해 즉시 육지로 이송되었습니다.",
+          "source": "Vietnam.vn",
+          "date": "11.17",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWTQwZlM4Tm54bFZidE9ldXloeEM4SDZqVldHLWZLQXpBeDN3Q2tVbS1JYWt5UG96anNMSUcySGVvVXU3dnB1U0xzV1JzTGJEbXV5WFY3eGQyUGVGU09Uak9JVG02YzN4dHVDQlpJbjFyQXJ6dGFDa1pFQmU0WTB0cVZB?oc=5"
+          ]
+        },
+        {
+          "title": "붕따우 해역에서 중병에 걸린 외국인 선원 구조 성공",
+          "source": "Laodong.vn",
+          "date": "11.17",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiugFBVV95cUxORUE0Z2JwYlFBZnZfaElYbXhBaUtSQmY2OTJoY2IzOUlQcFBfV1UwNUJxSDVQZDQydldqeHdPcEU0OGxUSnFRVXBab3RmYTBaQmdKdEJvMURRUmY1M01sTFJjcUNjemhzYnRKSmZIY0xuaURGeEhDNU9aSE1rMjBtckJ5TnlDbEZFYzlldVFvckFhS05rNXhzVTVTSjZLaEthMGR0SkhDTkRBX2lPZGRoT1ZIM3dqcTNqWkE?oc=5"
+          ]
+        },
+        {
+          "title": "올해 마지막 외국인력 고용허가 6,699명…23일부터 신청",
+          "source": "한국다문화뉴스",
+          "date": "11.15",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JOHVuRHBpSkF6akZOMDl4QlkzODlvaGE3LTY3Qm9yUDdjUXM4ajd2czhTdXVjVHFyYnpjR3FPSDlKa0dRbFVsRUExVFR6QzZPRmlrZktzeTE?oc=5"
           ]
         }
       ]
