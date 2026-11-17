@@ -1,0 +1,45 @@
+name: 텔레그램 명령 수신 (사전보고 초안)
+
+# 사무관이 텔레그램에서 "1, 2 대응"이라고 보내면 사전보고 초안을 답장으로 보냄.
+# 한 번 실행에 약 13분 동안 메시지를 기다리고, 끝나면 스스로 다음 실행을 걸어 거의 끊김 없이 대기함.
+# 이어 달리기가 끊겨도 15분마다 예약 실행이 다시 시작시킴.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+# 한 번에 하나만 대기 (두 개가 동시에 같은 메시지를 받지 않도록)
+concurrency:
+  group: telegram-listener
+  cancel-in-progress: false
+
+jobs:
+  listen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      actions: write   # 끝날 때 다음 실행을 거는 데 필요
+
+    steps:
+      - name: 레포지토리 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 텔레그램 명령 대기
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          LISTEN_MINUTES: '13'
+        run: python listener.py
+
+      - name: 다음 대기 실행 걸기
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run telegram_listener.yml --ref main -R ${{ github.repository }} || true
