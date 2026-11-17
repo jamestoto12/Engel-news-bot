@@ -72,6 +72,15 @@ def fetch_article(url: str) -> str:
     return body[:5000]
 
 
+def fetch_title(url: str) -> str:
+    try:
+        page, _ = _get(url)
+    except Exception:
+        return ""
+    m = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]*)"', page)
+    return html.unescape(m.group(1)).strip() if m else ""
+
+
 def gather_text(links: list) -> str:
     """같은 보도 링크 중 본문이 충분히 나오는 것을 씀 (구글 링크는 뒤로)"""
     ordered = sorted(links, key=lambda u: "news.google.com" in u)
@@ -110,7 +119,7 @@ def build_prompt(item: dict, body: str, today: datetime) -> str:
 - 확인 필요 항목과 확인처
 - 대응계획 선택지와 권고
 
-[실제 보고본 예시 — 이 문체와 분량을 따른다]
+[문체·분량 참고용 예시 — 이번 기사와 다른 기사다. 문장 길이와 어미만 참고하고 내용·지명·단체명은 절대 가져오지 않는다]
 (기사 내용)
  ○ 창원시·김해시 등 일부 지자체가 외국인 계절근로자의 근무태만 신고가 2회 이상 접수되면 근로계약 해지 및 출국 조치하고 정당한 사유 없이 계약을 해지할 경우 추천한 결혼이민자의 가족 초청을 제한하는 내용의 신청 서식을 배포
   - 정의당은 해당 조항이 근로자의 계약 해지 자유를 제한하고 가족에게까지 불이익을 주는 반인권적 조치라며, 조항 폐지 및 전국 지자체 신청 서식 전수점검을 촉구
@@ -144,15 +153,24 @@ def call_gemini(api_key: str, prompt: str) -> str:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
         payload = {
             "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": 0.2, "maxOutputTokens": 4096},
+            "generationConfig": {
+                "temperature": 0.2,
+                "maxOutputTokens": 16384,  # 2.5 계열은 '생각' 분량도 여기 포함되어 4096이면 본문이 잘림
+                "thinkingConfig": {"thinkingBudget": 2048},
+            },
         }
         req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"),
                                      headers={"Content-Type": "application/json"}, method="POST")
         try:
             with urllib.request.urlopen(req, timeout=120) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
-            parts = data["candidates"][0]["content"]["parts"]
-            text = "".join(p.get("text", "") for p in parts).strip()
+            cand = data["candidates"][0]
+            parts = cand.get("content", {}).get("parts", [])
+            text = "".join(p.get("text", "") for p in parts if not p.get("thought")).strip()
+            if cand.get("finishReason") == "MAX_TOKENS":
+                last_error = f"{model}: 출력 한도에 걸려 잘림"
+                print(f"  [Gemini 잘림] {model} → 다음 모델로")
+                continue
             if text:
                 print(f"  [Gemini] {model} 사용")
                 return re.sub(r"```[a-z]*\n?|```", "", text).replace("**", "").strip()
@@ -164,5 +182,26 @@ def call_gemini(api_key: str, prompt: str) -> str:
 
 def write_prereport(api_key: str, item: dict) -> str:
     body = gather_text(item.get("links", []))
+    if item.get("title", "").endswith(("...", "…")):
+        for url in sorted(item.get("links", []), key=lambda u: "news.google.com" in u):
+            full = fetch_title(url)
+            if full and not full.endswith(("...", "…")):
+                item = dict(item, title=re.sub(r"\s*[-|:]\s*[^-|:]{2,20}$", "", full) if " - " in full else full)
+                break
     print(f"  본문 {len(body)}자 확보: {item.get('title', '')[:30]}")
-    return call_gemini(api_key, build_prompt(item, body, datetime.now(KST)))
+    prompt = build_prompt(item, body, datetime.now(KST))
+    draft = call_gemini(api_key, prompt)
+    # 예시 문단을 베껴 쓴 경우(이번 기사에 없는 예시 고유 표현이 나옴) 한 번 다시 씀
+    if copied_example(draft, body + item.get("title", "")):
+        print("  [예시 베낌 감지] 다시 작성")
+        draft = call_gemini(api_key, prompt + "\n\n[주의] 직전 답이 예시 기사 내용을 베꼈다. 반드시 위 [기사 본문]의 내용으로만 쓴다.")
+        if copied_example(draft, body + item.get("title", "")):
+            raise RuntimeError("예시 기사 내용을 베껴 써서 폐기")
+    return draft
+
+
+EXAMPLE_MARKERS = ["근무태만 신고가 2회", "추천한 결혼이민자의 가족 초청", "전국 지자체 신청 서식 전수점검"]
+
+
+def copied_example(draft: str, source: str) -> bool:
+    return any(m in draft and m not in source for m in EXAMPLE_MARKERS)

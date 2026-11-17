@@ -36,7 +36,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           LISTEN_MINUTES: '13'
-        run: python listener.py
+        run: python -u listener.py   # -u: 로그가 실시간으로 남도록
 
       - name: 다음 대기 실행 걸기
         if: always()
