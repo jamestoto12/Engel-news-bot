@@ -601,7 +601,12 @@
     "1e2f2abd7ce51b1ea5d3e9f645e3f1de",
     "8a4e1973c6f5644c44ae62f3b287b67c",
     "8e6ae38e148c4d616b1f14c1d5fc6914",
-    "28d325911863f2be6d9185763adb8d3e"
+    "28d325911863f2be6d9185763adb8d3e",
+    "11a5ca7a130eca02c46e0349e0759218",
+    "251be539be4e6700f06e8cb6d483bef1",
+    "87e7775035100a62cd1d301cb5c806d1",
+    "64ed44c584b81b65b968126d34a06bbe",
+    "ade4590c62c0b7ffefcc122826a516d3"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -660,10 +665,13 @@
     "전북도 \"외국인 계절근로자, 임금체불 보증보험 가입 개선\" 건의",
     "1,200명이 넘는 노동자들이 계절 노동을 위해 한국으로 향했습니다.",
     "고용노동부, 27일까지 올해 마지막 외국인노동자(E-9) 고용허가 접수",
-    "제주 무사증 24년, 폐지법에 갈림길… 관광 성장과 불법체류의 딜레마"
+    "제주 무사증 24년, 폐지법에 갈림길… 관광 성장과 불법체류의 딜레마",
+    "[韓경제 아킬레스건](57) 외국인 근로자 의존도 심화 : 불법체류와 최저...",
+    "여수시, 전국 수산 유일 외국인 계절근로 우수사례 수상",
+    "농협, 노후 농가 수리·외국인 노동자 인권 점검 나서"
   ],
-  "updated": "2026-11-18",
-  "last_run_kst": "2026-11-18 18:00",
+  "updated": "2026-11-19",
+  "last_run_kst": "2026-11-19 07:00",
   "lists": [
     {
       "message_ids": [
@@ -1020,6 +1028,40 @@
           "date": "11.18",
           "links": [
             "https://weeklytrade.co.kr/news/view.html?section=1&category=3&item=&no=102301"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1637
+      ],
+      "sent_at": "2026-11-19 07:00",
+      "items": [
+        {
+          "title": "[韓경제 아킬레스건](57) 외국인 근로자 의존도 심화 : 불법체류와 최저...",
+          "source": "newsfc.co.kr",
+          "date": "11.19",
+          "links": [
+            "http://www.newsfc.co.kr/news/articleView.html?idxno=82470"
+          ]
+        },
+        {
+          "title": "농협, 노후 농가 수리·외국인 노동자 인권 점검 나서",
+          "source": "polinews.co.kr",
+          "date": "11.18",
+          "links": [
+            "https://www.polinews.co.kr/news/articleView.html?idxno=748699",
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE52R1BVZ3dsYU1nWVNQWmdBTFVRWm92ME9VbkY1Z21BeWRfTl9SdXRtWjQyR1NSOFdnUG15WUpmd2MzRWRnVFpfNVZsZ1NpTXNjSHh6M0cwbllhQl9pRTFDMThzQ1ktMFpJQWJSVlhB?oc=5"
+          ]
+        },
+        {
+          "title": "여수시, 전국 수산 유일 외국인 계절근로 우수사례 수상",
+          "source": "jnilbo.com",
+          "date": "11.19",
+          "links": [
+            "https://www.jnilbo.com/news/articleView.html?idxno=90000084084",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoZS1xbW95YldUaTYtQllYMGhPclJZSFhKQ1NQWU1oOXl6VnM1NkdHZE1JVXYzNm53Z1haNm9uYzhVdTZZbGl5ZXlZS2dsOHBHSVRqelZtVm1CRzhtSkRscU1JN29LX1BMaHpLVGpOaw?oc=5"
           ]
         }
       ]
