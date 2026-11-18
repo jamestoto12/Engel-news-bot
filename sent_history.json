@@ -587,7 +587,10 @@
     "de1b877087a73db34671e54750142875",
     "b60ac370c2e7946f8eeb4401f8d34120",
     "0cb716635851e766db4670151553338d",
-    "bacbff7baa341da6c1506cc278ca4ea2"
+    "bacbff7baa341da6c1506cc278ca4ea2",
+    "a3afea4937cfc48b472aa0eaa0b43054",
+    "2c82dca95d2af5d299a32575de9a8fec",
+    "ea8a5a34f14a05e514a1871e244c5e7a"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -637,10 +640,12 @@
     "애월농협, 공공형 계절근로자 대상 안전교육 및 문화체험 실시 ​",
     "외국인 선원들은 응급 치료를 위해 즉시 육지로 이송되었습니다.",
     "붕따우 해역에서 중병에 걸린 외국인 선원 구조 성공",
-    "올해 마지막 외국인력 고용허가 6,699명…23일부터 신청"
+    "올해 마지막 외국인력 고용허가 6,699명…23일부터 신청",
+    "정선군, 외국인 계절근로자 597명 도입…농촌 인력난 해소 총력",
+    "한국 장기·영구 이민자 작년 11% 감소…계절근로자는 49% 증가"
   ],
   "updated": "2026-11-18",
-  "last_run_kst": "2026-11-18 07:00",
+  "last_run_kst": "2026-11-18 11:30",
   "lists": [
     {
       "message_ids": [
@@ -904,6 +909,31 @@
           "date": "11.15",
           "links": [
             "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JOHVuRHBpSkF6akZOMDl4QlkzODlvaGE3LTY3Qm9yUDdjUXM4ajd2czhTdXVjVHFyYnpjR3FPSDlKa0dRbFVsRUExVFR6QzZPRmlrZktzeTE?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1628
+      ],
+      "sent_at": "2026-11-18 11:30",
+      "items": [
+        {
+          "title": "정선군, 외국인 계절근로자 597명 도입…농촌 인력난 해소 총력",
+          "source": "shinailbo.co.kr",
+          "date": "11.18",
+          "links": [
+            "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084574",
+            "https://news.google.com/rss/articles/CBMicEFVX3lxTE5uRG12RU80dmZlTXNkMmpfN2FDUXRUWTJNdG1aR3gwTldOUjV1SlRYbXVWeXB1S0E2VVJFYWdGdl84dFBhQWJyZWlKUE5yR09wQnBxeXVPV1Nva3R0eU9SZ3Rsc1QyMXRRNUh5cVJtWkM?oc=5"
+          ]
+        },
+        {
+          "title": "한국 장기·영구 이민자 작년 11% 감소…계절근로자는 49% 증가",
+          "source": "연합뉴스",
+          "date": "11.18",
+          "links": [
+            "https://n.news.naver.com/mnews/article/001/0016447811?sid=102"
           ]
         }
       ]
