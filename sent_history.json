@@ -609,7 +609,23 @@
     "ade4590c62c0b7ffefcc122826a516d3",
     "5cabd937211cd1613ce59edb7806dc1c",
     "b444239d361d1499a3e1df7ee8c880ad",
-    "8cd5e50a2c37a7637c7c4a26a3a2780a"
+    "8cd5e50a2c37a7637c7c4a26a3a2780a",
+    "0ef7bb6010c5436ebbc2733e0cd4e7d4",
+    "4c308b6c4af7a6a62cbb63229124dfb0",
+    "2836f7309b6504e491fd77916f900080",
+    "848824a36779efe0623d6c0e13b4d360",
+    "51b3cc6be24b3a114557c4ec2a026cac",
+    "60e018db992f780d74a84b35b5dbe786",
+    "9671594f9f482a7818d3bfb12f220083",
+    "c74170e368b31947ea29817465a4a38b",
+    "449a986f87d8378485a15ebcb7dab572",
+    "b8cf5a06ca7344bc52c74e08be131c51",
+    "343a7846ee16d9fcc9cae271a49fe3be",
+    "d8d21e24d3980dfa9c754bd1b72b5665",
+    "73fc3b3b74a11165e3e1eb7f1904a5af",
+    "8c36a3afd36adf8dd20ebcd6a6c855da",
+    "e63f282faf2143259c50693d37ae35ca",
+    "d5df379efdd03a5ee9bcd9347ae8c976"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -673,10 +689,19 @@
     "여수시, 전국 수산 유일 외국인 계절근로 우수사례 수상",
     "농협, 노후 농가 수리·외국인 노동자 인권 점검 나서",
     "정선 예미농협, 공공형 계절근로사업으로 농가 일손 걱정 덜어",
-    "트럼프·시진핑은 포옹하는데…中 로봇 기술자 줄줄이 美 비자 퇴짜 [차..."
+    "트럼프·시진핑은 포옹하는데…中 로봇 기술자 줄줄이 美 비자 퇴짜 [차...",
+    "제주 무사증 입국심사·불법체류 단속 강화..관계부처 합동 회의",
+    "'제주 무비자 불법체류 대책' 범정부 회의…\"부작용 최소화\"",
+    "정부, 제주 무사증 불법체류 집중 단속…고용주·브로커 수사 강화",
+    "어촌어항공단, 양식장 실태조사 결과 공유… 기후변화·외국인 근로자 ...",
+    "외국인 계절근로자 600명 시대 앞둔 산청군···주거시설 확충이 관건",
+    "나주시, 필리핀 구아구아시와 계절근로 협력 이어간다",
+    "나주시, 필리핀 구아구아시와 계절근로 인력 수급 협력 강화",
+    "산청군 외국인 근로자 기숙사 내년 1월 준공…농촌 인력난 해소",
+    "성달인터내셔날, 선주들과 머리 맞대…외국인 선원 인권·근로환경 논의"
   ],
   "updated": "2026-11-19",
-  "last_run_kst": "2026-11-19 11:30",
+  "last_run_kst": "2026-11-19 18:00",
   "lists": [
     {
       "message_ids": [
@@ -1092,6 +1117,93 @@
           "date": "11.19",
           "links": [
             "https://n.news.naver.com/mnews/article/015/0005355698?sid=101"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1639
+      ],
+      "sent_at": "2026-11-19 18:00",
+      "items": [
+        {
+          "title": "'제주 무비자 불법체류 대책' 범정부 회의…\"부작용 최소화\"",
+          "source": "연합뉴스",
+          "date": "11.19",
+          "links": [
+            "https://n.news.naver.com/mnews/article/001/0016452999?sid=102"
+          ]
+        },
+        {
+          "title": "정부, 제주 무사증 불법체류 집중 단속…고용주·브로커 수사 강화",
+          "source": "뉴시스",
+          "date": "11.19",
+          "links": [
+            "https://n.news.naver.com/mnews/article/003/0014333986?sid=102",
+            "https://n.news.naver.com/mnews/article/277/0005845244?sid=102",
+            "https://n.news.naver.com/mnews/article/421/0009299714?sid=102",
+            "https://www.jejumaeil.net/news/articleView.html?idxno=406924"
+          ]
+        },
+        {
+          "title": "성달인터내셔날, 선주들과 머리 맞대…외국인 선원 인권·근로환경 논의",
+          "source": "polinews.co.kr",
+          "date": "11.19",
+          "links": [
+            "https://www.polinews.co.kr/news/articleView.html?idxno=748726",
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE90ck9ocGZoSXU3WDdXbi1TVDFGUDFzSzJJRmgyeGZ1aWs3aHA3bklXM1RFVWN0cHpzMDRxRHZ1MjZRd09hX0VmcDFjWUlqQUdfbklVR05WdDJQMlpjZHhXcmFDTTZNc1RfQkcwOW93?oc=5"
+          ]
+        },
+        {
+          "title": "제주 무사증 입국심사·불법체류 단속 강화..관계부처 합동 회의",
+          "source": "jibs.co.kr",
+          "date": "11.19",
+          "links": [
+            "https://n.news.naver.com/mnews/article/661/0000086807?sid=100",
+            "https://n.news.naver.com/mnews/article/008/0005443658?sid=102"
+          ]
+        },
+        {
+          "title": "어촌어항공단, 양식장 실태조사 결과 공유… 기후변화·외국인 근로자 ...",
+          "source": "파이낸셜뉴스",
+          "date": "11.19",
+          "links": [
+            "https://n.news.naver.com/mnews/article/014/0005606996?sid=101",
+            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ra25PZExOT0FvekM5TWpuSnJ3Tklpb1FyOVRkZF94U3pPcmc1dy1Uc0FIbjdZUjF1LXN5QXhsNVdaaWJlRGNYcFByN05aU0hHeFdjY0NWdHUyZw?oc=5"
+          ]
+        },
+        {
+          "title": "외국인 계절근로자 600명 시대 앞둔 산청군···주거시설 확충이 관건",
+          "source": "pennmike.com",
+          "date": "11.19",
+          "links": [
+            "https://www.pennmike.com/news/articleView.html?idxno=132274"
+          ]
+        },
+        {
+          "title": "나주시, 필리핀 구아구아시와 계절근로 협력 이어간다",
+          "source": "전남인터넷신문",
+          "date": "11.19",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiXEFVX3lxTE00MC1yZGxTS3RTS0xkemRMRnJTQXJNZzByN3Y3MHoxZmZ2ZXg3U28tVWJGT0M3R0hqMktTU0NJWHVhVzNqbFE3bkNGTVM5RE5DbUdDd0tzQVdmQzN2?oc=5"
+          ]
+        },
+        {
+          "title": "나주시, 필리핀 구아구아시와 계절근로 인력 수급 협력 강화",
+          "source": "newsworker.co.kr",
+          "date": "11.19",
+          "links": [
+            "https://www.newsworker.co.kr/news/articleView.html?idxno=515078"
+          ]
+        },
+        {
+          "title": "산청군 외국인 근로자 기숙사 내년 1월 준공…농촌 인력난 해소",
+          "source": "news1.kr",
+          "date": "11.19",
+          "links": [
+            "https://n.news.naver.com/mnews/article/421/0009299115?sid=102",
+            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5UNlBFQUtLc0w5dUJKRFkyM2h1LVhvZWZCRDdzN1pnN3paR3dVUG5RV1RHNF9odFJkN29xWjRuNmZUdjlhSFY4UEVqVG5PTVVUX3h5UDN2R1otSUY1ZlE0?oc=5"
           ]
         }
       ]
