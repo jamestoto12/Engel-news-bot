@@ -606,7 +606,10 @@
     "251be539be4e6700f06e8cb6d483bef1",
     "87e7775035100a62cd1d301cb5c806d1",
     "64ed44c584b81b65b968126d34a06bbe",
-    "ade4590c62c0b7ffefcc122826a516d3"
+    "ade4590c62c0b7ffefcc122826a516d3",
+    "5cabd937211cd1613ce59edb7806dc1c",
+    "b444239d361d1499a3e1df7ee8c880ad",
+    "8cd5e50a2c37a7637c7c4a26a3a2780a"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -668,10 +671,12 @@
     "제주 무사증 24년, 폐지법에 갈림길… 관광 성장과 불법체류의 딜레마",
     "[韓경제 아킬레스건](57) 외국인 근로자 의존도 심화 : 불법체류와 최저...",
     "여수시, 전국 수산 유일 외국인 계절근로 우수사례 수상",
-    "농협, 노후 농가 수리·외국인 노동자 인권 점검 나서"
+    "농협, 노후 농가 수리·외국인 노동자 인권 점검 나서",
+    "정선 예미농협, 공공형 계절근로사업으로 농가 일손 걱정 덜어",
+    "트럼프·시진핑은 포옹하는데…中 로봇 기술자 줄줄이 美 비자 퇴짜 [차..."
   ],
   "updated": "2026-11-19",
-  "last_run_kst": "2026-11-19 07:00",
+  "last_run_kst": "2026-11-19 11:30",
   "lists": [
     {
       "message_ids": [
@@ -1062,6 +1067,31 @@
           "links": [
             "https://www.jnilbo.com/news/articleView.html?idxno=90000084084",
             "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoZS1xbW95YldUaTYtQllYMGhPclJZSFhKQ1NQWU1oOXl6VnM1NkdHZE1JVXYzNm53Z1haNm9uYzhVdTZZbGl5ZXlZS2dsOHBHSVRqelZtVm1CRzhtSkRscU1JN29LX1BMaHpLVGpOaw?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1638
+      ],
+      "sent_at": "2026-11-19 11:30",
+      "items": [
+        {
+          "title": "정선 예미농협, 공공형 계절근로사업으로 농가 일손 걱정 덜어",
+          "source": "nongmin.com",
+          "date": "11.19",
+          "links": [
+            "https://n.news.naver.com/mnews/article/662/0000108826?sid=102",
+            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9yUnpNclNBS25Vc1pxNTBZZlROeW9HSkcxOGhUWUxqNmNkN1FIUlZZLTdUSFBoWVdNMUdxamxXQ0JFWVlWOGVXX0tJZzdUcWVrUmx1c0JYS0tqQQ?oc=5"
+          ]
+        },
+        {
+          "title": "트럼프·시진핑은 포옹하는데…中 로봇 기술자 줄줄이 美 비자 퇴짜 [차...",
+          "source": "한국경제",
+          "date": "11.19",
+          "links": [
+            "https://n.news.naver.com/mnews/article/015/0005355698?sid=101"
           ]
         }
       ]
