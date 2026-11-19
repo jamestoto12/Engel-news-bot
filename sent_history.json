@@ -625,7 +625,13 @@
     "73fc3b3b74a11165e3e1eb7f1904a5af",
     "8c36a3afd36adf8dd20ebcd6a6c855da",
     "e63f282faf2143259c50693d37ae35ca",
-    "d5df379efdd03a5ee9bcd9347ae8c976"
+    "d5df379efdd03a5ee9bcd9347ae8c976",
+    "b1c0ecb4a0924e48bc90bda0e2f2d693",
+    "395e38b4cd7f06ec3c4e11989989709d",
+    "0125a01b78314d2f6890a5c1c4b338f5",
+    "795b99aa93af82f1cb30ca82604ad419",
+    "de4b6c685e8ff615d75e83a1225365b8",
+    "1b8978e35a68bae0940b13e82688fe5e"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -698,10 +704,14 @@
     "나주시, 필리핀 구아구아시와 계절근로 협력 이어간다",
     "나주시, 필리핀 구아구아시와 계절근로 인력 수급 협력 강화",
     "산청군 외국인 근로자 기숙사 내년 1월 준공…농촌 인력난 해소",
-    "성달인터내셔날, 선주들과 머리 맞대…외국인 선원 인권·근로환경 논의"
+    "성달인터내셔날, 선주들과 머리 맞대…외국인 선원 인권·근로환경 논의",
+    "외국인 선원 55% 시대… 정부 개편에 어업현장 '반발'",
+    "법무부 등 유관기관, 제주 무사증 불법체류 예방 및 국민안전 대책 논의",
+    "[사설] 계절노동자 노동권, 지자체가 침해해서는 안 돼",
+    "밀양경찰서 '외국인 근로자 야간 교통사고 예방 캠페인' 개최"
   ],
-  "updated": "2026-11-19",
-  "last_run_kst": "2026-11-19 18:00",
+  "updated": "2026-11-20",
+  "last_run_kst": "2026-11-20 07:00",
   "lists": [
     {
       "message_ids": [
@@ -1204,6 +1214,48 @@
           "links": [
             "https://n.news.naver.com/mnews/article/421/0009299115?sid=102",
             "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5UNlBFQUtLc0w5dUJKRFkyM2h1LVhvZWZCRDdzN1pnN3paR3dVUG5RV1RHNF9odFJkN29xWjRuNmZUdjlhSFY4UEVqVG5PTVVUX3h5UDN2R1otSUY1ZlE0?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1640
+      ],
+      "sent_at": "2026-11-20 07:00",
+      "items": [
+        {
+          "title": "외국인 선원 55% 시대… 정부 개편에 어업현장 '반발'",
+          "source": "현대해양",
+          "date": "11.20",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9YUmJQd25XenF3SWF0RFg0UnllWmh0MGR0ek9PM0JSeGV6SU1xT3VyNjZBSDVGUFlDQmRtS1ZLYVpTTngtaWpIYkxmRWRUVVJqaHBaNjhXcFh5ZFQzanV3RUx2aDcwaVU?oc=5"
+          ]
+        },
+        {
+          "title": "법무부 등 유관기관, 제주 무사증 불법체류 예방 및 국민안전 대책 논의",
+          "source": "한국사회복지저널",
+          "date": "11.19",
+          "links": [
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE5nRVJKT3g2NkZMT3RSVXZ1ZEJmSDRyQ1d1WGhKcTl0Y21vSng2MzVYUl9CRlVpSVQwYjdIY2JkYTQ4dXZJdGU5U1M1VTJyTHlSWENvNlBkaVh6dk5yekxHV0FQRUpSTlc3b1ZZ?oc=5",
+            "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5YNDJfYm5FYnAtOU03OV9FaTVBaV9PbVQtQjlETDYyN19fZHgzNXo0MDNvOGVzQUpVNW9oLWJxYzZCVWdtZlc4VWdqbjZJUzZZQUIyU0RvRENtb2hwaGc?oc=5",
+            "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBYNHZWak01d05Semc0ZERUZ0gwS21SQWtIWmY1cUw0djNUdEc0Zk1ZOS16S2FqamR2MDlJN3VOd2gzSy0tLS1QcE43TW83MmVNWEdWWmhQQWFUMlJJTktGYk1B?oc=5"
+          ]
+        },
+        {
+          "title": "[사설] 계절노동자 노동권, 지자체가 침해해서는 안 돼",
+          "source": "idomin.com",
+          "date": "11.19",
+          "links": [
+            "https://www.idomin.com/news/articleView.html?idxno=2020085"
+          ]
+        },
+        {
+          "title": "밀양경찰서 '외국인 근로자 야간 교통사고 예방 캠페인' 개최",
+          "source": "gndomin.com",
+          "date": "11.19",
+          "links": [
+            "http://www.gndomin.com/news/articleView.html?idxno=497532"
           ]
         }
       ]
