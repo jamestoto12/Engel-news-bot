@@ -631,7 +631,10 @@
     "0125a01b78314d2f6890a5c1c4b338f5",
     "795b99aa93af82f1cb30ca82604ad419",
     "de4b6c685e8ff615d75e83a1225365b8",
-    "1b8978e35a68bae0940b13e82688fe5e"
+    "1b8978e35a68bae0940b13e82688fe5e",
+    "390a42896982813e46f8c06b3f360211",
+    "491fc20649ec8eb2f59b190b3a618998",
+    "0e13c92788409cfc5c3e22774cd9d8b6"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -708,10 +711,13 @@
     "외국인 선원 55% 시대… 정부 개편에 어업현장 '반발'",
     "법무부 등 유관기관, 제주 무사증 불법체류 예방 및 국민안전 대책 논의",
     "[사설] 계절노동자 노동권, 지자체가 침해해서는 안 돼",
-    "밀양경찰서 '외국인 근로자 야간 교통사고 예방 캠페인' 개최"
+    "밀양경찰서 '외국인 근로자 야간 교통사고 예방 캠페인' 개최",
+    "무사증 폐지 논란에...제주 불법체류·외국인범죄 대응 강화한다",
+    "밀양경찰서, 외국인 근로자 밤길 안전위해 자전거 LED등 배부",
+    "농어촌 계절근로자 1만 6천 명 추가 배정"
   ],
   "updated": "2026-11-20",
-  "last_run_kst": "2026-11-20 07:00",
+  "last_run_kst": "2026-11-20 11:30",
   "lists": [
     {
       "message_ids": [
@@ -1256,6 +1262,38 @@
           "date": "11.19",
           "links": [
             "http://www.gndomin.com/news/articleView.html?idxno=497532"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1641
+      ],
+      "sent_at": "2026-11-20 11:30",
+      "items": [
+        {
+          "title": "무사증 폐지 논란에...제주 불법체류·외국인범죄 대응 강화한다",
+          "source": "headlinejeju.co.kr",
+          "date": "11.20",
+          "links": [
+            "https://www.headlinejeju.co.kr/news/articleView.html?idxno=602467"
+          ]
+        },
+        {
+          "title": "밀양경찰서, 외국인 근로자 밤길 안전위해 자전거 LED등 배부",
+          "source": "hansbiz.co.kr",
+          "date": "11.20",
+          "links": [
+            "http://www.hansbiz.co.kr/news/articleView.html?idxno=885426"
+          ]
+        },
+        {
+          "title": "농어촌 계절근로자 1만 6천 명 추가 배정",
+          "source": "안동MBC",
+          "date": "11.19",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTHdpSy1hSzJYaGpwZDZ0MXc4NmFKUy1PYTRMUi10elNINUh3YVp0Y2lUQmpURzVuQ2NRdG9reTRLTTJBM2loQ2pEai1fOVdPU3poNlVBQUJYdEZINVFjM043NzdSZEFYcS1uZW1pUHFMNFNDWDF6OXIyYWZUYXlidEI4WUZpaHgyYTRaUEpZTEpEazVfeFdWNWhvRF9OX05jaEEyZ3pReXlMUE0?oc=5"
           ]
         }
       ]
