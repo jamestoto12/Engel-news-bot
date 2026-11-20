@@ -634,7 +634,32 @@
     "1b8978e35a68bae0940b13e82688fe5e",
     "390a42896982813e46f8c06b3f360211",
     "491fc20649ec8eb2f59b190b3a618998",
-    "0e13c92788409cfc5c3e22774cd9d8b6"
+    "0e13c92788409cfc5c3e22774cd9d8b6",
+    "ff3d983209df1cd0e88c0a477589f56e",
+    "508fdaff8e19bc3527bd05c160b32993",
+    "5fe18af186cdeb520594b1fa45b7c6dc",
+    "1ca3da39db6ffcb309b66384c838ae7b",
+    "e47e485c19a8fe6369298988c91b9f89",
+    "0d47a3364d6a9a2f62b4bc459579cb29",
+    "765d8eeb341094f5b6c94da6e5bd23e4",
+    "f162f7dbf1baa220cad073a61a2ea580",
+    "64399a38cd02bdf442aa682b8543c913",
+    "539028f5a516f0b718c6890764728dfa",
+    "a72a6c487be000b254f6a1c155b27080",
+    "84422e9809fd42819ad71a0fe37ba2e3",
+    "343e63c72b1d5913585ac9a9727a3a0e",
+    "87f97e93ecfecd310b23edaa9b895314",
+    "669b87b49d05743c5a5891e5e70263ba",
+    "90a31415b2921f2288c650a6cffb5cde",
+    "547578be95281beed55dbc82f6804ca6",
+    "6ce447a0af808d5400d9fbbd666dfc53",
+    "788125af25bdf3a8e41228f61edcc459",
+    "06b83029649882cfdef3cefdbe1d49fe",
+    "2356471bd7ae1b9d9add1a4b51747720",
+    "d81c0d585b1c51b411a1ba0388a29047",
+    "16cf8a79edc375e4026ff7e7c3f19e26",
+    "a26fbb96399973c9223c413a06ba6f3d",
+    "0f8776a791d365fe753ba9292e19fd4c"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -714,10 +739,20 @@
     "밀양경찰서 '외국인 근로자 야간 교통사고 예방 캠페인' 개최",
     "무사증 폐지 논란에...제주 불법체류·외국인범죄 대응 강화한다",
     "밀양경찰서, 외국인 근로자 밤길 안전위해 자전거 LED등 배부",
-    "농어촌 계절근로자 1만 6천 명 추가 배정"
+    "농어촌 계절근로자 1만 6천 명 추가 배정",
+    "진도군, 외국인 계절근로자 결핵 검진...303명 중 1명 조기 발견",
+    "자동차정비 전문 외국인력 20명 한국에 입국",
+    "고흥군, 필리핀 대사관과 계절근로자 교육...상시 소통 핫라인 구축",
+    "경북 청도군, 첫 외국인 계절근로자 사업 성공적 평가",
+    "나주시, 구아구아시장과 계절근로자 입국·현장 배치 논의",
+    "[전남광주소식]전남농협, 계절근로자 안전 '구급함 비치' 등",
+    "연천군, 외국인 계절근로자 고용주 교육 실시… 농업인 118명 참석",
+    "속초해경 고성해역서 물에 빠진 외국인 선원 구조",
+    "나주시-필리핀 구아구아시, 농촌 인력난 해소 위한 계절근로 협력 지속",
+    "나주시, 외국인 계절근로자 확보 필리핀 지방정부 협력"
   ],
   "updated": "2026-11-20",
-  "last_run_kst": "2026-11-20 11:30",
+  "last_run_kst": "2026-11-20 18:00",
   "lists": [
     {
       "message_ids": [
@@ -1294,6 +1329,109 @@
           "date": "11.19",
           "links": [
             "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTHdpSy1hSzJYaGpwZDZ0MXc4NmFKUy1PYTRMUi10elNINUh3YVp0Y2lUQmpURzVuQ2NRdG9reTRLTTJBM2loQ2pEai1fOVdPU3poNlVBQUJYdEZINVFjM043NzdSZEFYcS1uZW1pUHFMNFNDWDF6OXIyYWZUYXlidEI4WUZpaHgyYTRaUEpZTEpEazVfeFdWNWhvRF9OX05jaEEyZ3pReXlMUE0?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1642
+      ],
+      "sent_at": "2026-11-20 18:00",
+      "items": [
+        {
+          "title": "진도군, 외국인 계절근로자 결핵 검진...303명 중 1명 조기 발견",
+          "source": "discoverynews.kr",
+          "date": "11.20",
+          "links": [
+            "https://www.discoverynews.kr/news/articleView.html?idxno=1107430",
+            "https://www.cbci.co.kr/news/articleView.html?idxno=629128",
+            "https://www.newsworker.co.kr/news/articleView.html?idxno=515295"
+          ]
+        },
+        {
+          "title": "자동차정비 전문 외국인력 20명 한국에 입국",
+          "source": "enewstoday.co.kr",
+          "date": "11.20",
+          "links": [
+            "http://www.enewstoday.co.kr/news/articleView.html?idxno=2495281"
+          ]
+        },
+        {
+          "title": "고흥군, 필리핀 대사관과 계절근로자 교육...상시 소통 핫라인 구축",
+          "source": "discoverynews.kr",
+          "date": "11.20",
+          "links": [
+            "https://www.discoverynews.kr/news/articleView.html?idxno=1107429",
+            "https://news.google.com/rss/articles/CBMickFVX3lxTE9yOTZBLXJKY242NG0yZEk2SE5ZQkQ0czJwdS1taUd5NDFJajctV1NCWHZsLV9oVS1kaGZ2X3JaNnZBd24zMXFPcnJ5b1ZrZjVKWWxzaWFrdkZjNGFvLUxGcmFZTmdkSGVHMGFWOVUwVlVVUQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiS0FVX3lxTE90cGhPRE4tRUpxeG81NTNKdDZQZ2psSlRiMVQ0YXppN2U0YnpPWWRIdlFxQUNmWWpjYUdNOVZ0NkwtQTlrMl9ZYmpsbw?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE5BdEc4YmlHZU1KN1I2QUdKQy1PZDJibHFPQktzN0pmWHNPUFlQMzNaZXJGU0w5NkZlRlZGZmJaT3VJbmU2Ykc0OTNQMXVRZjRVWWJzWVdvLWxGZ3llZXdyT0lIWU94WldUaTNwYzRDVQ?oc=5"
+          ]
+        },
+        {
+          "title": "경북 청도군, 첫 외국인 계절근로자 사업 성공적 평가",
+          "source": "news.tf.co.kr",
+          "date": "11.20",
+          "links": [
+            "https://n.news.naver.com/mnews/article/629/0000554184?sid=102",
+            "https://n.news.naver.com/mnews/article/662/0000108965?sid=102",
+            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0xU3VLTjZvY25SdndXcTVKUnIwQnBpQXJtd3Q5czcyNV9rOTY0ci1RYVpvNGdJTnFRRGlvVVlrODhtRklDTkNTQW1XWmU?oc=5"
+          ]
+        },
+        {
+          "title": "나주시, 구아구아시장과 계절근로자 입국·현장 배치 논의",
+          "source": "newsmaker.or.kr",
+          "date": "11.20",
+          "links": [
+            "http://www.newsmaker.or.kr/news/articleView.html?idxno=186170"
+          ]
+        },
+        {
+          "title": "[전남광주소식]전남농협, 계절근로자 안전 '구급함 비치' 등",
+          "source": "뉴시스",
+          "date": "11.20",
+          "links": [
+            "https://n.news.naver.com/mnews/article/003/0014336540?sid=102",
+            "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4xX1NZUHI1YUk4eUhzTzg4eUl5bm80SmUzcThzYnA0bEpuMU1SNnNmcXhkbGxoMVpBSmk3a1FFWDJZQWVmc3JYRllGaThrOFdSZ1B1VS0wQWpZWFBCRS1aN9IBeEFVX3lxTE5zcmJZajRrQWFxTlp3ZlZUTkJVMUt6ZzMzUHJDbGhFdXpDWi1WNjZ4MEtGbTY1cTVHQlc3bzJ2SlY3UE1NYWY5SFhLdUpONHpDX2t6ek5wQWwzZjRITVh6MWp5MkQzNjZxQkhydVBuTmxUSGlJVUgzcg?oc=5",
+            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9idFF4ZTlaUEM1MlRuU084eFh6ajlXM0EzMWVuRExSQkR6RVVCVlVQejQzNWxtMFFHRWxodDA2SGs2bml2RURKS3pzckYwbFlGcktZaWIwS2Uta0JOdTR3?oc=5",
+            "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAzRkhSN1ltQV91bTNPWjMxMjNCVzViZTV4aFpVaFZvWExrQWNfVWM4bGxMSFhabFlyLTVMSk1lcklIUmp1bzdmYThCd05XS2VFeTV2SE1MbVAyOVXSAWBBVV95cUxNX1drWUVWZzFtRVBwNElzQ3dEUE01VTRSaDRGQkd0cVBPOXdoTUp0TkxCcW5YdkNMdzB0WG5QRGRYU2dXYjFEQUItdDhVUTNEQmg3ZV95dEp5cFN2Nlgyc08?oc=5",
+            "https://n.news.naver.com/mnews/article/001/0016454769?sid=102",
+            "https://www.jnilbo.com/news/articleView.html?idxno=90000084962"
+          ]
+        },
+        {
+          "title": "연천군, 외국인 계절근로자 고용주 교육 실시… 농업인 118명 참석",
+          "source": "뉴스핌",
+          "date": "11.20",
+          "links": [
+            "https://www.newspim.com/news/view/20261120000727",
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE9pdEFHWncyQnphaUEzdWVFbEZtS3ZiMlhpX0o1SHpQbUItTWZOWTFfMEJLYjItTFMteF9leVZhZWZwQXcxSXNGWGxFdFgxYVZlckpSa3ZFZk5ZaFR6SGFvM25CRTJKY0NWZThJ?oc=5",
+            "https://www.gukjenews.com/news/articleView.html?idxno=3758167",
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE9nTlBsZGlaSmJ1a1dlRXp1Y2lJcVZvT2o2emU2R3lPYm5QR242a3EyQ3lsT2t0aXBMTnlpaFNXUEJscWF2a2RhX1h2cGNoaEVQUEpwbDNjajQ0ZnY5QlFUQjNvblV1SjRySl9ackZn?oc=5"
+          ]
+        },
+        {
+          "title": "속초해경 고성해역서 물에 빠진 외국인 선원 구조",
+          "source": "kado.net",
+          "date": "11.20",
+          "links": [
+            "https://n.news.naver.com/mnews/article/654/0000212493?sid=102"
+          ]
+        },
+        {
+          "title": "나주시-필리핀 구아구아시, 농촌 인력난 해소 위한 계절근로 협력 지속",
+          "source": "뉴스21 통신",
+          "date": "11.20",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1oSTFuUTBjak05Qk5KY3BTckJydmxraENHNDQ3U2pfeVV5UlZraUtXTVlDT0ZOQWluT2thYXVQa2FPXzc1aGFUSGQxa0d1bk1uczl5Q1BR?oc=5"
+          ]
+        },
+        {
+          "title": "나주시, 외국인 계절근로자 확보 필리핀 지방정부 협력",
+          "source": "스마트비즈",
+          "date": "11.20",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zalpITnF1WEdrblVzTmQtSUhZcG9tdFEtbzZIZFlKNWtCOUtib0tlRFF4UzRFcTY4MWNvNkVCQXpKRkt3UWs0YTlveTlxVFVKN1ZTTE1Rb2tINTFveGdacUdtejVteElwYVdGbw?oc=5"
           ]
         }
       ]
