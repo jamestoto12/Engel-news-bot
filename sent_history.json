@@ -677,7 +677,11 @@
     "b1dd1be5b649712fb8bfa9fe7fdf6c42",
     "2e8ed00326c319472182cc0615ca23a0",
     "34872ccb3757d6deda160a05d66db270",
-    "789953b8e6ea2548ae17faed918b51ed"
+    "789953b8e6ea2548ae17faed918b51ed",
+    "15dba05edd7c2191bd16cac11be02d5b",
+    "ee1e2f1c77c653d70af659aae1601de0",
+    "69d9904037b5c057d1a41f3b44df8440",
+    "ff16a9c3a952a4fd1e938e8b0cc00e02"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -773,10 +777,14 @@
     "보령 앞바다서 조업 중 양망기에 끼어…외국인 선원 사망",
     "보령 해상서 그물 걷던 외국인 선원, 양망기에 끼어 사망",
     "충남 보령 해상서 양망기 끼임 사고...외국인 선원 1명 숨져",
-    "외국인 선원 관리체계 시급성…실무자들 제도 정비 촉구"
+    "외국인 선원 관리체계 시급성…실무자들 제도 정비 촉구",
+    "캄보디아와 계절근로자 등 협력 확대 추진",
+    "베트남 노동자들을 한국으로 계절 노동에 파견하는 프로그램이 조속히 재개되어야 합니다.",
+    "2026년 E-9 비자 마지막 접수, 교육 이수 사업장이 배정 경쟁에서 앞선다",
+    "청도군 공공형 계절근로자 첫 시행, 농가 인건비 2억 원 절감·28명 전원 무사 귀국"
   ],
-  "updated": "2026-11-21",
-  "last_run_kst": "2026-11-21 18:00",
+  "updated": "2026-11-22",
+  "last_run_kst": "2026-11-22 07:00",
   "lists": [
     {
       "message_ids": [
@@ -1521,6 +1529,46 @@
           "date": "11.21",
           "links": [
             "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnU2xENXpMelJQNmZqV1RSakRndjlTYjhld3kwODRYZldvQ1dsMUZRS1VpeWJhRWltcUFiWmVQanYzNWx4UjRfX3BBTURCc2V1UGlKdXpURXJDQ3psd2Uybw?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1644
+      ],
+      "sent_at": "2026-11-22 07:00",
+      "items": [
+        {
+          "title": "캄보디아와 계절근로자 등 협력 확대 추진",
+          "source": "뉴스파이어",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE1xa0tMSHEtVGR2TVluMnppNm1XUnN6Tmc1MzVON0gzNEM2WG1aQUQyVjBDR1hNcEUySDBXSGM4dEQxU29mc2FYU0Y4REpDcy1Cai02THFRNTVOdVZlSkRncm44SnZQbUVfNmRYTUhnSQ?oc=5"
+          ]
+        },
+        {
+          "title": "베트남 노동자들을 한국으로 계절 노동에 파견하는 프로그램이 조속히 재개되어야 합니다.",
+          "source": "Vietnam.vn",
+          "date": "11.21",
+          "links": [
+            "https://news.google.com/rss/articles/CBMirAFBVV95cUxQLUJaMzRaOWRPSEFqM1l5NTFYSVU4LVliZ3hyalA5ak83ejJKYXl0cm1BNkY3SUlHTmFqM0ZneC04b2xSQWV0Z29ES04ydWZNdXV2aGZaS1RNVUF0Rk0wRjF3Q2RmQVdhanY3LUswWnlVV1VITFhzUnJGSThId2NscUVyclBtczktdVBUOG8wZmdUOWU2cGg1MGJoNmNTM1NQbGRCakotaEJPYzla?oc=5"
+          ]
+        },
+        {
+          "title": "2026년 E-9 비자 마지막 접수, 교육 이수 사업장이 배정 경쟁에서 앞선다",
+          "source": "패트론타임스",
+          "date": "11.21",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9wSndvVDNWdEtVR1h2Yjl6U2ZhQVVDajVlTzVCYWJGcUcyY09ZMnJ1STRCN1NOMnFpdFNhVGVqMm1tUDZTOTVXMzJNTWlCVXJZbWhj?oc=5"
+          ]
+        },
+        {
+          "title": "청도군 공공형 계절근로자 첫 시행, 농가 인건비 2억 원 절감·28명 전원 무사 귀국",
+          "source": "뉴스N연합",
+          "date": "11.20",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXQzJfUG56RGxDaTVTYWdiYkwxcFJ5MTlTcWRLSGJ5Q0trQlFJV0t4eDNvR00tMjRCb1lEWXJveERhSUVtaFZxU29WX05keVE?oc=5"
           ]
         }
       ]
