@@ -659,7 +659,25 @@
     "d81c0d585b1c51b411a1ba0388a29047",
     "16cf8a79edc375e4026ff7e7c3f19e26",
     "a26fbb96399973c9223c413a06ba6f3d",
-    "0f8776a791d365fe753ba9292e19fd4c"
+    "0f8776a791d365fe753ba9292e19fd4c",
+    "f37ee490002dc5d5b67bc44a8515381f",
+    "b371cc06dee0f6ae79db5cfd8e50940a",
+    "afea43916800f88283d80972db4085f9",
+    "4c3b0a34a4e95b50048e7be3a5e06d40",
+    "ac9f16ac15c1e5394a8357efe303b3d2",
+    "c85eefbddb98a733f5e3d30f910dd90d",
+    "812df74235c6f8ce4693b26b91d9a7d8",
+    "9d121c789c4c2849e1013e013dcd7cee",
+    "64a51031d60c807a13309e2615c853c5",
+    "c80724550eebad93bd93ae771207262d",
+    "79b693f57c2624199019fad6362decb4",
+    "06b9bc93033d6e1aa9d15d56fb8d8842",
+    "f157f2a687782022e574527c557778f5",
+    "10a4dc62bd8bfed38fbdec718c2d22a2",
+    "b1dd1be5b649712fb8bfa9fe7fdf6c42",
+    "2e8ed00326c319472182cc0615ca23a0",
+    "34872ccb3757d6deda160a05d66db270",
+    "789953b8e6ea2548ae17faed918b51ed"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -749,10 +767,16 @@
     "연천군, 외국인 계절근로자 고용주 교육 실시… 농업인 118명 참석",
     "속초해경 고성해역서 물에 빠진 외국인 선원 구조",
     "나주시-필리핀 구아구아시, 농촌 인력난 해소 위한 계절근로 협력 지속",
-    "나주시, 외국인 계절근로자 확보 필리핀 지방정부 협력"
+    "나주시, 외국인 계절근로자 확보 필리핀 지방정부 협력",
+    "보령 앞바다서 그물 끌어올리던 외국인 선원 장비에 끼어 숨져",
+    "부산 동오교역, 제주 선주 대상 외국인 선원 인권교육",
+    "보령 앞바다서 조업 중 양망기에 끼어…외국인 선원 사망",
+    "보령 해상서 그물 걷던 외국인 선원, 양망기에 끼어 사망",
+    "충남 보령 해상서 양망기 끼임 사고...외국인 선원 1명 숨져",
+    "외국인 선원 관리체계 시급성…실무자들 제도 정비 촉구"
   ],
   "updated": "2026-11-21",
-  "last_run_kst": "2026-11-21 11:30",
+  "last_run_kst": "2026-11-21 18:00",
   "lists": [
     {
       "message_ids": [
@@ -1432,6 +1456,71 @@
           "date": "11.20",
           "links": [
             "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zalpITnF1WEdrblVzTmQtSUhZcG9tdFEtbzZIZFlKNWtCOUtib0tlRFF4UzRFcTY4MWNvNkVCQXpKRkt3UWs0YTlveTlxVFVKN1ZTTE1Rb2tINTFveGdacUdtejVteElwYVdGbw?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1643
+      ],
+      "sent_at": "2026-11-21 18:00",
+      "items": [
+        {
+          "title": "보령 앞바다서 그물 끌어올리던 외국인 선원 장비에 끼어 숨져",
+          "source": "imnews.imbc.com",
+          "date": "11.21",
+          "links": [
+            "https://n.news.naver.com/mnews/article/214/0001537135?sid=102",
+            "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1yUXVkN3FLdUNoQXQwTG5aUGJMeDBaSmJPSlk3a25peW5tRU9adFIwSnAwV2dhMmtJSW41dUozN015SWNkNzEtMUNPMTJFNUlOalZvQjlPYjlMbnBDeTZqUg?oc=5",
+            "https://n.news.naver.com/mnews/article/421/0009302687?sid=102",
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE91WWtMaktlVVdGaTVzZWlFS08wTVZMRUhsd21lTkNpeUFnOFBHMDhkSk5UdVJVTVo0ejhGZTFpWGZLV2ttTDFHSXJBRGRuSFJxT0Ezak9ucGoxV3dLalNkMm8yUHFUMTlFaFdN?oc=5",
+            "https://n.news.naver.com/mnews/article/055/0001404765?sid=102",
+            "https://n.news.naver.com/mnews/article/023/0004010962?sid=102"
+          ]
+        },
+        {
+          "title": "보령 앞바다서 조업 중 양망기에 끼어…외국인 선원 사망",
+          "source": "매일경제",
+          "date": "11.21",
+          "links": [
+            "https://n.news.naver.com/mnews/article/057/0001979243?sid=102",
+            "https://n.news.naver.com/mnews/article/422/0000928528?sid=102",
+            "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBxUC1pTXBrZUZtMVZ2NE1rcEFyQWNCUjVySlBwVzU3ZnlWUm5TM0o5eW11aWVYSE9VbENUY3NNN3kzSy1tOU43QWt5YVFKX3JnaVduVkFXRm5yZm4ySVB4VEI0S3ZvZW8?oc=5"
+          ]
+        },
+        {
+          "title": "보령 해상서 그물 걷던 외국인 선원, 양망기에 끼어 사망",
+          "source": "daejonilbo.com",
+          "date": "11.21",
+          "links": [
+            "https://n.news.naver.com/mnews/article/656/0000193132?sid=102",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTFBuLXlESEswUjFtT3RRUXhuZW0yVTFjR2xIYkJZaklKTk0wQ1ZZNDExOVFpOTQ2YzhCRkZ5QmVYRUtGcFdhSVNPSWxpTVBYSnNyNjB5NERZWjNuZ29qejhwTkoyVGRpWFhSNFhWZkNxMNIBc0FVX3lxTE5vbjc5OGhwUW1DM2pPcmU2VEZ6eF9PeVJRek5oZ05qS3RMTHo3UGNRR1llNnNhaEJsWmZZT3RCSFo1UF96eFlHZ1pPWmp0Zm1Vb0lxNTJIUEJheFRIb2JkYmpmZXZNRkFVTktsUTliSmY2V3M?oc=5"
+          ]
+        },
+        {
+          "title": "충남 보령 해상서 양망기 끼임 사고...외국인 선원 1명 숨져",
+          "source": "YTN",
+          "date": "11.21",
+          "links": [
+            "https://n.news.naver.com/mnews/article/052/0002436111?sid=102"
+          ]
+        },
+        {
+          "title": "부산 동오교역, 제주 선주 대상 외국인 선원 인권교육",
+          "source": "busan.com",
+          "date": "11.21",
+          "links": [
+            "https://n.news.naver.com/mnews/article/082/0001408281?sid=102",
+            "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KN00yVEZZRmtlMHIwcTB2NzlSVDZkYmowb3FKTDFMcHd1UU9UVk1aWXAyaENHR09BOTVWZEVnOWhYQncwNXRlTEVpSkt0MEFMQm8ySjExRlYtSFhiYmo3c3NZcnJ2X1FmTzJ3dzVrUm82OEJXdGZRdg?oc=5"
+          ]
+        },
+        {
+          "title": "외국인 선원 관리체계 시급성…실무자들 제도 정비 촉구",
+          "source": "시사1",
+          "date": "11.21",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnU2xENXpMelJQNmZqV1RSakRndjlTYjhld3kwODRYZldvQ1dsMUZRS1VpeWJhRWltcUFiWmVQanYzNWx4UjRfX3BBTURCc2V1UGlKdXpURXJDQ3psd2Uybw?oc=5"
           ]
         }
       ]
