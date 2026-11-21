@@ -681,7 +681,10 @@
     "15dba05edd7c2191bd16cac11be02d5b",
     "ee1e2f1c77c653d70af659aae1601de0",
     "69d9904037b5c057d1a41f3b44df8440",
-    "ff16a9c3a952a4fd1e938e8b0cc00e02"
+    "ff16a9c3a952a4fd1e938e8b0cc00e02",
+    "76fef9fe10323606e6756badb10e6367",
+    "604e26232c0164d17fc84cd4439e1b66",
+    "b9c75fd83b4ba0ffe019f4f9a81975a7"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -781,7 +784,9 @@
     "캄보디아와 계절근로자 등 협력 확대 추진",
     "베트남 노동자들을 한국으로 계절 노동에 파견하는 프로그램이 조속히 재개되어야 합니다.",
     "2026년 E-9 비자 마지막 접수, 교육 이수 사업장이 배정 경쟁에서 앞선다",
-    "청도군 공공형 계절근로자 첫 시행, 농가 인건비 2억 원 절감·28명 전원 무사 귀국"
+    "청도군 공공형 계절근로자 첫 시행, 농가 인건비 2억 원 절감·28명 전원 무사 귀국",
+    "무안 계절근로자 숙소 화재…9516만원 재산피해",
+    "무안 계절근로자 숙소서 화재…인명 피해 없어"
   ],
   "updated": "2026-11-22",
   "last_run_kst": "2026-11-22 07:00",
@@ -1569,6 +1574,31 @@
           "date": "11.20",
           "links": [
             "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXQzJfUG56RGxDaTVTYWdiYkwxcFJ5MTlTcWRLSGJ5Q0trQlFJV0t4eDNvR00tMjRCb1lEWXJveERhSUVtaFZxU29WX05keVE?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1645
+      ],
+      "sent_at": "2026-11-22 08:58",
+      "items": [
+        {
+          "title": "무안 계절근로자 숙소 화재…9516만원 재산피해",
+          "source": "news1.kr",
+          "date": "11.22",
+          "links": [
+            "https://n.news.naver.com/mnews/article/421/0009303040?sid=102"
+          ]
+        },
+        {
+          "title": "무안 계절근로자 숙소서 화재…인명 피해 없어",
+          "source": "연합뉴스",
+          "date": "11.22",
+          "links": [
+            "https://n.news.naver.com/mnews/article/001/0016456102?sid=102",
+            "https://n.news.naver.com/mnews/article/003/0014337675?sid=102"
           ]
         }
       ]
