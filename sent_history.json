@@ -684,7 +684,12 @@
     "ff16a9c3a952a4fd1e938e8b0cc00e02",
     "76fef9fe10323606e6756badb10e6367",
     "604e26232c0164d17fc84cd4439e1b66",
-    "b9c75fd83b4ba0ffe019f4f9a81975a7"
+    "b9c75fd83b4ba0ffe019f4f9a81975a7",
+    "2f11455d4e7719c8e0cb8c90c661ba7e",
+    "6298f85cf2b81317345a1f78163558e1",
+    "41830aeab3f4c52d5c546518c1203c90",
+    "68f921d8f1d719d16eec4ddf8b0234da",
+    "c4a78222a87635828945405bb2f5af61"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -786,10 +791,14 @@
     "2026년 E-9 비자 마지막 접수, 교육 이수 사업장이 배정 경쟁에서 앞선다",
     "청도군 공공형 계절근로자 첫 시행, 농가 인건비 2억 원 절감·28명 전원 무사 귀국",
     "무안 계절근로자 숙소 화재…9516만원 재산피해",
-    "무안 계절근로자 숙소서 화재…인명 피해 없어"
+    "무안 계절근로자 숙소서 화재…인명 피해 없어",
+    "무안 계절근로자 숙소서 불…주택 2동 태워 9500만원 피해",
+    "충남도, 캄보디아 계절근로자 도입 협의",
+    "캄보디아와 손잡은 충남도, 계절근로자 확대",
+    "전남광주 계절근로자 숙소서 불‥다친 사람 없어"
   ],
   "updated": "2026-11-22",
-  "last_run_kst": "2026-11-22 07:00",
+  "last_run_kst": "2026-11-22 11:30",
   "lists": [
     {
       "message_ids": [
@@ -1599,6 +1608,47 @@
           "links": [
             "https://n.news.naver.com/mnews/article/001/0016456102?sid=102",
             "https://n.news.naver.com/mnews/article/003/0014337675?sid=102"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1646
+      ],
+      "sent_at": "2026-11-22 11:30",
+      "items": [
+        {
+          "title": "무안 계절근로자 숙소서 불…주택 2동 태워 9500만원 피해",
+          "source": "jnilbo.com",
+          "date": "11.22",
+          "links": [
+            "https://www.jnilbo.com/news/articleView.html?idxno=90000085251"
+          ]
+        },
+        {
+          "title": "충남도, 캄보디아 계절근로자 도입 협의",
+          "source": "대전일보",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE56cjltbl9JU1laWWFOZk1nN2s1WW56NEJSN3BkQjdXU1dYWUozWThXc2xlZlIyOFU2Y1VTX3c3M2VTMF9TZjhEc1RoZ0FTeS1UTE5TcHhzUndrelVWZTdkR3pCbE9pQ0FMSzNzTXQ1RdIBc0FVX3lxTE5SYkxpZGFOeHotY1JnYmdvdW5VUUV6MktkcHpHYXltN2hTUzlxaUhJZmo1bWJWRWtwdzVsN3Nfa0l1aWtCLWZSaU1HRDU5SkFlMk9XaE1yT0J3TVRYYktpSHlHeWVsQUptQzBhS0t4ZThzMWc?oc=5",
+            "https://news.google.com/rss/articles/CBMibEFVX3lxTE0zZnhyVDVTLTdyT3ZpY0RSX1M1SDFrOTVXVUVjMTRUVWVpVmpwbW1CNXItN2FhbXR0am5xTFF6TVlzZUxWd3J4dldKd1dGM1JYdDNsU2dxYVgzVFN1cmxXb0lYQjZldWo2aGFaQw?oc=5"
+          ]
+        },
+        {
+          "title": "캄보디아와 손잡은 충남도, 계절근로자 확대",
+          "source": "충청탑뉴스",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16akZwT3lmejRjMTdnSEtZN08wNGVnTUZYX2lmcEVvdFNCZjdYLWZXSjFPS0NDZjBWNnVJSnpNS3ExR3ktZ2NpV3F0UGY5MDRScFNmS3gzamNkUjFRX2oyMTZJZnk?oc=5"
+          ]
+        },
+        {
+          "title": "전남광주 계절근로자 숙소서 불‥다친 사람 없어",
+          "source": "imnews.imbc.com",
+          "date": "11.22",
+          "links": [
+            "https://n.news.naver.com/mnews/article/214/0001537187?sid=102"
           ]
         }
       ]
