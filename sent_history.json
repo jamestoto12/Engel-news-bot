@@ -689,7 +689,21 @@
     "6298f85cf2b81317345a1f78163558e1",
     "41830aeab3f4c52d5c546518c1203c90",
     "68f921d8f1d719d16eec4ddf8b0234da",
-    "c4a78222a87635828945405bb2f5af61"
+    "c4a78222a87635828945405bb2f5af61",
+    "0d041a27013d63d62bb2fbc0cba100c1",
+    "7df89741c38da32aaae7f45076e27e95",
+    "e275ff653d23e530cf6851228a37ecfb",
+    "1519d88a47751ccfa48ffa69ec803f22",
+    "48411dba3c11783ac4a2ddf797bf4218",
+    "5bcbab4357defde39bae098072e59480",
+    "ae6c08b297e3e9a018eb4b0d56719d41",
+    "45bd4b83480f65aea14646390370bd4e",
+    "6922a1c26a502c4eea0837c34cb902f8",
+    "8e1659cbf02b691522739d16a1313743",
+    "da0958f3f48837c6147a35bd8b4c0ef9",
+    "9bf3f9d78d9333c55b3ff5111b02d83d",
+    "d2b30babef9992fb63d802985b1d61bf",
+    "14ea171858954f66f4d6d82ad0f35506"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -795,10 +809,19 @@
     "무안 계절근로자 숙소서 불…주택 2동 태워 9500만원 피해",
     "충남도, 캄보디아 계절근로자 도입 협의",
     "캄보디아와 손잡은 충남도, 계절근로자 확대",
-    "전남광주 계절근로자 숙소서 불‥다친 사람 없어"
+    "전남광주 계절근로자 숙소서 불‥다친 사람 없어",
+    "충남도, 캄보디아와 계절근로자 도입 협력 논의…방문단 파견",
+    "전남농협, 계절근로자 안전한 근로환경 조성 노력",
+    "박수현 충남지사 특임 방문단, 캄보디아 계절근로자 도입 협의…농촌 인력난 해소 속도",
+    "영광중앙교회, 외국인 계절근로자 초청 행사 개최",
+    "청도군, 공공형 계절근로자 사업 첫 시행 '실효성' 입증",
+    "충남도, 농촌 인력난 해소 '캄보디아 계절근로자' 확보 나서",
+    "농촌 일손 부족에… 충남도, 캄보디아서 계절근로자 도입 협력 나섰다",
+    "충남도, 캄보디아와 계절근로자 협력 확대…농촌 인력난 해소 모색",
+    "공공형 계절근로 확대…농촌 인력난 ‘단비’"
   ],
   "updated": "2026-11-22",
-  "last_run_kst": "2026-11-22 11:30",
+  "last_run_kst": "2026-11-22 18:00",
   "lists": [
     {
       "message_ids": [
@@ -1649,6 +1672,91 @@
           "date": "11.22",
           "links": [
             "https://n.news.naver.com/mnews/article/214/0001537187?sid=102"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1647
+      ],
+      "sent_at": "2026-11-22 18:00",
+      "items": [
+        {
+          "title": "충남도, 캄보디아와 계절근로자 도입 협력 논의…방문단 파견",
+          "source": "gukjenews.com",
+          "date": "11.22",
+          "links": [
+            "https://www.gukjenews.com/news/articleView.html?idxno=3759572",
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE1ZVEZZb0RrSVB1ZFlLMmw5WHdENEJrUEZYZW1RTDNlSWdCSnV2c1VTUTFjaU1TNE9sMGJsUERfNzRaT19yenFzQy03RXhlMi1LNGRNOEhNSHI5ZU5HVDZLazhydmV4R19qaGFQTXJ3?oc=5"
+          ]
+        },
+        {
+          "title": "전남농협, 계절근로자 안전한 근로환경 조성 노력",
+          "source": "jndn.com",
+          "date": "11.22",
+          "links": [
+            "http://www.jndn.com/article.php?aid=1795335298443471098",
+            "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB1TTZram9TY3J4NE5tc05hSFU3Q3JMRHY0Wi1HWXRTM1pWWVhXSThXczNjWlhsTWxtLUQ5cHZpdHBzb0VMck5SM2RfZW1MWFNIdEpHTGE4T0pQeGZnWERMbA?oc=5"
+          ]
+        },
+        {
+          "title": "박수현 충남지사 특임 방문단, 캄보디아 계절근로자 도입 협의…농촌 인력난 해소 속도",
+          "source": "뉴스홈(newshome)",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE8zYUhKakcxNVVKYjRQTW1YdDlVMzB6Vk4xZDM3RWxQb2s5Rmg0R0JhR2lyLVpxOTY5WVliY09JR1dGbmNRZDVQclpKMFkyM1dWamxUTzdiX0F3LXQ0dWR0THNZdExocEFURTBOWUNB?oc=5"
+          ]
+        },
+        {
+          "title": "영광중앙교회, 외국인 계절근로자 초청 행사 개최",
+          "source": "jnilbo.com",
+          "date": "11.22",
+          "links": [
+            "https://www.jnilbo.com/news/articleView.html?idxno=90000085331",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE55RHJ4MVNHVVR0VmlqUU4ySDBuVkk3LUx1Tjh5ZHAzbmpLVFo3S3BacUtTZ0RrMkxmMDNOa2VFVHppM3A5djdVeHdrQ2JiZmxPVDVkNWV6ZUdIdFd6b2ZYdjNyc1doQkxNUWQ1dWlvYw?oc=5"
+          ]
+        },
+        {
+          "title": "청도군, 공공형 계절근로자 사업 첫 시행 '실효성' 입증",
+          "source": "dkilbo.com",
+          "date": "11.22",
+          "links": [
+            "https://www.dkilbo.com/news/articleView.html?idxno=561571"
+          ]
+        },
+        {
+          "title": "충남도, 농촌 인력난 해소 '캄보디아 계절근로자' 확보 나서",
+          "source": "asiatoday.co.kr",
+          "date": "11.22",
+          "links": [
+            "https://www.asiatoday.co.kr/kn/view.php?key=20261122010008231",
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTFBNNUVkaFFDYzdMZHpuTjZpdUFNLWZHWEl5N1RFeEd2a0U5VUN0cW1heUtpRFRZV24xeGV6QndCWHBvZGtXTmZrNDF6ZEtIT1VtNUhueGsxejJCRXl4TC1LaldhMXQ5X0lzWHZCZXpB?oc=5"
+          ]
+        },
+        {
+          "title": "농촌 일손 부족에… 충남도, 캄보디아서 계절근로자 도입 협력 나섰다",
+          "source": "shinailbo.co.kr",
+          "date": "11.22",
+          "links": [
+            "https://www.shinailbo.co.kr/news/articleView.html?idxno=5086198",
+            "https://news.google.com/rss/articles/CBMicEFVX3lxTE9ESUpHOFRDZzdza2VZa1RBWE5tTHE5M1NScUFPNW9CSkNVMGEzcldnRHJBSzBsdUh4Z0Qzb1BmRWlHa3JtcElubU5DdWxKSUdrVTd6aVZfOUU4U3VVOTc5R096OTZXOU40ejZpRVVVeWw?oc=5"
+          ]
+        },
+        {
+          "title": "충남도, 캄보디아와 계절근로자 협력 확대…농촌 인력난 해소 모색",
+          "source": "메가충청뉴스",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibEFVX3lxTE5lSWNNTmNPRWtKWVlxcU43TTlkM3RrN3R3VFlLRy1DaVh4azYwZmNZWFh1Sks5N3RVeExZd2VCREN5cWs3WnctMHEwYk40N3FhZm9sYmJkQkVJLTRrV3ZyMXRwcmxOdE9SaVBrZg?oc=5"
+          ]
+        },
+        {
+          "title": "공공형 계절근로 확대…농촌 인력난 ‘단비’",
+          "source": "농민신문",
+          "date": "11.20",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IOWxVQi1qRTEydVZXeWtIMTRxN3gwemZaNXdnZkdDUnJESGlMQ0gtaDF4YWdubGRGYW5nUjNadm9pLUczUGVlQnZ3emhLSEgwaDNkZjlYSkkyZw?oc=5"
           ]
         }
       ]
