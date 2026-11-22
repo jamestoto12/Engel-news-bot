@@ -703,7 +703,13 @@
     "da0958f3f48837c6147a35bd8b4c0ef9",
     "9bf3f9d78d9333c55b3ff5111b02d83d",
     "d2b30babef9992fb63d802985b1d61bf",
-    "14ea171858954f66f4d6d82ad0f35506"
+    "14ea171858954f66f4d6d82ad0f35506",
+    "a7c8feee5b6b4d6b33350aaee82bf5bd",
+    "1b1e358a28ab99167670f30d55d5483f",
+    "018ba40753dc082b2205f0a57c5de4f1",
+    "82f4633569d7cfa45935236fe625e95d",
+    "5bbad7dcd925f61c9a7acddbf529c9c2",
+    "37eafbb521991276af98d8fb62fd10d4"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -818,10 +824,16 @@
     "충남도, 농촌 인력난 해소 '캄보디아 계절근로자' 확보 나서",
     "농촌 일손 부족에… 충남도, 캄보디아서 계절근로자 도입 협력 나섰다",
     "충남도, 캄보디아와 계절근로자 협력 확대…농촌 인력난 해소 모색",
-    "공공형 계절근로 확대…농촌 인력난 ‘단비’"
+    "공공형 계절근로 확대…농촌 인력난 ‘단비’",
+    "외국인 계절근로자 5만 명 시대, 수수료 투명성이 농촌 인력시장 판도 바꾼다",
+    "충남도, 캄보디아와 농촌 계절근로자 도입 논의…노동직업훈련부 장관 만나",
+    "고성 천진해역서 30대 외국인 선원 바다에 빠져…해경 병원 이송",
+    "목포해양경찰서, 진도 해상 어선 전복 긴급 구조…내·외국인 선원 8명 전원 생존",
+    "국립공주대, 외국인 근로자 언어 장벽 낮춘다… 현장 한국어교육 성과",
+    "공주 국립공주대, 외국인 근로자 한국어 교실 수료식 개최"
   ],
-  "updated": "2026-11-22",
-  "last_run_kst": "2026-11-22 18:00",
+  "updated": "2026-11-23",
+  "last_run_kst": "2026-11-23 07:00",
   "lists": [
     {
       "message_ids": [
@@ -1757,6 +1769,62 @@
           "date": "11.20",
           "links": [
             "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IOWxVQi1qRTEydVZXeWtIMTRxN3gwemZaNXdnZkdDUnJESGlMQ0gtaDF4YWdubGRGYW5nUjNadm9pLUczUGVlQnZ3emhLSEgwaDNkZjlYSkkyZw?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1648
+      ],
+      "sent_at": "2026-11-23 07:00",
+      "items": [
+        {
+          "title": "외국인 계절근로자 5만 명 시대, 수수료 투명성이 농촌 인력시장 판도 바꾼다",
+          "source": "얼리어답터뉴스",
+          "date": "11.23",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiSkFVX3lxTE93MFozLWRCUHFDQXNkNjlzNl8yZFRxZUp3alY2ZHFWTzdmUEd3Um02VlBKYjlYMktfTzNfWnZJTnNjREVYU3d2MjJn?oc=5"
+          ]
+        },
+        {
+          "title": "충남도, 캄보디아와 농촌 계절근로자 도입 논의…노동직업훈련부 장관 만나",
+          "source": "타파인",
+          "date": "11.23",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiXkFVX3lxTE00dVJjWU1UdFpnNkNSXzlfdXJ1ZTRTQ2ZGU0p4Zlp2OC12eG5PdUk2eEJmSllHTWMySDVUU2V1b0tfS1c3c00tTkJxb1EybkpZWndBelpSSlFydjVRX0E?oc=5"
+          ]
+        },
+        {
+          "title": "고성 천진해역서 30대 외국인 선원 바다에 빠져…해경 병원 이송",
+          "source": "강원신문",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAyRV9TREFQcjZUWXo4V1Mwb0ZFSzE4NnljdDZUZlNfVFZiUklfVEh6YnVLcll4UVhlc2UyUGxpUWlOZTVYN25qaURuNHdvdWZfOGh6aFVyM2RTay0wV290WG8wWEVaOFBw?oc=5"
+          ]
+        },
+        {
+          "title": "목포해양경찰서, 진도 해상 어선 전복 긴급 구조…내·외국인 선원 8명 전원 생존",
+          "source": "시사의창",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PZEFsM0ZMRlMtd2h3bVRYSmMtV09NZVZGZTlrRWFXZTMwSXBXVHZZZ3VWM18xc1pnQ0Uwb1FGb21XSEl4cGhza0RYSXZmMjBlTHI0Yg?oc=5"
+          ]
+        },
+        {
+          "title": "국립공주대, 외국인 근로자 언어 장벽 낮춘다… 현장 한국어교육 성과",
+          "source": "m-i.kr",
+          "date": "11.22",
+          "links": [
+            "https://www.m-i.kr/news/articleView.html?idxno=2021798"
+          ]
+        },
+        {
+          "title": "공주 국립공주대, 외국인 근로자 한국어 교실 수료식 개최",
+          "source": "금강투데이",
+          "date": "11.22",
+          "links": [
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE1wc3M4RE9KS1NlUi1qUm5RNHh1bE9WN0V0SjF5LXhqQVJLVFFPcThFSjNxczE1Z1RfMEFVTjdIOG5WaVpRTTRBSkg0NE9kejdPZzhKcTlBaWlTYUVyMVYzMXc3SXpYaTFydnIw0gFuQVVfeXFMTVRHMkljdloxYWpNdW9pT3Uxd3d5aFFJUlJRTnNNMFNRSHZfNVFfaHV6eXQyMXEtSnJrYzdaU3l0dmRUeThwUFVrdVVNQ2t2U2gwSjZULVNpQVNOTkJEUTJqVC02NkMzRWZJaUd6elE?oc=5"
           ]
         }
       ]
