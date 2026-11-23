@@ -754,7 +754,12 @@
     "cb73cfde175fabcbd6d6e8b915c9b4e4",
     "12b2e20e3e61fd377432df03a55be461",
     "18868e584efaa10e9c743cb9bbd08eef",
-    "0884bd089ee36d5799fc0768086a7ca8"
+    "0884bd089ee36d5799fc0768086a7ca8",
+    "6ebb1451d1e599876cd0f669f0edc2e0",
+    "5a54e6a23af2615753f60e245e687fd1",
+    "cd5df3e4dbd9ff90722ef815f6b1130b",
+    "45d72f6f5ebfcd329d076efc0ee6d0cb",
+    "c33511e8ece0eec6119111d83419b6b7"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -903,10 +908,15 @@
     "김광규·서울검사정비組, 車 판금·도장 외국인력 첫 입국 서울의 종합·소형정비 조합원 업체 현장에 투입",
     "영주시 필리핀 로살레스시 방문, 외국인 계절근로자 신규 선발 면접",
     "김민수 충남도지사 비서실장 , 캄보디아와 '계절근로자 도입' 협력 급파",
-    "충남도, 라오스 이어 캄보디아로…농촌 계절근로자 확보 속도전"
+    "충남도, 라오스 이어 캄보디아로…농촌 계절근로자 확보 속도전",
+    "\"올해 마지막 기회\"…외국인 근로자 필요한 양돈농장, 27일까지 신청",
+    "영천시, 라오스서 계절근로자 직접 선발…내년 255명 목표",
+    "신안경찰, 외국인 계절근로자 대상 다국어 안전 홍보",
+    "“주민과 외국인 근로자가 상생하는 안전한 도서 치안을 구현”",
+    "영동군, 필리핀 두마게티시와 계절근로자·교육·문화 전방위 교류 강화"
   ],
-  "updated": "2026-11-23",
-  "last_run_kst": "2026-11-23 18:00",
+  "updated": "2026-11-24",
+  "last_run_kst": "2026-11-24 07:00",
   "lists": [
     {
       "message_ids": [
@@ -2155,6 +2165,54 @@
           "date": "11.23",
           "links": [
             "https://news.google.com/rss/articles/CBMia0FVX3lxTE5kWmo3NWhYZ0dXc21sZWRnQ0d1TUFpNDdpWFBKai1IdzFCaTZya2QwZjlrUUtLeTFoRnc4UVEzSGlHQ3JGNV9kdXBlWWN4NUhnTzNraTVEQUpfMnBSa2ZCaE1WU3BjbU9rLWN3?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1651
+      ],
+      "sent_at": "2026-11-24 07:00",
+      "items": [
+        {
+          "title": "\"올해 마지막 기회\"…외국인 근로자 필요한 양돈농장, 27일까지 신청",
+          "source": "돼지와사람",
+          "date": "11.23",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1uTzNIWnl4clFHamZHY0ZTcTIzMDBkUXRTYTBsRlpybkpBTzFGcHZwMXVmSnpJMlhaSlVUV243ZXlTU2M0S3FGTGdRUndiQlRKa0FxQk9leElxTlkzMUhoa05n?oc=5"
+          ]
+        },
+        {
+          "title": "영천시, 라오스서 계절근로자 직접 선발…내년 255명 목표",
+          "source": "kyongbuk.co.kr",
+          "date": "11.23",
+          "links": [
+            "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091822"
+          ]
+        },
+        {
+          "title": "신안경찰, 외국인 계절근로자 대상 다국어 안전 홍보",
+          "source": "namdonews.com",
+          "date": "11.23",
+          "links": [
+            "https://www.namdonews.com/news/articleView.html?idxno=930222"
+          ]
+        },
+        {
+          "title": "“주민과 외국인 근로자가 상생하는 안전한 도서 치안을 구현”",
+          "source": "kwangju.co.kr",
+          "date": "11.23",
+          "links": [
+            "http://www.kwangju.co.kr/article.php?aid=1795425300805621133"
+          ]
+        },
+        {
+          "title": "영동군, 필리핀 두마게티시와 계절근로자·교육·문화 전방위 교류 강화",
+          "source": "breaknews.com",
+          "date": "11.23",
+          "links": [
+            "http://www.breaknews.com/1253263"
           ]
         }
       ]
