@@ -759,7 +759,21 @@
     "5a54e6a23af2615753f60e245e687fd1",
     "cd5df3e4dbd9ff90722ef815f6b1130b",
     "45d72f6f5ebfcd329d076efc0ee6d0cb",
-    "c33511e8ece0eec6119111d83419b6b7"
+    "c33511e8ece0eec6119111d83419b6b7",
+    "f50e636b3c99f209f417d16e1ca2c78a",
+    "b4e9e288e82885d2f90e1e7bf1c03fbb",
+    "b7303a441c20439fd6585e5f76862747",
+    "a3bfa9f5671c492ae416a9188b99b716",
+    "37f0c6471284095b4c2d03beec897d86",
+    "8cc13787a4e255fd08b6ba2dd0653ce0",
+    "9889aaa8aa548a797ed678a6ab97d555",
+    "9355555c16ec623af491c81b1e7f3e3f",
+    "a8fc9f37931001fe72a12f3d9ece3180",
+    "67486638cd2171e3aef23dde3bdefb70",
+    "8fcdbef0564791074761fd4a294ea617",
+    "dcdb8ad990bb174d631ce68d4fb1ae31",
+    "db81ea5b316bddc8585c673a9969d9b1",
+    "2caea2c92e0e7d8558198fa41759f40c"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -913,10 +927,15 @@
     "영천시, 라오스서 계절근로자 직접 선발…내년 255명 목표",
     "신안경찰, 외국인 계절근로자 대상 다국어 안전 홍보",
     "“주민과 외국인 근로자가 상생하는 안전한 도서 치안을 구현”",
-    "영동군, 필리핀 두마게티시와 계절근로자·교육·문화 전방위 교류 강화"
+    "영동군, 필리핀 두마게티시와 계절근로자·교육·문화 전방위 교류 강화",
+    "사천시, 외국인 계절근로자 운영 우수상…내년 363명 도입 추진",
+    "강진군, '공공형 계절근로사업 성공 마무리'... 농촌 인력난 해소 견인",
+    "강진군, '공공형 외국인 계절근로자' 영농 마치고 본국으로 돌아가",
+    "사천시, ‘2026년 외국인 계절근로자 운영지자체 우수사례 평가’ 우수...",
+    "[영동군] 필리핀 두마게티시와 계절근로자 협력 확대…25일 무료 낭만콘..."
   ],
   "updated": "2026-11-24",
-  "last_run_kst": "2026-11-24 07:00",
+  "last_run_kst": "2026-11-24 11:30",
   "lists": [
     {
       "message_ids": [
@@ -2213,6 +2232,63 @@
           "date": "11.23",
           "links": [
             "http://www.breaknews.com/1253263"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1652
+      ],
+      "sent_at": "2026-11-24 11:30",
+      "items": [
+        {
+          "title": "사천시, 외국인 계절근로자 운영 우수상…내년 363명 도입 추진",
+          "source": "뉴시스",
+          "date": "11.24",
+          "links": [
+            "https://n.news.naver.com/mnews/article/003/0014341729?sid=102"
+          ]
+        },
+        {
+          "title": "강진군, '공공형 계절근로사업 성공 마무리'... 농촌 인력난 해소 견인",
+          "source": "newsworker.co.kr",
+          "date": "11.24",
+          "links": [
+            "https://www.newsworker.co.kr/news/articleView.html?idxno=515764",
+            "https://news.google.com/rss/articles/CBMicEFVX3lxTFByRWNidG5sandxWXFNS1hSbTRJd2ZaY0cwdGtfQ2pOcmYxMXFralduV1VOMGpoN0FmZzZ1dTV4NURyS05qNWpGQk0xazFUMjV2aGE1ZkVDeEVLRkFfWVNuWnhaVGt5bGxEbjlIR1ZTLUHSAXRBVV95cUxQUF9VanBCN28yejItRUwwTUY4QWEtaHhTZmpHZG14dHF6ZHBTcXBYTnBQU3l4M0xhY0k0ekFrMU8tZFJwY05IMllzNHFJUE1NYVRodHc2MWJSNlVibkxqUWlvenVwUWl2cVRsZk9ka2o5TERKVA?oc=5",
+            "https://news.google.com/rss/articles/CBMidkFVX3lxTE9YQk5vRDhXSHF5OUZjOWd3bFZiVlZOd3duam5wQ2hYYS1qVktHWHQwbTBHck5fQnZNdzRTMXkxWERTY1pZNEp5TEZvOGpvbHNVQkpzRkFZSGZPV3Y1dFcxQTVtaTNLN1gwR3pJRGo3WFBVMTdyR0HSAXZBVV95cUxPWEJOb0Q4V0hxeTlGYzlnd2xWYlZWTnd3bmpucENoWGEtalZLR1h0MG0wR3JOX0J2TXc0UzF5MVhEU2NaWTRKeUxGbzhqb2xzVUJKc0ZBWUhmT1d2NXRXMUE1bWkzSzdYMEd6SURqN1hQVTE3ckdB?oc=5",
+            "http://news.lghellovision.net/news/articleView.html?idxno=563461"
+          ]
+        },
+        {
+          "title": "강진군, '공공형 외국인 계절근로자' 영농 마치고 본국으로 돌아가",
+          "source": "머니투데이",
+          "date": "11.24",
+          "links": [
+            "https://n.news.naver.com/mnews/article/008/0005445426?sid=102",
+            "https://news.google.com/rss/articles/CBMiakFVX3lxTE14bmdLQmJTTUhhSm81emRsa29ZRDJVOVI5ekFTYTZISkFXb0lqMUFrWU9sbnp4bzlmYmM0VmJ4NUMxTHFhTkt6NWRwa1RYODdrajBYcG5UOVVWckZyNkxTbWhwS3FEb1oyU3c?oc=5",
+            "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1lcGI4VkdNbUdRUFBWU2ZRdzEtS19qVnJ6MFpTckFqWEdCOFNsaGNHTGE5bnFUdmM4OHh6ZXhUTWhvSmpaYk1vRzc2ZW5rTG5vd0V5VGRSaS11aFcxVHB3cEZBTQ?oc=5",
+            "https://news.google.com/rss/articles/CBMicEFVX3lxTE80N2E2NTlJUWxvWEc2cXpfaFFNZFNiUTZvcElodzhnczVsc0JGNnpLZTlLVkxuUHhOZDByOFNibUxlNXI0NjhCaHVUQjdDNWdSMnVtX0N6YjgzenJwQWFqY2VUakYtWXFVdkNpeENxUzg?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTFAtX2hGRjViOXFFaW1HNHA3Zk1qZ1JwbzZJNWQtWUI0Z2d5RXVqSjFHcVc3d3lYZ2NiVzJEN2NzMDNoM01kbDhkekNReGVQYk8tTXQtZ29PTlotQkRCeXBMRzNFcEdoWXRVWWR5ZGhqY9IBb0FVX3lxTFAtX2hGRjViOXFFaW1HNHA3Zk1qZ1JwbzZJNWQtWUI0Z2d5RXVqSjFHcVc3d3lYZ2NiVzJEN2NzMDNoM01kbDhkekNReGVQYk8tTXQtZ29PTlotQkRCeXBMRzNFcEdoWXRVWWR5ZGhqYw?oc=5",
+            "https://www.cbci.co.kr/news/articleView.html?idxno=630102"
+          ]
+        },
+        {
+          "title": "사천시, ‘2026년 외국인 계절근로자 운영지자체 우수사례 평가’ 우수...",
+          "source": "viva100.com",
+          "date": "11.24",
+          "links": [
+            "https://www.viva100.com/article/20261124500323",
+            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE15WFhWZmVOZ2hwNGxscFgxWGxqZTJKTXNqclNkMExSQ1NOdklKYlNTU1pkdWVwaEFWWGVzcE9BR1JreFlmWkZ6Ti0tbjhDdTBrOWd2cUZ0WkxzZw?oc=5"
+          ]
+        },
+        {
+          "title": "[영동군] 필리핀 두마게티시와 계절근로자 협력 확대…25일 무료 낭만콘...",
+          "source": "webeconomy.co.kr",
+          "date": "11.24",
+          "links": [
+            "https://www.webeconomy.co.kr/news/articleView.html?idxno=2386890"
           ]
         }
       ]
