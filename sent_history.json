@@ -773,7 +773,19 @@
     "8fcdbef0564791074761fd4a294ea617",
     "dcdb8ad990bb174d631ce68d4fb1ae31",
     "db81ea5b316bddc8585c673a9969d9b1",
-    "2caea2c92e0e7d8558198fa41759f40c"
+    "2caea2c92e0e7d8558198fa41759f40c",
+    "4dd7fb28a5759e778af70fe343d6dc8b",
+    "2e8752532128b601793b1f4d73bf4b9d",
+    "9e9bf2cac7a73bc284c5f7fcf7eb8c98",
+    "47146241997e3b56472c66410944e25c",
+    "c1735eecd611586c78fd086a1ce8ccad",
+    "509bee592c46b2cd77fb30a8ce3c29d0",
+    "cad070d9e01f1b58bbb83cca1b75a721",
+    "78c0a723c9772deba13ca66e6e3c8612",
+    "54bc4bb8fd1ae6ac9d841a04fff1135c",
+    "dc4fd315621723c855117116f878ecbf",
+    "fae69101b9aea854b6c595cff7997d38",
+    "2c0d0fb81a4cf48d66642b0db34d0983"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -932,10 +944,18 @@
     "강진군, '공공형 계절근로사업 성공 마무리'... 농촌 인력난 해소 견인",
     "강진군, '공공형 외국인 계절근로자' 영농 마치고 본국으로 돌아가",
     "사천시, ‘2026년 외국인 계절근로자 운영지자체 우수사례 평가’ 우수...",
-    "[영동군] 필리핀 두마게티시와 계절근로자 협력 확대…25일 무료 낭만콘..."
+    "[영동군] 필리핀 두마게티시와 계절근로자 협력 확대…25일 무료 낭만콘...",
+    "베트남 노동자, 한국행 1년 새 80% 급증...계절근로 프로그램 2031년까지...",
+    "양구군농협 '공공형 외국인 계절근로자', 농촌 인력난 해법으로 자리매...",
+    "양구군농협 공공형 계절근로제 농촌 일손 부족 해소 ‘톡톡’",
+    "김경희 서귀포시 농업경영지원팀장 \"외국인 계절근로자 확대…내년 340명...",
+    "선원노련·경남해상노조, 인니와 외국인 선원 권익 향상 협력",
+    "\"수산업 외국인력 확보·청년어업인 정착 지원 필요\"",
+    "‘무단이탈 0명’ 사천시, 외국인 계절근로자 운영 전국 우수상···현장 중심 적극행정 빛났다",
+    "도, 캄보디아 계절근로자 도입 논의"
   ],
   "updated": "2026-11-24",
-  "last_run_kst": "2026-11-24 11:30",
+  "last_run_kst": "2026-11-24 18:00",
   "lists": [
     {
       "message_ids": [
@@ -2289,6 +2309,82 @@
           "date": "11.24",
           "links": [
             "https://www.webeconomy.co.kr/news/articleView.html?idxno=2386890"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1653
+      ],
+      "sent_at": "2026-11-24 18:00",
+      "items": [
+        {
+          "title": "베트남 노동자, 한국행 1년 새 80% 급증...계절근로 프로그램 2031년까지...",
+          "source": "ajunews.com",
+          "date": "11.24",
+          "links": [
+            "https://www.ajunews.com/view/20261124100854338",
+            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ROUlZMklhSDAzY3VrMGYzQTRwUEZtTXR0MkJYRk9HSGxpZXYyT2cweVZJaUJYNHZFTHVFZnRZMTAyWERTdjRuQlp0bGgtSjFFcXYzZE9nZ185d9IBWEFVX3lxTE9TaW0wSWpUTTlFa2kxMDBkZXo0SkZvRG1MNzdQaFFfOFlGLS13MElQMEw0UW55Q2tkSUZYZWt2Zm54c3oyVTQ1STdycnpfcEE0TF9ENnBYWlg?oc=5"
+          ]
+        },
+        {
+          "title": "양구군농협 '공공형 외국인 계절근로자', 농촌 인력난 해법으로 자리매...",
+          "source": "jeonmae.co.kr",
+          "date": "11.24",
+          "links": [
+            "https://www.jeonmae.co.kr/news/articleView.html?idxno=1315539",
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE0xS3RLcDdvX20wbVJTdGg2Ql9jYVU0aFlxbWdYSFlSSzNSS2s3Y3lfczRuMmZudWNkMDdXMUtzczdldG5FeDZKUWdQbnZwOVMxZEhnWVVZdDg2ZlE4QllPWHduMHl5dHdHREVnbkFB?oc=5"
+          ]
+        },
+        {
+          "title": "양구군농협 공공형 계절근로제 농촌 일손 부족 해소 ‘톡톡’",
+          "source": "kwnews.co.kr",
+          "date": "11.24",
+          "links": [
+            "https://n.news.naver.com/mnews/article/087/0001233087?sid=102"
+          ]
+        },
+        {
+          "title": "김경희 서귀포시 농업경영지원팀장 \"외국인 계절근로자 확대…내년 340명...",
+          "source": "news.bbsi.co.kr",
+          "date": "11.24",
+          "links": [
+            "https://news.bbsi.co.kr/news/articleView.html?idxno=4120585",
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE9MSUQtNG5LS1BpWDJSc2NPNDhhWjB5Ti0xQ29FZ0t5bm5DNXFMQjdDaXJuSi03NWF5dTdkSE52T05ZWk9SVnhMQUNtMmk4WDc4OWxtRXdzUXZYaTZFTDNrZ202dlg1ZEJjc2dj?oc=5"
+          ]
+        },
+        {
+          "title": "선원노련·경남해상노조, 인니와 외국인 선원 권익 향상 협력",
+          "source": "해양한국",
+          "date": "11.24",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiekFVX3lxTE50eVRTVzhDaXJKQ1NnVjZ4UTdSV1VvazNqVDB0ZVR3dVVsTHhWZmlBX25qOXE4Rk1uY0ZKMXNpWldfb1BpTlNoUU9EMDFVWTdOV0lpNzRqTUNpZDdTTk5iWHNpc19vUDFhbzhKVGljWkd4bGFLempwUzFR?oc=5"
+          ]
+        },
+        {
+          "title": "\"수산업 외국인력 확보·청년어업인 정착 지원 필요\"",
+          "source": "agrinet.co.kr",
+          "date": "11.24",
+          "links": [
+            "https://www.agrinet.co.kr/news/articleView.html?idxno=409096",
+            "https://news.google.com/rss/articles/CBMibEFVX3lxTFA0TTF1VXhuaG9ORmYtSDNncTVRUUd6b2d4OWc5TURzNnl3b1pDaWRwMWN0MF85SkE3bktMMUlSQnRlY2ozNFZVM3hPakx2VkNIMGJLeE51al9IZi1yVFl5WXdGVnNORDcyM2Zvaw?oc=5"
+          ]
+        },
+        {
+          "title": "‘무단이탈 0명’ 사천시, 외국인 계절근로자 운영 전국 우수상···현장 중심 적극행정 빛났다",
+          "source": "펜앤마이크",
+          "date": "11.24",
+          "links": [
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9WczNoVTIyQVJadDRQQ2VmQ3JRdU01WWdzbDNBd09VM0NiZVpVT3pSMXVXcEppNlJEUmt5ejB1cVdVYWRQWndnZ01vblVLbkMxcGVhNVRBb1UtOTdKRzVhV3lJcEN4amd2VUpVUW4xa9IBb0FVX3lxTE9WczNoVTIyQVJadDRQQ2VmQ3JRdU01WWdzbDNBd09VM0NiZVpVT3pSMXVXcEppNlJEUmt5ejB1cVdVYWRQWndnZ01vblVLbkMxcGVhNVRBb1UtOTdKRzVhV3lJcEN4amd2VUpVUW4xaw?oc=5"
+          ]
+        },
+        {
+          "title": "도, 캄보디아 계절근로자 도입 논의",
+          "source": "충남내포뉴스",
+          "date": "11.23",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE5PR1RYa2ZKYnNYVUJzQjVPOVJvaTJQTzZKX3p2M1pKZmxhbHF1MHNsWEFtTUg5Q0dMOEphRktYa1lsa0s4WFVmcG9GQlpQbDFyNFpVTXJtR2NYaTJEczRIbmZhYk9qeFpJQmN2VFd3?oc=5"
           ]
         }
       ]
