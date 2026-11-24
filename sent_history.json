@@ -785,7 +785,11 @@
     "54bc4bb8fd1ae6ac9d841a04fff1135c",
     "dc4fd315621723c855117116f878ecbf",
     "fae69101b9aea854b6c595cff7997d38",
-    "2c0d0fb81a4cf48d66642b0db34d0983"
+    "2c0d0fb81a4cf48d66642b0db34d0983",
+    "bd29b74d365aa30491ffbd3b8c98f2e9",
+    "b8c1249cfd78cc3d7971e29223105efc",
+    "f008c1e5e0948c93a8ea2096b339b31d",
+    "2c9edda9f20b824e008642a702908393"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -952,10 +956,13 @@
     "선원노련·경남해상노조, 인니와 외국인 선원 권익 향상 협력",
     "\"수산업 외국인력 확보·청년어업인 정착 지원 필요\"",
     "‘무단이탈 0명’ 사천시, 외국인 계절근로자 운영 전국 우수상···현장 중심 적극행정 빛났다",
-    "도, 캄보디아 계절근로자 도입 논의"
+    "도, 캄보디아 계절근로자 도입 논의",
+    "고흥군, 의류 나눔으로 외국인 근로자 겨울나기 지원",
+    "성주 첫 외국인 근로자 숙소···건물주 민원 무마용?",
+    "전북자치도, 계절근로자 인권·한파 안전 점검…군산항 활성화 추진"
   ],
-  "updated": "2026-11-24",
-  "last_run_kst": "2026-11-24 18:00",
+  "updated": "2026-11-25",
+  "last_run_kst": "2026-11-25 07:00",
   "lists": [
     {
       "message_ids": [
@@ -2385,6 +2392,39 @@
           "date": "11.23",
           "links": [
             "https://news.google.com/rss/articles/CBMibkFVX3lxTE5PR1RYa2ZKYnNYVUJzQjVPOVJvaTJQTzZKX3p2M1pKZmxhbHF1MHNsWEFtTUg5Q0dMOEphRktYa1lsa0s4WFVmcG9GQlpQbDFyNFpVTXJtR2NYaTJEczRIbmZhYk9qeFpJQmN2VFd3?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1654
+      ],
+      "sent_at": "2026-11-25 07:01",
+      "items": [
+        {
+          "title": "고흥군, 의류 나눔으로 외국인 근로자 겨울나기 지원",
+          "source": "jnilbo.com",
+          "date": "11.25",
+          "links": [
+            "https://www.jnilbo.com/news/articleView.html?idxno=90000086040",
+            "https://news.google.com/rss/articles/CBMiS0FVX3lxTE85ekRaQ0YzbW03bU91b3NGSGZIYkxpWEc3Vml4SDBaRDYxSWlqdE9mR3FSbTVsb0RQVldxdk0xRnVhTzhyN2lxakpXSQ?oc=5"
+          ]
+        },
+        {
+          "title": "성주 첫 외국인 근로자 숙소···건물주 민원 무마용?",
+          "source": "dgmbc.com",
+          "date": "11.24",
+          "links": [
+            "https://n.news.naver.com/mnews/article/657/0000057814?sid=102"
+          ]
+        },
+        {
+          "title": "전북자치도, 계절근로자 인권·한파 안전 점검…군산항 활성화 추진",
+          "source": "newsmaker.or.kr",
+          "date": "11.24",
+          "links": [
+            "http://www.newsmaker.or.kr/news/articleView.html?idxno=186363"
           ]
         }
       ]
