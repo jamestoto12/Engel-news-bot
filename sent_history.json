@@ -789,7 +789,20 @@
     "bd29b74d365aa30491ffbd3b8c98f2e9",
     "b8c1249cfd78cc3d7971e29223105efc",
     "f008c1e5e0948c93a8ea2096b339b31d",
-    "2c9edda9f20b824e008642a702908393"
+    "2c9edda9f20b824e008642a702908393",
+    "7d7d4b56496b308beb2f2408fdde2d39",
+    "d763a7cb52e025efc5e3916ca685fcf3",
+    "b7fe607a598324151c188951f9cbf800",
+    "e6466eab37eee34cca85f04468e0713a",
+    "f99d590a3fd93667366cb6b2448a9266",
+    "e1b308ae624d4e63c6b1521988f087ea",
+    "3575f0f6ca14774bb3e741cb1d76eeb1",
+    "f7c3d8394e8ace7f6183334ca4d0acf5",
+    "c2fec463be7348a763ea4ce63e5277d3",
+    "7c97c087bfcf5d4ad71c89663a32acd0",
+    "f061f6670eea7ab143c9bb46bfe59690",
+    "e6337276cdf389e2d420555abb37c87c",
+    "e88043e5e58b6e9da94e1e8687dbcbda"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -959,10 +972,19 @@
     "도, 캄보디아 계절근로자 도입 논의",
     "고흥군, 의류 나눔으로 외국인 근로자 겨울나기 지원",
     "성주 첫 외국인 근로자 숙소···건물주 민원 무마용?",
-    "전북자치도, 계절근로자 인권·한파 안전 점검…군산항 활성화 추진"
+    "전북자치도, 계절근로자 인권·한파 안전 점검…군산항 활성화 추진",
+    "서귀포 중문농협, 베트남 계절근로자 30명 입국…농촌 인력난 해소 본격...",
+    "영월군 “외국인 계절 근로자 결혼이민자 가족 초청”···2촌 이내 친척...",
+    "제주서 심정지 외국인 선원, 동료 CPR로 19분 만에 호흡 회복",
+    "사천 '외국인 계절근로자' 3년새 6배↑…\"조기적응 교육\"",
+    "제주시 한림항서 외국인 선원 작업 중 심정지…병원 이송",
+    "구인난 메우는 외국인력, 이제는 숙련인력으로…교육·근속 지원 과제",
+    "한·인도네시아 외국인 선원 권익 보호 논의",
+    "베트남, '디지털노마드' 시범비자 도입 추진…관광업 개발 촉진",
+    "고삼농협 4년차 외국인(라오스) 공공형계절노동자 환송식 열어...3억원 이상 생산비 절감 효과"
   ],
   "updated": "2026-11-25",
-  "last_run_kst": "2026-11-25 07:00",
+  "last_run_kst": "2026-11-25 11:30",
   "lists": [
     {
       "message_ids": [
@@ -2425,6 +2447,90 @@
           "date": "11.24",
           "links": [
             "http://www.newsmaker.or.kr/news/articleView.html?idxno=186363"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1655
+      ],
+      "sent_at": "2026-11-25 11:30",
+      "items": [
+        {
+          "title": "서귀포 중문농협, 베트남 계절근로자 30명 입국…농촌 인력난 해소 본격...",
+          "source": "nongmin.com",
+          "date": "11.25",
+          "links": [
+            "https://n.news.naver.com/mnews/article/662/0000109269?sid=102"
+          ]
+        },
+        {
+          "title": "영월군 “외국인 계절 근로자 결혼이민자 가족 초청”···2촌 이내 친척...",
+          "source": "경향신문",
+          "date": "11.25",
+          "links": [
+            "https://n.news.naver.com/mnews/article/032/0003484917?sid=102"
+          ]
+        },
+        {
+          "title": "제주서 심정지 외국인 선원, 동료 CPR로 19분 만에 호흡 회복",
+          "source": "연합뉴스",
+          "date": "11.25",
+          "links": [
+            "https://n.news.naver.com/mnews/article/001/0016462366?sid=102"
+          ]
+        },
+        {
+          "title": "사천 '외국인 계절근로자' 3년새 6배↑…\"조기적응 교육\"",
+          "source": "뉴시스",
+          "date": "11.25",
+          "links": [
+            "https://n.news.naver.com/mnews/article/003/0014343862?sid=102",
+            "https://news.google.com/rss/articles/CBMiYEFVX3lxTE95dGozZG95bThPQkdOTnF5WXlxT3RrVjU3Qi1jOU9EN2RBb0Z5R0VEWkVUMllOLUw1TW5oNzdIX3hTeWJGcnlCa1VGX3BVMXZ5MkI3dXlpamRheFhWdGZvYdIBeEFVX3lxTE5KT3Ywd2RRYk5aZUhrVWUzcEdzSmx3V2psRnFWZ0c0OGxYVWU2dnBJdExpYk9QSU14eUdEOVhXWnpCcW1oeXJJNGVqRDdoemRqM2FQOFMtcWZmclg4TndoM1hic0cybWw5MWtwLURnNFMwbGZULTRYcQ?oc=5"
+          ]
+        },
+        {
+          "title": "제주시 한림항서 외국인 선원 작업 중 심정지…병원 이송",
+          "source": "news1.kr",
+          "date": "11.25",
+          "links": [
+            "https://n.news.naver.com/mnews/article/421/0009308805?sid=102",
+            "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9HSVNwRzNla25ZazBWQTctQWZhRTR5OTlvNk1WNHpaYk1qZjhVNEtBQlhXSzZ6Rk9CQjJVVXpDbVpRTjllclQ2XzFiNUVURnUw?oc=5",
+            "https://www.headlinejeju.co.kr/news/articleView.html?idxno=602691"
+          ]
+        },
+        {
+          "title": "구인난 메우는 외국인력, 이제는 숙련인력으로…교육·근속 지원 과제",
+          "source": "산업종합저널",
+          "date": "11.25",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiU0FVX3lxTE56dUN4R0x1UlZOOVRYYnhDZmUySERCc29UNzFXS3oyX29PUlo1LWp3M2sya1FYd1V1OFM1V3A4Tm5qaTBiTnhsbnJ0UzdJMWpDaG5n?oc=5"
+          ]
+        },
+        {
+          "title": "한·인도네시아 외국인 선원 권익 보호 논의",
+          "source": "klnews.co.kr",
+          "date": "11.25",
+          "links": [
+            "https://www.klnews.co.kr/news/articleView.html?idxno=323692",
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTFBPcHYyaWMwQ1ZYRWhwU25PdkdWbHk5OHZFenYtc2VmUk5WdUdtZmpUT283M3hhNmxxSWZoNWhKWkFIQnk0T1lVOGMzc0ktZWpIbHV4SjhuQzlfMUV3R0Q5WC02RWgxTDJvRXJR?oc=5"
+          ]
+        },
+        {
+          "title": "베트남, '디지털노마드' 시범비자 도입 추진…관광업 개발 촉진",
+          "source": "insidevina.com",
+          "date": "11.25",
+          "links": [
+            "https://www.insidevina.com/news/articleView.html?idxno=44584"
+          ]
+        },
+        {
+          "title": "고삼농협 4년차 외국인(라오스) 공공형계절노동자 환송식 열어...3억원 이상 생산비 절감 효과",
+          "source": "시사안성",
+          "date": "11.25",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LeW5iTW5nYTVVZDU3cUlCQnFESnVfOVdzdWdHUWJ1WmxHX2F1SWdPcl8tWWJvZDBhdXFiRzRSc3lLZnU0djhyZURYemJpVTkweW9QekM5OE9JM2RNOWYzYlhuVVdjRFlia3Nqdw?oc=5"
           ]
         }
       ]
