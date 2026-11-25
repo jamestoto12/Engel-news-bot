@@ -831,7 +831,15 @@
     "17e686cc3c9fdb2d7c21f0d3121ea664",
     "5de3f0d879370548b24e2641a05bbb76",
     "9006e0b1a6effe81dcbf711fb57bea03",
-    "b3c238d8a56617558830d4b8381b45fa"
+    "b3c238d8a56617558830d4b8381b45fa",
+    "a903a7e8a299b358c4cca7247ac6f20b",
+    "52862fb71e418a65a562eb13f5b958d6",
+    "016cfcf8ebfd7b33ade617f6a837be03",
+    "164240f3d6fe0b1cd077ae4881610c59",
+    "a09040f530bb5006f5c53be0f6f29451",
+    "4f5d9ec4d674bc853778e6f2dd434bf4",
+    "6aead464f4a5bbd235563f3188a69046",
+    "3d979ceb08d046dd48aa34485b279eed"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1024,10 +1032,16 @@
     "“외국인 유학생 구직비자, 한국어 능력 따라 최장 2년·3년 차등”",
     "영천시, 라오스 계절근로자 현지 선발 참여… 내년 농번기 인력 확보 총력",
     "“농촌일손 구하러 해외로”… 지자체, 계절근로자 확보전",
-    "논산시, 외국인 계절근로자 확대…농촌 일손 지원 강화"
+    "논산시, 외국인 계절근로자 확대…농촌 일손 지원 강화",
+    "중소기업중앙회, 외국인력 고용제도 개선·에너지경비 연동제 대응",
+    "외국인 선원 심정지...응급처치로 자발순환 회복",
+    "나주시, '안심 주거환경 조성'... 30일까지 계절근로자 숙소 특별 점검",
+    "“고향의 맛과 정을 나눕니다” 지스코선박, 외국인 선원 위안의 날",
+    "사천, 외국인 계절근로자 안정적 정착 돕는다",
+    "인력확보부터 정착까지, 계절근로자 상생모델 주목"
   ],
-  "updated": "2026-11-25",
-  "last_run_kst": "2026-11-25 18:00",
+  "updated": "2026-11-26",
+  "last_run_kst": "2026-11-26 07:00",
   "lists": [
     {
       "message_ids": [
@@ -2709,6 +2723,64 @@
           "date": "11.24",
           "links": [
             "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9fOTdoRW1VWHVLSmVKZmdOVVBlSkJJM2lzY2ZhOE11aFpfMHZtV1paczZ6WVFNWTFaLUZ1NVR0MnZwUGp2ZWkySDBPYlk3cFFIb0NDS1pkeDRWSkd5Unc?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1657
+      ],
+      "sent_at": "2026-11-26 07:00",
+      "items": [
+        {
+          "title": "중소기업중앙회, 외국인력 고용제도 개선·에너지경비 연동제 대응",
+          "source": "webeconomy.co.kr",
+          "date": "11.25",
+          "links": [
+            "https://www.webeconomy.co.kr/news/articleView.html?idxno=2391447",
+            "https://news.google.com/rss/articles/CBMickFVX3lxTE9HcXRLTThkMG5Za1VYYnI4ZU9oVTdTMlJwOEJQc0ZTUk9ZVWhNSzNOMWt6bndnZkNZWkVtVmpSU0VFVURIS3UzTDJhbzNsM1pZU0FMOWRhYnc1ZWh4X0o1cjY2bWFYQm9LUVphZjhWSHY0QQ?oc=5"
+          ]
+        },
+        {
+          "title": "외국인 선원 심정지...응급처치로 자발순환 회복",
+          "source": "jibs.co.kr",
+          "date": "11.25",
+          "links": [
+            "https://n.news.naver.com/mnews/article/661/0000087088?sid=102"
+          ]
+        },
+        {
+          "title": "나주시, '안심 주거환경 조성'... 30일까지 계절근로자 숙소 특별 점검",
+          "source": "newsworker.co.kr",
+          "date": "11.25",
+          "links": [
+            "https://www.newsworker.co.kr/news/articleView.html?idxno=516220"
+          ]
+        },
+        {
+          "title": "“고향의 맛과 정을 나눕니다” 지스코선박, 외국인 선원 위안의 날",
+          "source": "busan.com",
+          "date": "11.25",
+          "links": [
+            "https://n.news.naver.com/mnews/article/082/0001409018?sid=102",
+            "https://news.google.com/rss/articles/CBMieEFVX3lxTE92RmtxTUFNeWMwZGJIbE5QVkRobzN3Z0V6N2hxT2ZGRXlNY005S2NYeElRQTc3emxSUnRZZDZhT0tIOHJOckpwcS01dEdmcTVEeUttZU5vejdjZFh1LVg3Vzd2X0FRRkVtVkMwNWVrTnlPWkt1clNWYg?oc=5"
+          ]
+        },
+        {
+          "title": "사천, 외국인 계절근로자 안정적 정착 돕는다",
+          "source": "서울일보",
+          "date": "11.25",
+          "links": [
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE56YWhXNEtSSXAxYWg2Z0RnOE1RNk11cFB1N09Lc3N0NWlsUDVxdEJsYnZhaVJXMG1GWElTaEdKWEV0YTJoeXBiU0E0SnNWVEhZeTVvV2VDNmxaV3hnU040MVJiRkgtOXE5dVk00gFvQVVfeXFMTnpQa3JQLTV3S1NDQm1BUy1iMzBvdmkySGJNUnp1RUFzNUtkWlktUDByNUxnRF9UbEJCTVJucjV2UUI1ZG5oUF9SZ1d2U0U3Zm43eElkWnowLXFhWlpENTY5YnFEWHNvNTlKX05yeW9n?oc=5"
+          ]
+        },
+        {
+          "title": "인력확보부터 정착까지, 계절근로자 상생모델 주목",
+          "source": "전주일보",
+          "date": "11.25",
+          "links": [
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE5JMXBRM1VWZ2NFeGo5cFV6S0ZnajdZR1ptUTRrUnNWRUxfQTI5cUkwaXMwbEJfVFhoSmhrQmlOdXR6Rlk2RXRUOVdKUUxVU05YWk5idHhCcGxvcTgtU2hCZlVzQzBtQm00OHBN?oc=5"
           ]
         }
       ]
