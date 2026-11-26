@@ -840,7 +840,15 @@
     "4f5d9ec4d674bc853778e6f2dd434bf4",
     "6aead464f4a5bbd235563f3188a69046",
     "3d979ceb08d046dd48aa34485b279eed",
-    "6d54afa702db36e56e63e9f1f3e7565c"
+    "6d54afa702db36e56e63e9f1f3e7565c",
+    "6575df1ea9249bdacd9fdaf65ec2c921",
+    "d66e9a541eeb8ecdfb1d72f7abaf83d2",
+    "244a6d628ffae71475309747d033ebab",
+    "cdbf69a4104800a7f2dc37c4658a42fc",
+    "5555c9e4541577081c3e7129c25f6935",
+    "5207a6a3d688813bd0436687def10dc5",
+    "f9dc2fb2dd4d141ff1dbbe0eff9f0b54",
+    "eb297e3a23505c77ceb168fa91a24b83"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1040,10 +1048,14 @@
     "“고향의 맛과 정을 나눕니다” 지스코선박, 외국인 선원 위안의 날",
     "사천, 외국인 계절근로자 안정적 정착 돕는다",
     "인력확보부터 정착까지, 계절근로자 상생모델 주목",
-    "부산 앞바다 화물선서 외국인 선원 2명 복통 호소…1명 숨져"
+    "부산 앞바다 화물선서 외국인 선원 2명 복통 호소…1명 숨져",
+    "외국인 어선원 급증…동해해경청 '5개 국어 구명조끼 영상' 제작",
+    "태백시, 외국인 계절근로자 395명 출국 완료… 내년 513명 확대",
+    "동해해경청, 외국 공관과 '외국인 어선원 구명조끼 착용 생활화' 협력",
+    "라오스 계절근로자 사업 마무리... 농촌 일손 부족 해소에 큰 힘"
   ],
   "updated": "2026-11-26",
-  "last_run_kst": "2026-11-26 07:00",
+  "last_run_kst": "2026-11-26 11:30",
   "lists": [
     {
       "message_ids": [
@@ -2799,6 +2811,50 @@
           "date": "11.26",
           "links": [
             "https://n.news.naver.com/mnews/article/079/0004214101?sid=102"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1659
+      ],
+      "sent_at": "2026-11-26 11:30",
+      "items": [
+        {
+          "title": "외국인 어선원 급증…동해해경청 '5개 국어 구명조끼 영상' 제작",
+          "source": "연합뉴스",
+          "date": "11.26",
+          "links": [
+            "https://n.news.naver.com/mnews/article/001/0016464851?sid=101"
+          ]
+        },
+        {
+          "title": "태백시, 외국인 계절근로자 395명 출국 완료… 내년 513명 확대",
+          "source": "한국사회복지저널",
+          "date": "11.26",
+          "links": [
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTFAzR2RDbWJaRHZYWEkwZEMtZVVaeXNZQ3pHRGJsd3RUVGd4NFJ0aVhxX0VuLTBmUXJsS0t4OU5yNHRSTkNRaTVRU2lXUzNUNHdubVZzRldwa01ENmJFSGNNeUhWU0NyU21KT3hZ?oc=5",
+            "https://news.google.com/rss/articles/CBMickFVX3lxTE8xUVg2WGx6eGl5STU1WjRhcXdZNWpXQnlIdmtjZTVONWxTV3NkNTZvUWpVa2F4WWEweWdRRjJxdk1vUFNUbVlCLURjNndsenRvdnRPaFdGd2xKY1JfQnZGRVFNdXJGUElvVTNHWHFFdWVYdw?oc=5",
+            "https://news.google.com/rss/articles/CBMiY0FVX3lxTE45djl1M3hPT0Z4Qm90bHotczRhclZhQWlQVnhkYkNRNUdoQkVYemszY3drY0d6Y2tJT2NEaG01WlBNc3VDYXlNdEtLVGN1QVI0RUNIbXg4bzhOcWJmRGJzX3FyVQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8tOUxMMnVtUmdCN3hhREV3RTFwQ2tqZUZOM1UwaEVUOWVldXIzMmNEeWFUak9ycUhOU1J3dDlDUHhQdVZUTkNHd0k2MDVzdmZVRjU4ZjRJTW5qRkpGVUNJd3RZbHFEZw?oc=5",
+            "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1XdV9WanUxd0o0a3c2UlphSTFJSzlKUmotQ3ZGdVNvYU1qVkhLVWhaTmV4NFdubGFRci0zUXFKUkF3bHdsRWVPc3BkeVBFSU9rVkN4Tkg1SQ?oc=5"
+          ]
+        },
+        {
+          "title": "동해해경청, 외국 공관과 '외국인 어선원 구명조끼 착용 생활화' 협력",
+          "source": "뉴스핌",
+          "date": "11.26",
+          "links": [
+            "https://www.newspim.com/news/view/20261126000489"
+          ]
+        },
+        {
+          "title": "라오스 계절근로자 사업 마무리... 농촌 일손 부족 해소에 큰 힘",
+          "source": "aflnews.co.kr",
+          "date": "11.26",
+          "links": [
+            "https://www.aflnews.co.kr/news/articleView.html?idxno=332501"
           ]
         }
       ]
