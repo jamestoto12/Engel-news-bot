@@ -839,7 +839,8 @@
     "a09040f530bb5006f5c53be0f6f29451",
     "4f5d9ec4d674bc853778e6f2dd434bf4",
     "6aead464f4a5bbd235563f3188a69046",
-    "3d979ceb08d046dd48aa34485b279eed"
+    "3d979ceb08d046dd48aa34485b279eed",
+    "6d54afa702db36e56e63e9f1f3e7565c"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1038,7 +1039,8 @@
     "나주시, '안심 주거환경 조성'... 30일까지 계절근로자 숙소 특별 점검",
     "“고향의 맛과 정을 나눕니다” 지스코선박, 외국인 선원 위안의 날",
     "사천, 외국인 계절근로자 안정적 정착 돕는다",
-    "인력확보부터 정착까지, 계절근로자 상생모델 주목"
+    "인력확보부터 정착까지, 계절근로자 상생모델 주목",
+    "부산 앞바다 화물선서 외국인 선원 2명 복통 호소…1명 숨져"
   ],
   "updated": "2026-11-26",
   "last_run_kst": "2026-11-26 07:00",
@@ -2781,6 +2783,22 @@
           "date": "11.25",
           "links": [
             "https://news.google.com/rss/articles/CBMia0FVX3lxTE5JMXBRM1VWZ2NFeGo5cFV6S0ZnajdZR1ptUTRrUnNWRUxfQTI5cUkwaXMwbEJfVFhoSmhrQmlOdXR6Rlk2RXRUOVdKUUxVU05YWk5idHhCcGxvcTgtU2hCZlVzQzBtQm00OHBN?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1658
+      ],
+      "sent_at": "2026-11-26 11:30",
+      "items": [
+        {
+          "title": "부산 앞바다 화물선서 외국인 선원 2명 복통 호소…1명 숨져",
+          "source": "nocutnews.co.kr",
+          "date": "11.26",
+          "links": [
+            "https://n.news.naver.com/mnews/article/079/0004214101?sid=102"
           ]
         }
       ]
