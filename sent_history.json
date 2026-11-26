@@ -867,7 +867,12 @@
     "b3bf03c885a935acfeef56c34b9910b6",
     "fdf578b316ac238f34699ca1e9b8cb55",
     "435f90525f654e5e4fceb0ce8226e034",
-    "1c75f4b624161536cd90c56845833c04"
+    "1c75f4b624161536cd90c56845833c04",
+    "73b0a638212733e4472a04d613f1463d",
+    "9c6e6be4be7cd073b877ab7c0129e334",
+    "3b3b502c24de3233e2d4f01b6766a1e8",
+    "d75d5530c2a4d10409ae63923874e6af",
+    "f577c4e7ee96a77b2eac188b5340798b"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1085,10 +1090,14 @@
     "[단독]‘1100만원 담보’ 걸고 한국행···당진 계절노동자 12명 ‘인신매매 피해’ 인정받았다",
     "한국에서 8개월 동안 계절 노동자로 일하면 최대 3억 2천만 VND까지 저축할 수 있습니다.",
     "외국공관까지 나섰다... 동해해경, 외국인 어선원 안전사고 막기 총력전",
-    "논산시, 외국인 계절근로자 확대해 농촌 인력난 해소 나서"
+    "논산시, 외국인 계절근로자 확대해 농촌 인력난 해소 나서",
+    "괴산군, 2027년 외국인 계절근로자 1,171명 신청…라오스·캄보디아 방문 추진",
+    "한국한센복지협회, 부산 외국인 선원 370여명 대상 무료 건강검진 실시",
+    "‘공공형 계절근로사업’ 성공리에 마쳐",
+    "대정농협, 2026 베트남 공공형 계절근로자 환영회 개최"
   ],
-  "updated": "2026-11-26",
-  "last_run_kst": "2026-11-26 18:00",
+  "updated": "2026-11-27",
+  "last_run_kst": "2026-11-27 07:00",
   "lists": [
     {
       "message_ids": [
@@ -3013,6 +3022,47 @@
           "date": "11.25",
           "links": [
             "https://news.google.com/rss/articles/CBMickFVX3lxTE1QZzVPR1RsUDJFYTZLeUVrQWtlOW1yLTFOa1NVeUptTmU4MDFzNWtVT2RLUzM0OXFHSmJJOWRYdHA1UFpmU2lKOGN0ZWVGQl9zaGtHSnpCS3VGRk5hYVhnbGw1a2NYaHhhMmlrLURUdlJOZw?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1661
+      ],
+      "sent_at": "2026-11-27 07:00",
+      "items": [
+        {
+          "title": "괴산군, 2027년 외국인 계절근로자 1,171명 신청…라오스·캄보디아 방문 추진",
+          "source": "경충일보",
+          "date": "11.27",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiWEFVX3lxTE44dFVfWUxIM2J2OGdpRTJEWFpfRUdVMzBkeDhMbXZRNklJRkNlRW5xZmxlT1NZUzdtc2xfcDhpVURlY1dSLWhHRHlsdGQxU0ZXdElIdEM0ckM?oc=5"
+          ]
+        },
+        {
+          "title": "한국한센복지협회, 부산 외국인 선원 370여명 대상 무료 건강검진 실시",
+          "source": "뉴스21 통신",
+          "date": "11.27",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Uai02cm02bEVZU2hqOXkzNFNOZUlCdE9DdElyZTVteVdvM1NhUWlhdmFRZ2ZlRWxubjlpRldHRnpnU1ozdVdzUUhlcXVCMmdJVU1zSWZB?oc=5"
+          ]
+        },
+        {
+          "title": "‘공공형 계절근로사업’ 성공리에 마쳐",
+          "source": "nongmin.com",
+          "date": "11.27",
+          "links": [
+            "https://n.news.naver.com/mnews/article/662/0000109421?sid=102",
+            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hR1MyNUdsZHZNN0FXYUhDOE4zMGQyWFdZOFNsZkFfSWJIMHhGYlJvYi16QWxMc1ZWa2Q4ci1CTXpTaVJqX2RkdHRYZHl4Mml4VXBJQWkyeEtTdw?oc=5"
+          ]
+        },
+        {
+          "title": "대정농협, 2026 베트남 공공형 계절근로자 환영회 개최",
+          "source": "지금제주",
+          "date": "11.26",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE1UdU1FQWVvQW9KT01uYjNtdnVERGJOUEFVYW5SeHNRTkxlVnJ1dXg2a1Q5OFZNX3RFRzVXVWNuOXdBT21kSVJjYnVHYmxmeG9DclNHTXFQZzRwMG14NDI4ekx5LTJ0UFZONVVlekJn?oc=5"
           ]
         }
       ]
