@@ -877,7 +877,10 @@
     "9a380ca579016936f2766f4fa79687b4",
     "177e987a36fd124b375e20e636ec63d5",
     "8a6494d86cf42b423d85260e462b1427",
-    "65655552b24c08b4a33c731867212b58"
+    "65655552b24c08b4a33c731867212b58",
+    "4dc9d5646e1c3319b698569f75f73e29",
+    "380c4732c45c9c646901172ffe63e16f",
+    "de28aba2464cfa1b97d95a41d673e516"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1102,89 +1105,13 @@
     "대정농협, 2026 베트남 공공형 계절근로자 환영회 개최",
     "괴산군, 외국인 계절근로자 도입 규모 17% 확대…동남아 공식 방문길 올...",
     "양평 인력난 해소 주역, 캄보디아 계절근로자 316명 성실 근무 마치고 귀국",
-    "진안군 공공형 계절근로자 78명, 고국 필리핀으로 귀국"
+    "진안군 공공형 계절근로자 78명, 고국 필리핀으로 귀국",
+    "선원노련 \"연근해 외국인 선원 혼승 기준 완화 말라\"",
+    "해외 계절 노동은 산간 지역 사람들에게 빈곤에서 벗어날 수 있는 길을 열어줍니다."
   ],
-  "updated": "2026-11-27",
-  "last_run_kst": "2026-11-27 18:00",
+  "updated": "2026-11-28",
+  "last_run_kst": "2026-11-28 07:00",
   "lists": [
-    {
-      "message_ids": [
-        1618
-      ],
-      "sent_at": "2026-11-17 18:00",
-      "items": [
-        {
-          "title": "법무부 통제 대상화에 계절노동자 인권 사각지대 몰려…개별법으로 보...",
-          "source": "idomin.com",
-          "date": "11.17",
-          "links": [
-            "https://www.idomin.com/news/articleView.html?idxno=2019844",
-            "https://news.google.com/rss/articles/CBMiakFVX3lxTFBTTlNOV3JvS3FwYVA1dm5wemJrSnRtdFpvb1l4V19kbThYbWxJYkhKYmhTdUNaYWh0V2FNTG5NTmJWVEZVNTMzdDZYMHlpR1U1YkxsSmV3bUx2WmxDRGFRdWJVeHZSU3BVRWc?oc=5"
-          ]
-        },
-        {
-          "title": "외국인 근로자 정착 돕는 '조기적응 프로그램'",
-          "source": "jejumaeil.net",
-          "date": "11.17",
-          "links": [
-            "https://www.jejumaeil.net/news/articleView.html?idxno=406822"
-          ]
-        },
-        {
-          "title": "함양군, 베트남 현지에서 계절 근로자 직접 뽑는다",
-          "source": "news1.kr",
-          "date": "11.17",
-          "links": [
-            "https://n.news.naver.com/mnews/article/421/0009294330?sid=102",
-            "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBiQ3IzR1R6ZWdBOHFabVN0UUgxYnlEeEdvNmk0RWx5XzdXQUZKSFhpdFB6RXYwZ2hBc2c1dWttZkI0cDhyblFUdkVORFdLYTRWRmVvWm00c19CNDdLVzZJ?oc=5"
-          ]
-        },
-        {
-          "title": "밭으로 달려간 정선군 공직자·외국인 근로자…농번기 일손 덜었다",
-          "source": "pressian.com",
-          "date": "11.17",
-          "links": [
-            "https://n.news.naver.com/mnews/article/002/0002466243?sid=102",
-            "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjcUdpMi1kTDRHdlRPaTd6R0tleHlJeEhkdGJ5MjlBcFJNOGliWnFtTmRjclV4a0Rlbmc5MjBzMHR4YnJGOTVLOW16Wk84d3ZuR2NtUjlwczFvUE4wT1M5ZmNfemZXYTc2VDJN?oc=5"
-          ]
-        },
-        {
-          "title": "[태백시] 외국인 계절근로자 운영 공모전 '전국 우수상' 쾌거",
-          "source": "연리지TV",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiaEFVX3lxTE01M1NiLTZZUDVmRzl5TlZTWnloYVBXTGFSZmFLRkpDLV9xM241RHAzNjR2ZmFrQjVqMFVFdk5rZnZTcWhoYXgwTWotTjRIQ0xNd2lNeEZNcVAtSExmV2MyVjZSN1JmemZy?oc=5"
-          ]
-        },
-        {
-          "title": "정선군, 농번기 일손 부족에 힘 보태…계절근로자·일손돕기 확대",
-          "source": "enewstoday.co.kr",
-          "date": "11.17",
-          "links": [
-            "http://www.enewstoday.co.kr/news/articleView.html?idxno=2493547",
-            "https://news.google.com/rss/articles/CBMicEFVX3lxTE1tamNVZmlSNFE2dlRzVGZkblYwQzEtU3VtOVVDai1aZkVHc1ZSekFyN3RtOHYzRk5RZmpLaHkza2tiOHMwVWxxT3pLbVVfZnFoUWZDNWxIemNOczY0MEVUOVJqMVlodGRacDNVX0Q3YUnSAXRBVV95cUxPbDdIN1N0QTVGa2Rvckl1ZmNrdWd4Q2lPVVRiOC03ZnJWZXBjNjlIRi1EdmhGN3FTel91Q2JJYXA4QzlqZVBpUEtUVmM3aEhwaTNPd2M1ckd5aHBpRHNRWkFwWk9VOXpFcFU0V3Rja044YnhzaA?oc=5"
-          ]
-        },
-        {
-          "title": "군산시, 베트남 다낭서 계절근로자 60명 도입 추진",
-          "source": "jeollailbo.com",
-          "date": "11.17",
-          "links": [
-            "http://www.jeollailbo.com/news/articleView.html?idxno=816918",
-            "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PLTF2YmhheFFkTlRqQ0VTaThKdVoteEN6YzlaQk1WUWdPcjZBSDNBTHVRUWJubjBFWmtYWURBM2xYaTZxbFdGeXBEZlRnUXNtVk1nZmpiZWIxa3Zwa3ZGUkpCSmdaVlB2Y2xVM2tUZjLSAXBBVV95cUxOTy0xdmJoYXhRZE5UakNFU2k4SnVaLXhDemM5WkJNVlFnT3I2QUgzQUx1UVFibm4wRVprWFlEQTNsWGk2cWxXRnlwRGZUZ1FzbVZNZ2ZqYmViMWt2cGt2RlJKQkpnWlZQdmNsVTNrVGYy?oc=5",
-            "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9SYkwyV2NJRHM2M2YxNFcweFZFc1hqUzdCWkM0UmF1ZkRuV2dOUldCYnpUMEJQb2lMRV9nUm81OU92dVZIUVdlZXVITmVwQ29aSjNOeXh0Tkl1X0czcjkyQ0tiaw?oc=5"
-          ]
-        },
-        {
-          "title": "김해시, 외국인 계절근로자 인권·안전 실태 점검",
-          "source": "영남매일",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmZHdzNUMyVUI3NVJOenZ3ZENvT3dGbFN3ZlJHcE9ZWWJnRmRiZURpOGFtd2FLT3NydmE0NDFENUR4eVplYlUwemxhUDFzZEhyaWVNYzBqbS1sOGd4TTdNdW1kX1ZqTGs?oc=5"
-          ]
-        }
-      ]
-    },
     {
       "message_ids": [
         1627
@@ -2991,6 +2918,31 @@
           "date": "11.27",
           "links": [
             "https://n.news.naver.com/mnews/article/421/0009314561?sid=102"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1663
+      ],
+      "sent_at": "2026-11-28 07:00",
+      "items": [
+        {
+          "title": "선원노련 \"연근해 외국인 선원 혼승 기준 완화 말라\"",
+          "source": "뉴시스",
+          "date": "11.27",
+          "links": [
+            "https://n.news.naver.com/mnews/article/003/0014350191?sid=102",
+            "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1LMllnTVlMVHhSTmNENFBCS25UanlCZTBVaHgweWp0SkZHdFJaZDRMZXg3VVdHWUpVMGpyT2xuUl9fTG1HSVVsUlJzOGpweWV4RXhndlVMWkJnSjA3bWozbdIBeEFVX3lxTE5xVWpNN21mWXZrTkxXbHFTUi00Rlk3NE43bXFnRXU0WWxmMzB5c21ZUEJ1aVFWeFNYOC1JQll4YWtxY1k3QktCSDBYMjMzQm5xd0xFLVVndmhGeVBwQm56VUtnYUFqaUZWejRsd3l6YnNfNmFOd0EyeA?oc=5"
+          ]
+        },
+        {
+          "title": "해외 계절 노동은 산간 지역 사람들에게 빈곤에서 벗어날 수 있는 길을 열어줍니다.",
+          "source": "Vietnam.vn",
+          "date": "11.27",
+          "links": [
+            "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMUpUaHVEMmZLTi1KVHowbFIyZV9qb1NJQmw3UDZSUzNEMTMxcDVrREttX3BDeE4yYlhpR1dmdFFGaTdEblE5YnRNSm9TRlBaRVNfUlFVS0ktdUJ3eHd6UXdZQjBSV2xwSWR3ZXhVYW5VTTlURGk2ejZBZG1EcV96RDN4a2k0RTRkNXV3U2lCcXNzY214cWJ6bmk4VFdPaERx?oc=5"
           ]
         }
       ]
