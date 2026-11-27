@@ -872,7 +872,12 @@
     "9c6e6be4be7cd073b877ab7c0129e334",
     "3b3b502c24de3233e2d4f01b6766a1e8",
     "d75d5530c2a4d10409ae63923874e6af",
-    "f577c4e7ee96a77b2eac188b5340798b"
+    "f577c4e7ee96a77b2eac188b5340798b",
+    "5f34858a6eb95f41e9f4a3b6fe5ec21d",
+    "9a380ca579016936f2766f4fa79687b4",
+    "177e987a36fd124b375e20e636ec63d5",
+    "8a6494d86cf42b423d85260e462b1427",
+    "65655552b24c08b4a33c731867212b58"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1094,125 +1099,14 @@
     "괴산군, 2027년 외국인 계절근로자 1,171명 신청…라오스·캄보디아 방문 추진",
     "한국한센복지협회, 부산 외국인 선원 370여명 대상 무료 건강검진 실시",
     "‘공공형 계절근로사업’ 성공리에 마쳐",
-    "대정농협, 2026 베트남 공공형 계절근로자 환영회 개최"
+    "대정농협, 2026 베트남 공공형 계절근로자 환영회 개최",
+    "괴산군, 외국인 계절근로자 도입 규모 17% 확대…동남아 공식 방문길 올...",
+    "양평 인력난 해소 주역, 캄보디아 계절근로자 316명 성실 근무 마치고 귀국",
+    "진안군 공공형 계절근로자 78명, 고국 필리핀으로 귀국"
   ],
   "updated": "2026-11-27",
-  "last_run_kst": "2026-11-27 11:30",
+  "last_run_kst": "2026-11-27 18:00",
   "lists": [
-    {
-      "message_ids": [
-        1617
-      ],
-      "sent_at": "2026-11-17 11:30",
-      "items": [
-        {
-          "title": "태백시, 외국인 계절근로자 운영 사례 우수상 수상",
-          "source": "mbceg.co.kr",
-          "date": "11.17",
-          "links": [
-            "https://www.mbceg.co.kr/post/142038",
-            "https://news.google.com/rss/articles/CBMickFVX3lxTE9IU2pRWVlnN2hjUTlsQ0o2a0hqRnJUOEhhSG4yY0tDYmpNckpNalozcV9CTWs5MzNQUS16TWZMYzl0UDNJUEs2RC1TQ00yR3l2VDRIY2FjNXVRTHlhRTdKWUhXSUZsYTRDd3hYTC02blhlZw?oc=5",
-            "https://news.google.com/rss/articles/CBMia0FVX3lxTE1BaklwQ3Q3YW1CNHoyS2pSUjZQR0tyNGJ5VjhzenBfXzNqUFhXM1N6YnZwcU9JMjczTmViNm1ZR0Y4NmdLNWdWZHJZSW1Cbk5jWXBTbTBjX19JVDQ1T1VSUlBzVUxZZHdOWjBn?oc=5"
-          ]
-        },
-        {
-          "title": "함양군, 외국인 계절근로자 400명 내년 입국…\"농작업 참여\"",
-          "source": "뉴시스",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9qcnE5cE4zX25rMEc2SlRYWVR2b3pDcVVGMENrajJuRjgzQWhMNXZLdF9ycVhBd1haeVNHS1VXc3NpZFZzMDItNllBM08xeEFXc3pvZzFnVkZQQlhyb2k5ddIBeEFVX3lxTFBfenZ4N1V4NmJpaXB3OGJHV2R4NVpvaTdraThJVjhpTEExUHVkQ0Y0SnJ4MnBad2Z4dkZvc0MzczJCT29lcmRKODhNdkJWZExVVUJRd2ZRNFJMVm9MbmNMeVE1WmFlLWctNDdaN2JsdzNrZXBMd0ZPZw?oc=5"
-          ]
-        },
-        {
-          "title": "김천시, 2027년 라오스 계절근로자 현지 선발",
-          "source": "kbsm.net",
-          "date": "11.17",
-          "links": [
-            "https://www.kbsm.net/news/view.php?idx=542020",
-            "https://news.google.com/rss/articles/CBMidEFVX3lxTE5uYTVxYTRhck9FWmg3bGU2ZWRXdjdXWWpibFlmRFBhWUt0Nnc0QTRuSldaenpYWVRzWUdUSUZXdWcxNGpoM1V2YXE3YXZEZzFnZ1d4NlZpMjkzZ2trdlgtTk5QUUxXUTRjM3RpY29KT2FsbkJP?oc=5",
-            "https://news.google.com/rss/articles/CBMiVEFVX3lxTE91TGVEQUUzWnprckUxVEIxdnN1a25nQ3pBckdLUGVlLUxtT05uOTNNMjhrdjQ2OExrUHFZdkFyVEdMMVRPcmJiMWdEYXZXMWdETTBabg?oc=5"
-          ]
-        },
-        {
-          "title": "김천시, 라오스 계절근로자 292명 면접…내년 160명 선발",
-          "source": "daily.hankooki.com",
-          "date": "11.17",
-          "links": [
-            "https://daily.hankooki.com/news/articleView.html?idxno=1425847",
-            "https://news.google.com/rss/articles/CBMia0FVX3lxTE9pTlBXN0habGZNR3p3ZTFxY1VFU3JLTmRJUEJXbEpTNUtaWDNTRlFjVU1YdFptbVg2S1FKQ3BDQWxxa21pX1VwQjdiQ1pFM0RWSWdfdnd6bjNUV2JTNDhYMEM1V3B1SDNrUGxV?oc=5"
-          ]
-        },
-        {
-          "title": "제주시, 외국인 계절근로자 조기적응 교육 확대…400여 명 이수",
-          "source": "뉴스N제주",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jXzhtN0NES0QtWFI0cTVVeWdwaHpKVFZTSjJuak1FNS01TERXeHZqY0lOU0hndUFwWEctN0hiYXI0RGdyNTcxMTRTZUljOElrN0NRTVhLNmtIcXBLVlVNbW1Ga3hUeVd4WGNoWQ?oc=5",
-            "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBuTkY1dzNhVmFaSFVTaXd3cVZDYk5xaDJXZTMxUi16NUlFTmR6SUNTbWFOT1dCVmw4TDFLNDU2ZjZISWtVd2dlOWdsYVpFNkNqRTlfY2lJUVk3NWVw?oc=5",
-            "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Ya3hEOUJlSEdZYXFnRW82b3Z4dTliSG0wUVdoSUZhWnl5R0JvUVByZUZBNEtiYlNJNDZmc05vTE0zdlRlaUl0ckdFREpxcHpfb1VzM0d2QVZqOEM1ZU1sRVN0SWdzVDh1?oc=5"
-          ]
-        },
-        {
-          "title": "[정선소식]외국인 계절근로자·일손돕기 등 농촌 지원 총력 등",
-          "source": "뉴시스",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1WNGtsLXRrLVF3dzk5cHlMbE5LUXhNdUVwTDVza3BPbWM4NEJrZlZFUFdscHY5TGxHbmQ3aDdqU2hZYnF0cldJY1A5TUdLazU3U2VSTXpWNFBzdzlXbUhHeNIBeEFVX3lxTE1XeTNwTExrVDRyX2JPaFFjTnhWaWM5X183TGVXSjZtYnd4VXhMX09YOVhhUzk2bGFnRFJ0Xzl3NzRQODQyZUNzS1l1QzFSLXVNb2lsbHhWbnhTbmJSYTR3Tl9WQ0x0b0FPMjRjcjBsSTRVWXJseFdtdA?oc=5"
-          ]
-        },
-        {
-          "title": "군산시, 베트남 다낭시와 외국인 계절근로자 도입 협력 본격화",
-          "source": "웹이코노미",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMickFVX3lxTE9FOWM3WHF2TVEzTDNPSndRYkdrMTVybDVVWGFIUmFKb0paODBUMXgxb01KT0lTRGhTY181dVdjeWRfWUt3bEp2VGZDM19MNlVTd3hIaTU2b0VlUkdJeG9EVVg0U0tUYU9jTm94akcyTWZMZw?oc=5",
-            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5LcmJnUFBkcG9iTTgyM3lQM1FUcFV0SkVMSmVqYXY4d1I4UTc5YzZqWDBGY19vb2R2eGhuOTN1VnpuN1BUbHdvUXFBWjM?oc=5"
-          ]
-        },
-        {
-          "title": "연천군, 베트남 닥락성과 계절근로자 MOU 체결… 농번기 일손 부족 해소 총력",
-          "source": "국민기자뉴스",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBCdE1WSjhzWEduWHEzMEhVWmRkeF9YRjZaUjRLOFZuaWNGeWhRV0lyX1U2MERHOVk4SW1Cc2UwQk1kNHF2bWFSYl9tOFEzZFB1WVB1dnc3NHc0MDFtTDA5bXlLalXSAWdBVV95cUxPZksxb3pXMzd5ZGRncEI0WWtkeWhmdmp5dlRBcFBNOWc4YmpiYS1hc0hHdElpOEd3TG5TcEFqODVWMlhNMW1QMGFzSXlFSlI2NkNodVI2Nl8xXzJmZ0xLQlhDZ3FkX2pR?oc=5",
-            "https://news.google.com/rss/articles/CBMibkFVX3lxTE5wak4yN19PeHFwSjJFLWU3MUdvazIxRXZiYW9mWUItcHFlSzBRbUdiX09jZnB3UENRTlFzYUhRZk5RT3F6LUZJT09aZzBGNmFlckpCMnk4akVMbFFJcXVZYnI2WkVzc1lqTkZwYzdn?oc=5"
-          ]
-        },
-        {
-          "title": "4년 연속 우수지자체… 태백시 외국인 계절근로자 정책 전국 인정받았다",
-          "source": "http://www.reporternside.com/",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMickFVX3lxTE1DYlVtVld0eUdZTHJjbWRJYmdGaFR2WGxyYmZOc3M2M1dyOGR6VUpORVJDX041VXpGSG5iYTV3Tjg5NlhzSmczLTRhOEdMdkhhNzdXcmZ1T0JVWnU3MlE0OTg2M1pycm5NajMtQnZSSXVMUQ?oc=5"
-          ]
-        },
-        {
-          "title": "양주시, 공공형 계절근로 2026년 사업 종료…138농가 지원",
-          "source": "딜라이브뉴스",
-          "date": "11.16",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBlOUdtZEJILU10SWZGbVJ0Q1V3cnQxb1N5Vmt1UGJxRGJUSWI3WEEwR3oteGg4c3F1eXFfdFRvNmZ5ZGl5bENIcFA3X2NWM21XcWFkZHdfdlduLWUzdVhpVFVBU2ZZQQ?oc=5"
-          ]
-        },
-        {
-          "title": "제주 감귤 수확철 인력난 해소…베트남 계절근로자 39명 현장 투입",
-          "source": "제주뉴스",
-          "date": "11.16",
-          "links": [
-            "https://news.google.com/rss/articles/CBMia0FVX3lxTFA0SjBIem9GQ2NtNUdSTm9PWnFMaUt4VGpueGtnOHZYd2dnVXpyMWJvNUd2RmNELXMzb1VUcEMwSy1mbFNITlF2TFRta2xpZGszdnhkU3hGeFQ0cmhVNGlNaFdSV1VINkpKTVUw0gFuQVVfeXFMT0pLbEI5dFFDR3BjcENRUlZBU0Z1eTUwYjl0QUR6TkctRmZCQXkzOFdRdmVxMFdCbUtGbkVReVNEQTJmVjBvX2l3SlAzRENvdEVhcEpMM3JuLTFLaDVLUWlZV29nNjg4bnRUeFNiT2c?oc=5",
-            "https://news.google.com/rss/articles/CBMibkFVX3lxTE5WQnBmR2FMdDVmekxMbHp2ZjhrVy1USEhYd3Z2OGp1WlhGc2psNmxmeExWVUR2WlNFZjBpcTFtLXVjZF91bTdoSWRjOVh3dU53d2g0emVXdnJSSmhDWnhLdjI4U0JQZjYxMDJsN21n0gFuQVVfeXFMTlZCcGZHYUx0NWZ6TExsenZmOGtXLVRISFh3dnY4anVaWEZzamw2bGZ4TFZVRHZaU0VmMGlxMW0tdWNkX3VtN2hJZGM5WHd1Tnd3aDR6ZVd2clJKaENaeEt2MjhTQlBmNjEwMmw3bWc?oc=5"
-          ]
-        },
-        {
-          "title": "계절근로자 웃게 하니 ‘야반 도주’ 확 줄어",
-          "source": "동아일보",
-          "date": "11.16",
-          "links": [
-            "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JUUFTQUk4WFFPRDdyeEhxazJuWHgtNDVDSzFXU09WazR0cjA0bTNyOFBfRURkVmlDR0s2QVNQOTg3cjdZcE9vQzBvbzJ5bWFTVHg2WmtJQ0E3TDZUcU8zbS0zNExZWExIUXJOUFoycVV6bFkwOUHSAWZBVV95cUxNb1FIMUhHRUFldjk0enV5c3M5VDg0QUs4UWJiRU9oNDBobk1kMHFPZEprOUtweEU3WG1DdEVFdXFhSWdKeHNnMUlGX3EzRkZSa1JmM21WYlBQWkpVZjJGeG4zYjZMQlE?oc=5"
-          ]
-        }
-      ]
-    },
     {
       "message_ids": [
         1618
@@ -3063,6 +2957,40 @@
           "date": "11.26",
           "links": [
             "https://news.google.com/rss/articles/CBMibkFVX3lxTE1UdU1FQWVvQW9KT01uYjNtdnVERGJOUEFVYW5SeHNRTkxlVnJ1dXg2a1Q5OFZNX3RFRzVXVWNuOXdBT21kSVJjYnVHYmxmeG9DclNHTXFQZzRwMG14NDI4ekx5LTJ0UFZONVVlekJn?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1662
+      ],
+      "sent_at": "2026-11-27 18:00",
+      "items": [
+        {
+          "title": "괴산군, 외국인 계절근로자 도입 규모 17% 확대…동남아 공식 방문길 올...",
+          "source": "breaknews.com",
+          "date": "11.27",
+          "links": [
+            "http://www.breaknews.com/1254824"
+          ]
+        },
+        {
+          "title": "양평 인력난 해소 주역, 캄보디아 계절근로자 316명 성실 근무 마치고 귀국",
+          "source": "뉴스후플러스",
+          "date": "11.27",
+          "links": [
+            "https://news.google.com/rss/articles/CBMibkFVX3lxTE1MVGQ0eWFSVXE5V2l5eXpnajhYY2JCc0oxSkZEQ0FnNUtfeWQtbDV4Z2hGb2c0STlfTENyMTdtdTlDNG9PV2NKVERNbm1GR1ZUa2FNLTI4SlItcXh4dE8xR0hwTFA4ZVZzbVZzVGZn?oc=5",
+            "https://news.google.com/rss/articles/CBMickFVX3lxTE5yZjBqTjFXWlhZTDFZNUQxZlhhc0JneFFjX255QkIwOFZoaTc2d3o2VTNFdHlyQ3o5Yl85bEZoSExkV29kalN0aHVRdGNVWEhnTHZGa21ucGNTMTVnYkN4RlZQd1FhYy1KZzM2TENCNS1xQQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiakFVX3lxTE80LWRHWm1tYnRBdEVUd2ZGaGpTbGdIT2p3Znd0QzA3RVJKRXJkTnpWSjhZQmdsUVhRTDZuSF9xVFBrcVoyZ2NQbzQ2VUVTXy1aczVKVjQzeUQ4WUdpUVVNYk9RUWFoVmUxTnc?oc=5"
+          ]
+        },
+        {
+          "title": "진안군 공공형 계절근로자 78명, 고국 필리핀으로 귀국",
+          "source": "news1.kr",
+          "date": "11.27",
+          "links": [
+            "https://n.news.naver.com/mnews/article/421/0009314561?sid=102"
           ]
         }
       ]
