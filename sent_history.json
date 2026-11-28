@@ -881,7 +881,16 @@
     "4dc9d5646e1c3319b698569f75f73e29",
     "380c4732c45c9c646901172ffe63e16f",
     "de28aba2464cfa1b97d95a41d673e516",
-    "b17ca181157c273c509be386852b07f6"
+    "b17ca181157c273c509be386852b07f6",
+    "6acd54de1ec194949cc554c4e3d81800",
+    "134fba52c00331feaa03a07f128dc08f",
+    "f0a04381263587a3de02e629a6516f1c",
+    "1f708483da61d215fd793650fc4a2879",
+    "5c9b0e2f2185eb2961bc1058562a16c2",
+    "5c493a4c8dbf7b75361ef191d0d84f65",
+    "635209bca5138f26a8e821f93ed3d129",
+    "db378c2c66a2471f2e9450b12d3c2de6",
+    "36f69d6efd5d36327cfef7ed4f151c99"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1109,36 +1118,16 @@
     "진안군 공공형 계절근로자 78명, 고국 필리핀으로 귀국",
     "선원노련 \"연근해 외국인 선원 혼승 기준 완화 말라\"",
     "해외 계절 노동은 산간 지역 사람들에게 빈곤에서 벗어날 수 있는 길을 열어줍니다.",
-    "“외국인 계절근로자 전담팀 신설해야”"
+    "“외국인 계절근로자 전담팀 신설해야”",
+    "독도 앞바다서 다친 외국인 선원…해경, 악천후 뚫고 구조",
+    "독도 해상 어선서 다친 외국인 선원, 악천후 속 해경 긴급 이송",
+    "풍랑주의보 속 독도 인근 해상서 외국인 선원 긴급 구조…경비함정 10시...",
+    "동해해경, 풍랑주의보 속에 30대 외국인 선원 이송",
+    "【양평】양평군 캄보디아 계절근로자 본국 귀국"
   ],
   "updated": "2026-11-28",
-  "last_run_kst": "2026-11-28 11:30",
+  "last_run_kst": "2026-11-28 18:00",
   "lists": [
-    {
-      "message_ids": [
-        1628
-      ],
-      "sent_at": "2026-11-18 11:30",
-      "items": [
-        {
-          "title": "정선군, 외국인 계절근로자 597명 도입…농촌 인력난 해소 총력",
-          "source": "shinailbo.co.kr",
-          "date": "11.18",
-          "links": [
-            "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084574",
-            "https://news.google.com/rss/articles/CBMicEFVX3lxTE5uRG12RU80dmZlTXNkMmpfN2FDUXRUWTJNdG1aR3gwTldOUjV1SlRYbXVWeXB1S0E2VVJFYWdGdl84dFBhQWJyZWlKUE5yR09wQnBxeXVPV1Nva3R0eU9SZ3Rsc1QyMXRRNUh5cVJtWkM?oc=5"
-          ]
-        },
-        {
-          "title": "한국 장기·영구 이민자 작년 11% 감소…계절근로자는 49% 증가",
-          "source": "연합뉴스",
-          "date": "11.18",
-          "links": [
-            "https://n.news.naver.com/mnews/article/001/0016447811?sid=102"
-          ]
-        }
-      ]
-    },
     {
       "message_ids": [
         1629
@@ -2887,6 +2876,58 @@
           "date": "11.27",
           "links": [
             "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBZb0J2ZWk0b1p5R2UyMmk3dXItbndsR2R1V21FX1BtRFczMW56SUZMZ1BVZUVxd1NXYnlDVm5pdTdUT2E1OTFNZEIxNGRFOHdQdk1v?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1665
+      ],
+      "sent_at": "2026-11-28 18:00",
+      "items": [
+        {
+          "title": "독도 앞바다서 다친 외국인 선원…해경, 악천후 뚫고 구조",
+          "source": "SBS",
+          "date": "11.28",
+          "links": [
+            "https://n.news.naver.com/mnews/article/055/0001406561?sid=102",
+            "https://news.google.com/rss/articles/CBMiakFVX3lxTE0tRUtLanU0RXBjUldNcEtrNVBBcXVDc3VFUTRSd1N2dERkNGl1MDVDNE1VeFBSOURPQ01LRkNOUTQ5ODlRck8wa0RXRUNZUzdvSHNIMG10cmwzcVNPZ00zRDNqTDAwTXBOTEE?oc=5"
+          ]
+        },
+        {
+          "title": "독도 해상 어선서 다친 외국인 선원, 악천후 속 해경 긴급 이송",
+          "source": "연합뉴스",
+          "date": "11.28",
+          "links": [
+            "https://n.news.naver.com/mnews/article/001/0016468909?sid=101",
+            "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9obnJCd0szR1VVa2REWThjMGZseFFlUTN6OFNZY2s1U1hkbVZNcGVwclpQcXhsUy1tdExROXVCcFdxZEpqTEx2OVk0Ny1iOEkwOEE?oc=5"
+          ]
+        },
+        {
+          "title": "풍랑주의보 속 독도 인근 해상서 외국인 선원 긴급 구조…경비함정 10시...",
+          "source": "news.tf.co.kr",
+          "date": "11.28",
+          "links": [
+            "https://n.news.naver.com/mnews/article/629/0000556455?sid=102",
+            "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Jb0N4X0kwdlBYZmdzY0FYUmJ4RmNDTkRjbkFzNDZFb2ZUY0tpcGV6UWI5TG1PdjVwNlhMTkkwSFBJTGx0Q1h5ZXNhNTF6ZlFNUlpwTmtR0gFWQVVfeXFMT0lvQ3hfSTB2UFhmZ3NjQVhSYnhGY0NORGNuQXM0NkVvZlRjS2lwZXpRYjlMbU92NXA2WExOSTBIUElMbHRDWHllc2E1MXpmUU1SWnBOa1E?oc=5"
+          ]
+        },
+        {
+          "title": "동해해경, 풍랑주의보 속에 30대 외국인 선원 이송",
+          "source": "뉴시스",
+          "date": "11.28",
+          "links": [
+            "https://n.news.naver.com/mnews/article/003/0014350718?sid=102",
+            "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FeUFDTXpHbzZxZVRic1NkbUV1bERadHR2b3pBTWZ0RGhmTHBTaTFJdm1uWFZUR3lPTGtMV3JQTUJFZUNpMkpMWHBlaWUwcUpzMGJVMFpQM3NuUU5haG05Ug?oc=5"
+          ]
+        },
+        {
+          "title": "【양평】양평군 캄보디아 계절근로자 본국 귀국",
+          "source": "양평백운신문",
+          "date": "11.27",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1HM2Q2UnozZnJxcTdzSkFHT0IyX3dEQ0ZjN2xwNTFNLWZxa3A0eGo2VnNSaTZHZmg5dzhGdjM3VVpMMmQ3RGtROXFIWkxUdDE3TGluZ2VNVnBGVm8xUVJiOWdIcnY?oc=5"
           ]
         }
       ]
