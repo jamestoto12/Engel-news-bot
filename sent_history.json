@@ -880,7 +880,8 @@
     "65655552b24c08b4a33c731867212b58",
     "4dc9d5646e1c3319b698569f75f73e29",
     "380c4732c45c9c646901172ffe63e16f",
-    "de28aba2464cfa1b97d95a41d673e516"
+    "de28aba2464cfa1b97d95a41d673e516",
+    "b17ca181157c273c509be386852b07f6"
   ],
   "titles": [
     "‘억울한 누명에 배상 책임까지?’…계절 근로자 고용 농민 반발",
@@ -1107,85 +1108,12 @@
     "양평 인력난 해소 주역, 캄보디아 계절근로자 316명 성실 근무 마치고 귀국",
     "진안군 공공형 계절근로자 78명, 고국 필리핀으로 귀국",
     "선원노련 \"연근해 외국인 선원 혼승 기준 완화 말라\"",
-    "해외 계절 노동은 산간 지역 사람들에게 빈곤에서 벗어날 수 있는 길을 열어줍니다."
+    "해외 계절 노동은 산간 지역 사람들에게 빈곤에서 벗어날 수 있는 길을 열어줍니다.",
+    "“외국인 계절근로자 전담팀 신설해야”"
   ],
   "updated": "2026-11-28",
-  "last_run_kst": "2026-11-28 07:00",
+  "last_run_kst": "2026-11-28 11:30",
   "lists": [
-    {
-      "message_ids": [
-        1627
-      ],
-      "sent_at": "2026-11-18 07:00",
-      "items": [
-        {
-          "title": "붕따우 앞바다에서 건강 문제를 겪은 외국인 선원들을 구하기 위한 구조 작업이 밤새도록 계속되었습니다.",
-          "source": "Vietnam.vn",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ25sUmRfVzh2NE5zNW5TZWxHM201MDktc0VISWhZMXJ3dzJxMnplUk9QYV9PNUw5cHhQcDU4bGJMS1Y4eVNDREdJb3lqNi1QLXZiN3hPZ0FMWldUUGRzUy02cHhUZVA4WDNkZExyM0xRVUhYRUhkOFBGOVBqWkhHZl91M2pQTWNRVDVEcHBOV0M0OVNpOE84RXQtYUNHOGVWbVJrQTdpdw?oc=5"
-          ]
-        },
-        {
-          "title": "[농업 혁신 현장] AI 번역 활용 계절노동자 교육…‘인력 부담’ 덜고 ‘...",
-          "source": "nongmin.com",
-          "date": "11.18",
-          "links": [
-            "https://n.news.naver.com/mnews/article/662/0000108708?sid=102",
-            "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xRmxHdmhoNUNzQ2FPUGpWOENCVUVCNWRwVGQtVHpCZ0R1bnNkdlNqOHoxNXdOTlIzSGFpMWVjcGxDNzg4V29ialBFdFhfTWhxWUJJOW5RS2ZjQQ?oc=5"
-          ]
-        },
-        {
-          "title": "정선군, 계절근로자·일손돕기 병행 농촌 인력난 대응",
-          "source": "kado.net",
-          "date": "11.18",
-          "links": [
-            "https://n.news.naver.com/mnews/article/654/0000211827?sid=102"
-          ]
-        },
-        {
-          "title": "호주서 워홀 1년 더 하려면 농촌서 4개월 일해야…인력난에 비자 조건 ...",
-          "source": "dailian.co.kr",
-          "date": "11.17",
-          "links": [
-            "https://n.news.naver.com/mnews/article/119/0003156366?sid=104",
-            "https://news.google.com/rss/articles/CBMiggJBVV95cUxQaGFQc3NLV2ZFQWszS2trVG5jb1lMUnJwOU02Qkhaa3R2YWhFOHVwWDFQUlFLRThCTVN4bXVzLV9Pc25EQUczc1RDX1pDblp6dUtOQkVQNVgyNlF2amVsVGtTTi1kWTdUalp6X1dVangwTURmb0RVaHR4b1lxOWpsNC11TVRjVW5ISzZGRi1RMTJ1UF9qSkt1ZjU0Q0VtTWtrWkpoVXRnbnUxcjZpUlE1d3JLc3Y3SjJwdk5JZEVGY1p0WEV2MjFxbzJpd0dkSy1RdUhMOUNXUTFjc0dHTEV4azZCWUdkdmp5Z0NRZnJsQ21hN0dqbVhpTTJWcnF1U1FUbUE?oc=5"
-          ]
-        },
-        {
-          "title": "애월농협, 공공형 계절근로자 대상 안전교육 및 문화체험 실시 ​",
-          "source": "지금제주",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMibkFVX3lxTE9iZU5YbGVodEJzcG1nbWZQX2Z3NlV0YXJZU0ktSFBjN2poX1ZNbkV2WHdvM3hiZXVDbkN6NXpHVjI1Um9hRzR3aWtxTEdHY2lvZk5MTHhlY2FDQWlYUjlEUHhoN2wtZU52WXJrZGZR?oc=5"
-          ]
-        },
-        {
-          "title": "외국인 선원들은 응급 치료를 위해 즉시 육지로 이송되었습니다.",
-          "source": "Vietnam.vn",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWTQwZlM4Tm54bFZidE9ldXloeEM4SDZqVldHLWZLQXpBeDN3Q2tVbS1JYWt5UG96anNMSUcySGVvVXU3dnB1U0xzV1JzTGJEbXV5WFY3eGQyUGVGU09Uak9JVG02YzN4dHVDQlpJbjFyQXJ6dGFDa1pFQmU0WTB0cVZB?oc=5"
-          ]
-        },
-        {
-          "title": "붕따우 해역에서 중병에 걸린 외국인 선원 구조 성공",
-          "source": "Laodong.vn",
-          "date": "11.17",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiugFBVV95cUxORUE0Z2JwYlFBZnZfaElYbXhBaUtSQmY2OTJoY2IzOUlQcFBfV1UwNUJxSDVQZDQydldqeHdPcEU0OGxUSnFRVXBab3RmYTBaQmdKdEJvMURRUmY1M01sTFJjcUNjemhzYnRKSmZIY0xuaURGeEhDNU9aSE1rMjBtckJ5TnlDbEZFYzlldVFvckFhS05rNXhzVTVTSjZLaEthMGR0SkhDTkRBX2lPZGRoT1ZIM3dqcTNqWkE?oc=5"
-          ]
-        },
-        {
-          "title": "올해 마지막 외국인력 고용허가 6,699명…23일부터 신청",
-          "source": "한국다문화뉴스",
-          "date": "11.15",
-          "links": [
-            "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JOHVuRHBpSkF6akZOMDl4QlkzODlvaGE3LTY3Qm9yUDdjUXM4ajd2czhTdXVjVHFyYnpjR3FPSDlKa0dRbFVsRUExVFR6QzZPRmlrZktzeTE?oc=5"
-          ]
-        }
-      ]
-    },
     {
       "message_ids": [
         1628
@@ -2943,6 +2871,22 @@
           "date": "11.27",
           "links": [
             "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMUpUaHVEMmZLTi1KVHowbFIyZV9qb1NJQmw3UDZSUzNEMTMxcDVrREttX3BDeE4yYlhpR1dmdFFGaTdEblE5YnRNSm9TRlBaRVNfUlFVS0ktdUJ3eHd6UXdZQjBSV2xwSWR3ZXhVYW5VTTlURGk2ejZBZG1EcV96RDN4a2k0RTRkNXV3U2lCcXNzY214cWJ6bmk4VFdPaERx?oc=5"
+          ]
+        }
+      ]
+    },
+    {
+      "message_ids": [
+        1664
+      ],
+      "sent_at": "2026-11-28 11:30",
+      "items": [
+        {
+          "title": "“외국인 계절근로자 전담팀 신설해야”",
+          "source": "의령신문",
+          "date": "11.27",
+          "links": [
+            "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBZb0J2ZWk0b1p5R2UyMmk3dXItbndsR2R1V21FX1BtRFczMW56SUZMZ1BVZUVxd1NXYnlDVm5pdTdUT2E1OTFNZEIxNGRFOHdQdk1v?oc=5"
           ]
         }
       ]
